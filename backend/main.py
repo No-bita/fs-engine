@@ -250,6 +250,59 @@ def get_gap_analysis(profile: BusinessProfile):
     schemes = load_local_schemes()
     return GapAnalysisEngine.analyze_gaps(profile.model_dump(), schemes)
 
+@app.get("/api/audit/schemes")
+def audit_schemes():
+    from rules.questions import PARAMETER_QUESTIONS
+    schemes = load_local_schemes()
+    
+    audit_data = []
+    for s in schemes:
+        rules = []
+        raw_rules = []
+        questions = []
+        for r in s.eligibility_rules:
+            param = r.parameter.value if hasattr(r.parameter, "value") else str(r.parameter)
+            op = r.operator.value if hasattr(r.operator, "value") else str(r.operator)
+            
+            raw_rules.append({
+                "id": r.id,
+                "parameter": param,
+                "operator": op,
+                "value": r.value
+            })
+            rules.append(f"{param} {op} {r.value}")
+            
+            if param in PARAMETER_QUESTIONS and PARAMETER_QUESTIONS[param] not in questions:
+                questions.append(PARAMETER_QUESTIONS[param])
+                
+        steps = []
+        urls = []
+        
+        if s.workflow and hasattr(s.workflow, "steps"):
+            for step in s.workflow.steps:
+                steps.append(step.description)
+                if hasattr(step, "url") and step.url:
+                    urls.append(step.url)
+                    
+        if s.references:
+            for ref in s.references:
+                if hasattr(ref, "url") and ref.url and ref.url not in urls:
+                    urls.append(ref.url)
+                
+        audit_data.append({
+            "id": s.scheme.id,
+            "name": s.scheme.name,
+            "provider": s.scheme.provider.name,
+            "description": s.scheme.description,
+            "eligibility_requirements": rules,
+            "raw_eligibility_rules": raw_rules,
+            "questions_to_ask": questions,
+            "steps_to_apply": steps,
+            "urls": urls
+        })
+        
+    return audit_data
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

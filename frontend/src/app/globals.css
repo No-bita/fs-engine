@@ -22,8 +22,6 @@ body {
   font-family: 'Inter', -apple-system, sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  height: 100vh;
-  overflow: hidden;
 }
 
 button {
