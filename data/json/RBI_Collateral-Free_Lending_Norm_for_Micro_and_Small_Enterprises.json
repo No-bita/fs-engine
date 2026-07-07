@@ -1,0 +1,126 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "RBI_COLLATERALFREE_LENDING_NORM_FOR_MICRO_AND_SMALL_ENTERPRISES",
+        "name": "RBI Collateral-Free Lending Norm for Micro and Small Enterprises",
+        "short_name": "RBI",
+        "slug": "rbi-collateral-free-lending-norm-for-micro-and-small-enterprises",
+        "description": "",
+        "scheme_type": "government_product",
+        "provider": {
+            "category": "public_institution",
+            "name": "Reserve Bank of India",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "startup_early_stage",
+                "existing_enterprise",
+                "all_stages"
+            ],
+            "sectors": [
+                "manufacturing",
+                "services",
+                "sector_agnostic"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "collateral_substitution"
+            ],
+            "msme_segments": [
+                "micro",
+                "small"
+            ],
+            "business_intents": [
+                "start factory",
+                "start service business"
+            ],
+            "search_keywords": [
+                "consultancy",
+                "industrial machines",
+                "repair shop",
+                "it services",
+                "factory setup"
+            ],
+            "search_aliases": [
+                "RBI"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "RBI_COLLATERALFREE_LENDING_NORM_FOR_MICRO_AND_SMALL_ENTERPRISES_BENEFIT_01",
+            "name": "Mandatory collateral-free credit up to 20 lakh (25 lakh discretionary)",
+            "category": "loan",
+            "summary": "RBI regulatory mandate under which banks and NBFCs cannot demand collateral for loans to micro and small enterprises up to a specified ceiling, improving formal-credit access for asset-light small businesses.",
+            "calculation_logic": "Mandatory no-collateral for MSE loans up to 20 lakh (raised from 10 lakh), effective 01 April 2026 under the Lending to MSME Sector (Amendment) Directions, 2026. Banks may extend collateral-free loans up to 25 lakh for units with a good track record and sound financials. Also applies to PMEGP-financed units. Credit guarantee (for example CGTMSE) may be used.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "0-2500000",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "collateral_free",
+            "guarantee_coverage": "via_cgtmse_where_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "RBI_COLLATERALFREE_LENDING_NORM_FOR_MICRO_AND_SMALL_ENTERPRISES_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "RBI_COLLATERALFREE_LENDING_NORM_FOR_MICRO_AND_SMALL_ENTERPRISES_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.rbi.org.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "RBI_COLLATERALFREE_LENDING_NORM_FOR_MICRO_AND_SMALL_ENTERPRISES_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://taxguru.in/rbi/rbi-expanded-collateral-free-msme-loans-rs-25-lakh-norms.html",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "This is a lending norm (regulatory benefit), not a scheme with an application; it underpins collateral-free access across bank MSE lending. Voluntary pledge of gold/silver within the limit is not treated as a violation."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of RBI Collateral-Free Lending Norm for Micro and Small Enterprises?",
+            "answer": "The main objective is to provide assistance and support under RBI Collateral-Free Lending Norm for Micro and Small Enterprises to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for RBI Collateral-Free Lending Norm for Micro and Small Enterprises?",
+            "answer": "Businesses belonging to micro, small in manufacturing, services, sector_agnostic may apply."
+        }
+    ]
+}

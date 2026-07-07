@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSME Scheme Registry - Quality & Recommendation Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --primary-accent: #38bdf8;
+            --secondary-accent: #a855f7;
+            --success-color: #4ade80;
+            --warning-color: #fbbf24;
+            --error-color: #f87171;
+            --text-color: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-accent) 0%, var(--secondary-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            background: rgba(15, 23, 42, 0.4);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: var(--card-bg);
+            color: var(--primary-accent);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-accent);
+            margin: 0.5rem 0;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Simulator Styles */
+        .simulator-container {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 2rem;
+        }
+
+        .profile-form {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            height: fit-content;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        select, input {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus, input:focus {
+            border-color: var(--primary-accent);
+        }
+
+        button.btn-primary {
+            width: 100%;
+            padding: 0.9rem;
+            background: linear-gradient(135deg, var(--primary-accent) 0%, var(--secondary-accent) 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        button.btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .results-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .scheme-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .scheme-card.ineligible {
+            opacity: 0.75;
+            border-left: 4px solid var(--error-color);
+        }
+
+        .scheme-card.eligible {
+            border-left: 4px solid var(--success-color);
+        }
+
+        .scheme-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .scheme-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .score-badge {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--primary-accent);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .rule-list {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .rule-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .rule-icon.passed { color: var(--success-color); }
+        .rule-icon.failed { color: var(--error-color); }
+
+        /* Linter View Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background: rgba(15, 23, 42, 0.6);
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .badge-error {
+            background: rgba(248, 113, 113, 0.15);
+            color: var(--error-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-warning {
+            background: rgba(251, 191, 36, 0.15);
+            color: var(--warning-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MSME Scheme Registry Dashboard</h1>
+        <div style="font-size: 0.9rem; color: var(--text-muted);" id="registry-ver">Registry Version: 1.0.0</div>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('simulator')">Match Simulator</button>
+        <button class="tab-btn" onclick="switchTab('health')">Registry Health & Linter</button>
+        <button class="tab-btn" onclick="switchTab('editor')">Rule Manager & Tester</button>
+    </div>
+
+    <!-- Simulator Content -->
+    <div id="simulator" class="tab-content active">
+        <div class="simulator-container">
+            <div class="profile-form">
+                <h3 style="margin-bottom: 1.5rem; font-weight: 600;">Business Profile</h3>
+                
+                <div class="form-group">
+                    <label>MSME Segment</label>
+                    <select id="msme_segment">
+                        <option value="micro">Micro</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Annual Turnover (INR)</label>
+                    <input type="number" id="turnover" value="1500000">
+                </div>
+
+                <div class="form-group">
+                    <label>Industry Sector</label>
+                    <select id="sector">
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="services">Services</option>
+                        <option value="trading">Trading</option>
+                        <option value="agriculture_allied">Agriculture & Allied</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Ownership Category</label>
+                    <select id="ownership">
+                        <option value="general">General</option>
+                        <option value="women">Women-led</option>
+                        <option value="SC">Scheduled Caste (SC)</option>
+                        <option value="ST">Scheduled Tribe (ST)</option>
+                        <option value="OBC">Other Backward Class (OBC)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>State of Operation</label>
+                    <select id="state">
+                        <option value="all_india">All India</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="karnataka">Karnataka</option>
+                        <option value="gujarat">Gujarat</option>
+                        <option value="tamil_nadu">Tamil Nadu</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="display: flex; gap: 0.5rem; align-items: center; margin-top: 1rem;">
+                    <input type="checkbox" id="udyam" style="width: auto;" checked>
+                    <label for="udyam" style="margin-bottom: 0;">Udyam Registered</label>
+                </div>
+
+                <button class="btn-primary" style="margin-top: 1.5rem;" onclick="simulateMatch()">Evaluate Match</button>
+            </div>
+
+            <div class="results-container">
+                <h2 id="match-count" style="font-weight: 600;">Matched Schemes</h2>
+                <div id="schemes-list" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <!-- Filled by dynamic fetch -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Health/Linter Content -->
+    <div id="health" class="tab-content">
+        <div class="stats-grid" id="health-stats">
+            <div class="stat-card">
+                <div class="stat-value" id="stat-total">48</div>
+                <div class="stat-label">Total Schemes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="stat-quality">84%</div>
+                <div class="stat-label">Avg Quality Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="stat-warnings">0</div>
+                <div class="stat-label">Lint Warnings</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="stat-errors">0</div>
+                <div class="stat-label">Lint Errors</div>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Active Registry Diagnostics</h3>
+        <table id="linter-table">
+            <thead>
+                <tr>
+                    <th>Scheme ID</th>
+                    <th>File Name</th>
+                    <th>Quality Score</th>
+                    <th>Validation</th>
+                    <th>Diagnostics & Issues</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Rule Manager & Tester Content -->
+    <div id="editor" class="tab-content">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <!-- Left Panel: Rule Editor -->
+            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem;">
+                <h3 style="margin-bottom: 1rem; font-weight: 600;">Scheme Selector</h3>
+                <div class="form-group">
+                    <label>Select Scheme to Manage</label>
+                    <select id="editor-scheme-select" onchange="loadSchemeRulesForEditing()">
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Active Rules</h3>
+                <div id="editor-rules-list" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+                    <!-- Lists active rules with delete buttons -->
+                </div>
+                
+                <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; font-weight: 600; color: var(--primary-accent);">Add New Eligibility Rule</h4>
+                <div style="background: rgba(15,23,42,0.4); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.2rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="form-group">
+                        <label>Rule ID</label>
+                        <input type="text" id="new-rule-id" placeholder="e.g. SMILE_RULE_TURNOVER">
+                    </div>
+                    <div class="form-group">
+                        <label>Parameter Path</label>
+                        <select id="new-rule-param">
+                            <option value="business.msme_segment">business.msme_segment</option>
+                            <option value="business.turnover">business.turnover</option>
+                            <option value="business.sector">business.sector</option>
+                            <option value="business.ownership_category">business.ownership_category</option>
+                            <option value="business.has_udyam_registration">business.has_udyam_registration</option>
+                            <option value="business.state">business.state</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Operator</label>
+                        <select id="new-rule-op">
+                            <option value="=">=</option>
+                            <option value="<=">&lt;=</option>
+                            <option value=">=">&gt;=</option>
+                            <option value="IN">IN</option>
+                            <option value="NOT IN">NOT IN</option>
+                            <option value="CONTAINS">CONTAINS</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Value (if list, separate with commas; e.g. micro,small or true/false)</label>
+                        <input type="text" id="new-rule-val" placeholder="e.g. 50000000.0 or micro,small">
+                    </div>
+                    <button class="btn-primary" style="padding: 0.6rem;" onclick="addRuleLocally()">Add Rule to List</button>
+                </div>
+                
+                <button class="btn-primary" style="margin-top: 2rem; background: linear-gradient(135deg, #10b981 0%, #059669 100%);" onclick="saveRulesToRegistry()">Save Rules to Scheme JSON</button>
+            </div>
+            
+            <!-- Right Panel: Live Tester -->
+            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; height: fit-content;">
+                <h3 style="margin-bottom: 1.5rem; font-weight: 600;">Interactive Rules Tester</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Input test parameters to check eligibility for this scheme in real time under current draft rules.</p>
+                
+                <div class="form-group">
+                    <label>MSME Segment</label>
+                    <select id="test-segment">
+                        <option value="micro">Micro</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="sc_st_entrepreneur">SC/ST Entrepreneur</option>
+                        <option value="women_led">Women-led</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Turnover (INR)</label>
+                    <input type="number" id="test-turnover" value="1500000">
+                </div>
+                <div class="form-group">
+                    <label>Industry Sector</label>
+                    <select id="test-sector">
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="services">Services</option>
+                        <option value="trading">Trading</option>
+                        <option value="agriculture_allied">Agriculture & Allied</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ownership Category</label>
+                    <select id="test-ownership">
+                        <option value="general">General</option>
+                        <option value="women">Women</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                        <option value="OBC">OBC</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>State</label>
+                    <input type="text" id="test-state" value="maharashtra">
+                </div>
+                <div class="form-group" style="display: flex; gap: 0.5rem; align-items: center; margin-top: 1rem;">
+                    <input type="checkbox" id="test-udyam" style="width: auto;" checked>
+                    <label for="test-udyam" style="margin-bottom: 0;">Udyam Registered</label>
+                </div>
+                
+                <button class="btn-primary" style="margin-top: 1.5rem;" onclick="testDraftRules()">Test Draft Rules</button>
+                
+                <div id="test-result-box" style="margin-top: 1.5rem; padding: 1.2rem; border-radius: 8px; display: none;">
+                    <!-- Result shown dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSchemeId = '';
+        window.draftRules = [];
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        async function simulateMatch() {
+            const body = {
+                msme_segment: document.getElementById('msme_segment').value,
+                turnover: parseFloat(document.getElementById('turnover').value),
+                sector: document.getElementById('sector').value,
+                ownership_category: document.getElementById('ownership').value,
+                state: document.getElementById('state').value,
+                has_udyam_registration: document.getElementById('udyam').checked
+            };
+
+            const response = await fetch('/recommend', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            });
+            const data = await response.json();
+
+            const list = document.getElementById('schemes-list');
+            list.innerHTML = '';
+            document.getElementById('match-count').innerText = `Matched Schemes (${data.length})`;
+
+            data.forEach(item => {
+                const s = item.scheme;
+                const card = document.createElement('div');
+                card.className = `scheme-card ${item.is_eligible ? 'eligible' : 'ineligible'}`;
+                
+                let ruleHtml = '';
+                item.rule_evaluations.forEach(r => {
+                    const statusClass = r.passed ? 'passed' : 'failed';
+                    const icon = r.passed ? '✓' : '✗';
+                    ruleHtml += `
+                        <div class="rule-item">
+                            <span class="rule-icon ${statusClass}">${icon}</span>
+                            <span>${r.explanation}</span>
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="scheme-header">
+                        <div>
+                            <span class="scheme-title">${s.scheme.name}</span>
+                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">
+                                ID: ${s.scheme.id} | Type: ${s.scheme.scheme_type} | Level: ${s.scheme.provider.government_level}
+                            </div>
+                        </div>
+                        <span class="score-badge">Match: ${Math.round(item.score)}%</span>
+                    </div>
+                    <p style="font-size: 0.95rem; line-height: 1.4; color: var(--text-color);">${s.scheme.description || 'Provides credit options and policy assistance for target segments.'}</p>
+                    <div style="margin-top: 0.8rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        ${s.scheme.tags.sectors.map(sec => `<span style="font-size: 0.75rem; background: rgba(255,255,255,0.05); padding: 0.2rem 0.5rem; border-radius: 4px;">${sec}</span>`).join('')}
+                        ${s.scheme.tags.msme_segments.map(seg => `<span style="font-size: 0.75rem; background: rgba(56,189,248,0.1); color: var(--primary-accent); padding: 0.2rem 0.5rem; border-radius: 4px;">${seg}</span>`).join('')}
+                    </div>
+                    <div class="rule-list">
+                        ${ruleHtml}
+                    </div>
+                `;
+                list.appendChild(card);
+            });
+        }
+
+        async function loadDiagnostics() {
+            try {
+                // Fetch the compilation report from local JSON
+                const response = await fetch('/api/diagnostics');
+                const data = await response.json();
+                
+                // Update stats
+                document.getElementById('stat-total').innerText = data.length;
+                
+                let totalQuality = 0;
+                let warningsCount = 0;
+                let errorsCount = 0;
+
+                const tbody = document.querySelector('#linter-table tbody');
+                tbody.innerHTML = '';
+
+                // Populate selector dropdown
+                const select = document.getElementById('editor-scheme-select');
+                const prevVal = select.value;
+                select.innerHTML = '';
+
+                data.forEach(item => {
+                    totalQuality += item.quality_score;
+                    
+                    const reportWarnings = item.warnings || [];
+                    const lintIssues = item.lint_issues || [];
+
+                    const totalWarnings = reportWarnings.length + lintIssues.filter(l => l.severity === 'warning').length;
+                    const totalErrors = item.errors.length + lintIssues.filter(l => l.severity === 'error').length;
+
+                    warningsCount += totalWarnings;
+                    errorsCount += totalErrors;
+
+                    let diagnosisHtml = '';
+                    if (totalWarnings === 0 && totalErrors === 0) {
+                        diagnosisHtml = '<span style="color: var(--success-color);">Clean - No Issues</span>';
+                    } else {
+                        if (totalErrors > 0) {
+                            diagnosisHtml += `<span class="badge-error">${totalErrors} Errors</span> `;
+                        }
+                        if (totalWarnings > 0) {
+                            diagnosisHtml += `<span class="badge-warning">${totalWarnings} Warnings</span>`;
+                        }
+                        
+                        // list details
+                        const details = [];
+                        item.errors.forEach(e => details.push(`Error: ${e}`));
+                        lintIssues.forEach(l => details.push(`Lint ${l.severity}: ${l.message}`));
+                        
+                        diagnosisHtml += `<div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">${details.join('<br>')}</div>`;
+                    }
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td style="font-weight: 600;">${item.scheme_id}</td>
+                        <td>${item.file_name}</td>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="background: rgba(255,255,255,0.05); width: 60px; height: 6px; border-radius: 3px; overflow: hidden;">
+                                    <div style="background: var(--primary-accent); width: ${item.quality_score}%; height: 100%;"></div>
+                                </div>
+                                <span>${item.quality_score}%</span>
+                            </div>
+                        </td>
+                        <td>${item.is_valid ? '<span style="color: var(--success-color);">Passed</span>' : '<span style="color: var(--error-color);">Failed</span>'}</td>
+                        <td>${diagnosisHtml}</td>
+                    `;
+                    tbody.appendChild(row);
+
+                    // Add option to scheme selector
+                    const opt = document.createElement('option');
+                    opt.value = item.scheme_id;
+                    opt.innerText = item.scheme_id;
+                    select.appendChild(opt);
+                });
+
+                if (prevVal) {
+                    select.value = prevVal;
+                }
+                loadSchemeRulesForEditing();
+
+                document.getElementById('stat-quality').innerText = Math.round(totalQuality / data.length) + '%';
+                document.getElementById('stat-warnings').innerText = warningsCount;
+                document.getElementById('stat-errors').innerText = errorsCount;
+
+            } catch (err) {
+                console.error("Error loading diagnostics:", err);
+            }
+        }
+
+        async function loadSchemeRulesForEditing() {
+            const select = document.getElementById('editor-scheme-select');
+            currentSchemeId = select.value;
+            if (!currentSchemeId) return;
+
+            const response = await fetch('/scheme/' + currentSchemeId);
+            if (!response.ok) return;
+            const schemeDoc = await response.json();
+
+            window.draftRules = schemeDoc.eligibility_rules || [];
+            renderDraftRules();
+        }
+
+        function renderDraftRules() {
+            const list = document.getElementById('editor-rules-list');
+            list.innerHTML = '';
+            if (window.draftRules.length === 0) {
+                list.innerHTML = '<div style="color: var(--text-muted); font-size: 0.9rem;">No eligibility rules defined.</div>';
+                return;
+            }
+
+            window.draftRules.forEach((rule, index) => {
+                const div = document.createElement('div');
+                div.style = 'display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 0.8rem; border-radius: 8px;';
+                div.innerHTML = `
+                    <div>
+                        <span style="font-weight: 600; color: var(--primary-accent);">${rule.id}:</span>
+                        <span style="font-size: 0.9rem;">${rule.parameter} ${rule.operator} ${JSON.stringify(rule.value)}</span>
+                    </div>
+                    <button class="badge-error" style="border: none; cursor: pointer; padding: 0.3rem 0.6rem;" onclick="removeRuleLocally(${index})">Delete</button>
+                `;
+                list.appendChild(div);
+            });
+        }
+
+        function removeRuleLocally(index) {
+            window.draftRules.splice(index, 1);
+            renderDraftRules();
+        }
+
+        function addRuleLocally() {
+            const id = document.getElementById('new-rule-id').value.trim();
+            const param = document.getElementById('new-rule-param').value;
+            const op = document.getElementById('new-rule-op').value;
+            let valInput = document.getElementById('new-rule-val').value.trim();
+
+            if (!id) {
+                alert("Please enter a Rule ID.");
+                return;
+            }
+
+            // Parse value
+            let value = valInput;
+            if (valInput.toLowerCase() === 'true') value = true;
+            else if (valInput.toLowerCase() === 'false') value = false;
+            else if (!isNaN(valInput) && valInput !== '') value = parseFloat(valInput);
+            else if (op === 'IN' || op === 'NOT IN') {
+                value = valInput.split(',').map(s => s.trim());
+            }
+
+            const newRule = { id, parameter: param, operator: op, value };
+            window.draftRules.push(newRule);
+            renderDraftRules();
+
+            // Reset inputs
+            document.getElementById('new-rule-id').value = '';
+            document.getElementById('new-rule-val').value = '';
+        }
+
+        async function saveRulesToRegistry() {
+            if (!currentSchemeId) return;
+            const response = await fetch(`/api/scheme/${currentSchemeId}/rules`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ rules: window.draftRules })
+            });
+            const result = await response.json();
+            if (response.ok) {
+                alert(`Successfully saved rules for ${currentSchemeId}! Registry compiled.`);
+                loadDiagnostics(); // Refresh health report
+            } else {
+                alert(`Error saving rules: ${result.detail}`);
+            }
+        }
+
+        function evaluateRuleJS(profile, rule) {
+            const param = rule.parameter;
+            const op = rule.operator;
+            const val = rule.value;
+            
+            const key = param.split('.').pop();
+            let currentVal = profile[key];
+            
+            try {
+                if (op === '=') return String(currentVal) === String(val);
+                if (op === '<=') return parseFloat(currentVal) <= parseFloat(val);
+                if (op === '>=') return parseFloat(currentVal) >= parseFloat(val);
+                if (op === 'IN') {
+                    const arr = Array.isArray(val) ? val : String(val).split(',').map(s => s.trim());
+                    return arr.includes(String(currentVal));
+                }
+                if (op === 'NOT IN') {
+                    const arr = Array.isArray(val) ? val : String(val).split(',').map(s => s.trim());
+                    return !arr.includes(String(currentVal));
+                }
+                if (op === 'CONTAINS') return String(currentVal).includes(String(val));
+            } catch(e) {
+                return false;
+            }
+            return false;
+        }
+
+        function testDraftRules() {
+            const profile = {
+                msme_segment: document.getElementById('test-segment').value,
+                turnover: parseFloat(document.getElementById('test-turnover').value),
+                sector: document.getElementById('test-sector').value,
+                ownership_category: document.getElementById('test-ownership').value,
+                state: document.getElementById('test-state').value,
+                has_udyam_registration: document.getElementById('test-udyam').checked
+            };
+            
+            const box = document.getElementById('test-result-box');
+            box.style.display = 'block';
+            box.innerHTML = '';
+            
+            let isEligible = true;
+            let evaluationsHtml = '';
+            
+            if (!window.draftRules || window.draftRules.length === 0) {
+                box.style.background = 'rgba(74, 222, 128, 0.15)';
+                box.style.border = '1px solid var(--success-color)';
+                box.innerHTML = `<h4 style="color: var(--success-color); font-weight: 600;">Draft Result: ELIGIBLE</h4>
+                                 <p style="font-size: 0.9rem; margin-top: 0.5rem;">No eligibility rules defined; scheme is open.</p>`;
+                return;
+            }
+            
+            window.draftRules.forEach(rule => {
+                const passed = evaluateRuleJS(profile, rule);
+                if (!passed) isEligible = false;
+                
+                const statusClass = passed ? 'passed' : 'failed';
+                const icon = passed ? '✓' : '✗';
+                evaluationsHtml += `
+                    <div class="rule-item">
+                        <span class="rule-icon ${statusClass}">${icon}</span>
+                        <span>${passed ? 'Passed' : 'Failed'}: ${rule.parameter} ${rule.operator} ${JSON.stringify(rule.value)}</span>
+                    </div>
+                `;
+            });
+            
+            if (isEligible) {
+                box.style.background = 'rgba(74, 222, 128, 0.15)';
+                box.style.border = '1px solid var(--success-color)';
+                box.innerHTML = `
+                    <h4 style="color: var(--success-color); font-weight: 600; margin-bottom: 0.8rem;">Draft Result: ELIGIBLE</h4>
+                    <div class="rule-list">${evaluationsHtml}</div>
+                `;
+            } else {
+                box.style.background = 'rgba(248, 113, 113, 0.15)';
+                box.style.border = '1px solid var(--error-color)';
+                box.innerHTML = `
+                    <h4 style="color: var(--error-color); font-weight: 600; margin-bottom: 0.8rem;">Draft Result: NOT ELIGIBLE</h4>
+                    <div class="rule-list">${evaluationsHtml}</div>
+                `;
+            }
+        }
+
+        // Initialize
+        simulateMatch();
+        loadDiagnostics();
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "CREDIT_GUARANTEE_SCHEME_FOR_STARTUPS_CGSS",
+        "name": "Credit Guarantee Scheme for Startups (CGSS)",
+        "short_name": "CGSS",
+        "slug": "credit-guarantee-scheme-for-startups-cgss",
+        "description": "",
+        "scheme_type": "credit_guarantee",
+        "provider": {
+            "category": "public_institution",
+            "name": "NCGTC (DPIIT, Ministry of Commerce and Industry)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "startup_early_stage",
+                "expansion"
+            ],
+            "sectors": [
+                "sector_agnostic"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "equity_seed_capital",
+                "collateral_substitution"
+            ],
+            "msme_segments": [
+                "startup_dpiit"
+            ],
+            "business_intents": [
+                "need loan",
+                "need collateral free loan",
+                "working capital support"
+            ],
+            "search_keywords": [
+                "low interest",
+                "guarantee",
+                "no security",
+                "loan",
+                "term loan",
+                "working capital",
+                "credit cover",
+                "collateral free"
+            ],
+            "search_aliases": [
+                "CGSS"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "CREDIT_GUARANTEE_SCHEME_FOR_STARTUPS_CGSS_BENEFIT_01",
+            "name": "Collateral-free credit guarantee for DPIIT-recognised startups",
+            "category": "loan",
+            "summary": "Provides collateral-free credit guarantee cover to banks, NBFCs and SEBI-registered venture debt funds lending to DPIIT-recognised startups, across venture debt, working capital, term loans and other debt instruments.",
+            "calculation_logic": "Guarantee ceiling 20 crore per borrower (revised 2025). Extent of cover: 85pct of amount in default for loans up to 10 crore, 75pct for loans above 10 crore. Annual Guarantee Fee 1pct p.a. for 27 Champion Sectors, otherwise 2pct (1.5pct for women/NER).",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "0-200000000",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "collateral_free",
+            "guarantee_coverage": "up_to_85pct_below_10cr_75pct_above",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "CREDIT_GUARANTEE_SCHEME_FOR_STARTUPS_CGSS_RULE_GEN_SEGMENT",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "startup_dpiit"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "CREDIT_GUARANTEE_SCHEME_FOR_STARTUPS_CGSS_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.startupindia.gov.in/content/sih/en/credit-guarantee-scheme-for-startups.html",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "CREDIT_GUARANTEE_SCHEME_FOR_STARTUPS_CGSS_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2127843",
+            "type": "official_guidelines",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Startup must be DPIIT-recognised, not in default/NPA. Guarantee issued via NCGTC to Member Institutions; borrowers apply through the lender. Overlaps DPIIT/Startup India scope but placed here as a credit guarantee."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Credit Guarantee Scheme for Startups (CGSS)?",
+            "answer": "The main objective is to provide assistance and support under Credit Guarantee Scheme for Startups (CGSS) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Credit Guarantee Scheme for Startups (CGSS)?",
+            "answer": "Businesses belonging to startup_dpiit in sector_agnostic may apply."
+        }
+    ]
+}

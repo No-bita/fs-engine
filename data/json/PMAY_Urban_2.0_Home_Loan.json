@@ -1,0 +1,169 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "PRADHAN_MANTRI_AWAS_YOJANA_URBAN_2_0_ISS",
+        "name": "Pradhan Mantri Awas Yojana – Urban 2.0 (Interest Subsidy Scheme)",
+        "short_name": "PMAY-U 2.0 ISS",
+        "slug": "pradhan-mantri-awas-yojana-urban-2-0-iss",
+        "description": "Improve affordable home ownership in urban India through subsidized home loans.",
+        "scheme_type": "subsidy",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of Housing and Urban Affairs",
+            "implementing_agencies": [
+                "MoHUA",
+                "Participating Banks",
+                "Housing Finance Companies"
+            ],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "state_specific",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [],
+            "sectors": [],
+            "benefit_categories": [
+                "subsidy"
+            ],
+            "msme_segments": [],
+            "business_intents": [
+                "need subsidy",
+                "discount on cost"
+            ],
+            "search_keywords": [
+                "reimbursement",
+                "subsidy",
+                "financial support",
+                "govt grant"
+            ],
+            "search_aliases": [
+                "PMAY-U 2.0 ISS"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "PMAYU2_BENEFIT_01",
+            "name": "Interest Subsidy",
+            "category": "subsidy",
+            "summary": "4% interest subsidy on the first ₹8 lakh of home loans up to ₹25 lakh for EWS, LIG, and MIG urban families.",
+            "calculation_logic": "Subsidy calculated at 4% p.a. on a maximum principal of ₹8 lakh over a maximum tenure of 12 years.",
+            "max_amount": 180000.0,
+            "min_amount": 0.0,
+            "loan_range": "Loan up to ₹25 lakh, property value up to ₹35 lakh",
+            "interest_rate": "4% interest subsidy reduction",
+            "collateral_required": true,
+            "collateral_details": "Hypothecation of the residential property",
+            "guarantee_coverage": "",
+            "tenure_months": 144,
+            "moratorium_months": 0,
+            "margin_contribution": ""
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "PMAY_RULE_INCOME",
+            "parameter": "business.turnover",
+            "operator": "<=",
+            "value": 900000.0
+        },
+        {
+            "id": "PMAY_RULE_UDYAM",
+            "parameter": "business.has_udyam_registration",
+            "operator": "IN",
+            "value": [
+                true,
+                false
+            ]
+        }
+    ],
+    "documents": [
+        {
+            "id": "PMAYU2_DOC_01",
+            "name": "Aadhaar and PAN Cards",
+            "description": "Identity proof of applicant and family members",
+            "is_mandatory": true,
+            "issuing_authority": "UIDAI/Income Tax Dept",
+            "digitized_verification_available": true
+        },
+        {
+            "id": "PMAYU2_DOC_02",
+            "name": "Income Proof",
+            "description": "Salary slips, ITR, or income certificate showing annual household income up to ₹9 lakh",
+            "is_mandatory": true,
+            "issuing_authority": "Employer/Revenue Authority",
+            "digitized_verification_available": false
+        },
+        {
+            "id": "PMAYU2_DOC_03",
+            "name": "Property Documents",
+            "description": "Sale agreement, approved plan, carpet area details <= 120 sq. m., property value <= ₹35 lakh",
+            "is_mandatory": true,
+            "issuing_authority": "Registrar/Municipal Corp",
+            "digitized_verification_available": false
+        }
+    ],
+    "workflow": [
+        {
+            "id": "PMAYU2_WF_01",
+            "step_number": 1,
+            "name": "Check Eligibility & Apply",
+            "description": "Register on JanSamarth, check eligibility, select lender, and submit online application.",
+            "actor": "applicant",
+            "channel": "online",
+            "url": "https://www.jansamarth.in/home-loan-pradhan-mantri-awas-yojana-urban-2-0-scheme",
+            "estimated_duration_days": 1
+        },
+        {
+            "id": "PMAYU2_WF_02",
+            "step_number": 2,
+            "name": "Lender Sanction and Subsidy Credit",
+            "description": "Lender evaluates property, approves loan, and processes interest subsidy which is credited directly to reduce principal outstanding.",
+            "actor": "bank",
+            "channel": "hybrid",
+            "url": "",
+            "estimated_duration_days": 30
+        }
+    ],
+    "references": [
+        {
+            "id": "PMAYU2_REF_01",
+            "title": "JanSamarth PMAY-U 2.0 Application Portal",
+            "url": "https://www.jansamarth.in/home-loan-pradhan-mantri-awas-yojana-urban-2-0-scheme",
+            "type": "application_portal",
+            "language": "en"
+        },
+        {
+            "id": "PMAYU2_REF_02",
+            "title": "PMAY-U 2.0 Operational Guidelines",
+            "url": "https://pmay-urban.gov.in/uploads/guidelines/Operational-Guidelines-of-PMAY-U-2.pdf",
+            "type": "official_guidelines",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-05T00:00:00Z",
+        "updated_at": "2026-07-05T00:00:00Z",
+        "verified_at": "2026-07-05T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 100,
+        "notes": "Applicant family must not own a pucca house anywhere in India. First-time urban home buyers."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Pradhan Mantri Awas Yojana – Urban 2.0 (Interest Subsidy Scheme)?",
+            "answer": "The main objective is to provide assistance and support under Pradhan Mantri Awas Yojana – Urban 2.0 (Interest Subsidy Scheme) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Pradhan Mantri Awas Yojana – Urban 2.0 (Interest Subsidy Scheme)?",
+            "answer": "Businesses belonging to eligible categories in various sectors may apply."
+        }
+    ]
+}

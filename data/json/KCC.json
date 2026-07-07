@@ -1,0 +1,192 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "KISAN_CREDIT_CARD_KCC_SCHEME",
+        "name": "Kisan Credit Card (KCC) Scheme",
+        "short_name": "KCC",
+        "slug": "kisan-credit-card-kcc-scheme",
+        "description": "Provide timely and affordable short-term agricultural credit for crop cultivation and allied activities.",
+        "scheme_type": "government_scheme",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of Agriculture & Farmers Welfare",
+            "implementing_agencies": [
+                "NABARD",
+                "RBI",
+                "Participating Banks"
+            ],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise"
+            ],
+            "sectors": [
+                "agriculture_allied"
+            ],
+            "benefit_categories": [
+                "loan",
+                "subsidy",
+                "interest_subvention"
+            ],
+            "msme_segments": [
+                "farmer",
+                "tenant_farmer",
+                "sharecropper",
+                "shg",
+                "jlg"
+            ],
+            "business_intents": [
+                "need loan",
+                "farming capital",
+                "working capital support",
+                "working_capital"
+            ],
+            "search_keywords": [
+                "low interest",
+                "cold storage",
+                "loan",
+                "term loan",
+                "working capital",
+                "dairy farm",
+                "crop cultivation"
+            ],
+            "search_aliases": [
+                "KCC"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "KCC_BENEFIT_01",
+            "name": "Revolving Credit Facility",
+            "category": "loan",
+            "summary": "Revolving credit limit for crop cultivation, purchase of agricultural inputs, and post-harvest working capital needs.",
+            "calculation_logic": "Scale of Finance × Area Cultivated + 10% for post-harvest/household + 20% for maintenance + insurance components.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "Based on land holdings and cropping pattern",
+            "interest_rate": "7% p.a. base rate",
+            "collateral_required": false,
+            "collateral_details": "Generally collateral free up to ₹2 lakh",
+            "guarantee_coverage": "",
+            "tenure_months": 60,
+            "moratorium_months": 0,
+            "margin_contribution": ""
+        },
+        {
+            "id": "KCC_BENEFIT_02",
+            "name": "Interest Subvention and Prompt Repayment Incentive",
+            "category": "interest_subvention",
+            "summary": "Effective interest rate reduced to 4% p.a. for timely repayment of crop loans up to ₹3 lakh.",
+            "calculation_logic": "7% base rate minus 2% interest subvention and 3% prompt repayment incentive.",
+            "max_amount": 300000.0,
+            "min_amount": 0.0,
+            "loan_range": "Up to ₹3 lakh",
+            "interest_rate": "4% p.a. effective rate upon prompt repayment",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": ""
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "KCC_RULE_SECTOR",
+            "parameter": "business.sector",
+            "operator": "=",
+            "value": "agriculture_allied"
+        },
+        {
+            "id": "KCC_RULE_TURNOVER",
+            "parameter": "business.turnover",
+            "operator": "<=",
+            "value": 10000000.0
+        }
+    ],
+    "documents": [
+        {
+            "id": "KCC_DOC_01",
+            "name": "Aadhaar Card",
+            "description": "Identity and address proof",
+            "is_mandatory": true,
+            "issuing_authority": "UIDAI",
+            "digitized_verification_available": true
+        },
+        {
+            "id": "KCC_DOC_02",
+            "name": "Land Records or Lease Agreement",
+            "description": "Proof of land ownership, revenue records, lease agreement or cultivator certification",
+            "is_mandatory": true,
+            "issuing_authority": "State Revenue Department",
+            "digitized_verification_available": false
+        }
+    ],
+    "workflow": [
+        {
+            "id": "KCC_WF_01",
+            "step_number": 1,
+            "name": "Apply on JanSamarth",
+            "description": "Visit the JanSamarth portal, select KCC, and complete online application and eligibility check.",
+            "actor": "applicant",
+            "channel": "online",
+            "url": "https://www.jansamarth.in/kisan-credit-card-scheme",
+            "estimated_duration_days": 1
+        },
+        {
+            "id": "KCC_WF_02",
+            "step_number": 2,
+            "name": "Lender Review and Disbursal",
+            "description": "Participating bank reviews the cultivation details, verifies land records, and sanctions and issues the RuPay Kisan Card.",
+            "actor": "bank",
+            "channel": "hybrid",
+            "url": "",
+            "estimated_duration_days": 15
+        }
+    ],
+    "references": [
+        {
+            "id": "KCC_REF_01",
+            "title": "JanSamarth Kisan Credit Card Portal",
+            "url": "https://www.jansamarth.in/kisan-credit-card-scheme",
+            "type": "application_portal",
+            "language": "en"
+        },
+        {
+            "id": "KCC_REF_02",
+            "title": "SBI Kisan Credit Card Operational Guidelines",
+            "url": "https://sbi.bank.in/web/agri-rural/agriculture-banking/crop-loan/kisan-credit-card",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-05T00:00:00Z",
+        "updated_at": "2026-07-05T00:00:00Z",
+        "verified_at": "2026-07-05T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 100,
+        "notes": "Requires annual review for continuation and credit limit enhancement."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Kisan Credit Card (KCC) Scheme?",
+            "answer": "The main objective is to provide assistance and support under Kisan Credit Card (KCC) Scheme to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Kisan Credit Card (KCC) Scheme?",
+            "answer": "Businesses belonging to farmer, tenant_farmer, sharecropper, shg, jlg in agriculture_allied may apply."
+        }
+    ]
+}

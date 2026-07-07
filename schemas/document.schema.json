@@ -1,0 +1,46 @@
+{
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+            "description": "Canonical ID for document, e.g., DOC_UDYAM_REGISTRATION",
+            "pattern": "^[A-Z0-9_]+$",
+            "title": "Id",
+            "type": "string"
+        },
+        "name": {
+            "description": "Name of the document",
+            "title": "Name",
+            "type": "string"
+        },
+        "description": {
+            "default": "",
+            "description": "Purpose or description of the document",
+            "title": "Description",
+            "type": "string"
+        },
+        "is_mandatory": {
+            "default": true,
+            "description": "Whether the document is mandatory",
+            "title": "Is Mandatory",
+            "type": "boolean"
+        },
+        "issuing_authority": {
+            "default": "",
+            "description": "Authority issuing the document",
+            "title": "Issuing Authority",
+            "type": "string"
+        },
+        "digitized_verification_available": {
+            "default": false,
+            "description": "Whether digitized API verification is available",
+            "title": "Digitized Verification Available",
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ],
+    "title": "DocumentRequirement",
+    "type": "object"
+}

@@ -1,0 +1,67 @@
+{
+    "$defs": {
+        "RuleOperator": {
+            "enum": [
+                "=",
+                "!=",
+                ">",
+                "<",
+                ">=",
+                "<=",
+                "IN",
+                "NOT IN",
+                "BETWEEN",
+                "CONTAINS"
+            ],
+            "title": "RuleOperator",
+            "type": "string"
+        },
+        "RuleParameter": {
+            "enum": [
+                "business.msme_segment",
+                "business.turnover",
+                "business.state",
+                "business.district",
+                "business.sector",
+                "business.ownership_category",
+                "business.constitution",
+                "business.investment_plant_machinery",
+                "business.establishment_year",
+                "business.has_udyam_registration",
+                "business.employment_count",
+                "business.export_status"
+            ],
+            "title": "RuleParameter",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+            "description": "Canonical ID for rule, e.g., PMEGP_RULE_TURNOVER",
+            "pattern": "^[A-Z0-9_]+$",
+            "title": "Id",
+            "type": "string"
+        },
+        "parameter": {
+            "$ref": "#/$defs/RuleParameter",
+            "description": "The business profile parameter to evaluate"
+        },
+        "operator": {
+            "$ref": "#/$defs/RuleOperator",
+            "description": "Comparison operator"
+        },
+        "value": {
+            "description": "The matching value or threshold",
+            "title": "Value"
+        }
+    },
+    "required": [
+        "id",
+        "parameter",
+        "operator",
+        "value"
+    ],
+    "title": "EligibilityRule",
+    "type": "object"
+}

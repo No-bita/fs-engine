@@ -1,0 +1,80 @@
+{
+    "$defs": {
+        "WorkflowActor": {
+            "enum": [
+                "applicant",
+                "provider",
+                "implementing_agency",
+                "bank",
+                "third_party"
+            ],
+            "title": "WorkflowActor",
+            "type": "string"
+        },
+        "WorkflowChannel": {
+            "enum": [
+                "online",
+                "offline",
+                "hybrid"
+            ],
+            "title": "WorkflowChannel",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+            "description": "Canonical ID for workflow step, e.g., PMEGP_WF_STEP_01",
+            "pattern": "^[A-Z0-9_]+$",
+            "title": "Id",
+            "type": "string"
+        },
+        "step_number": {
+            "description": "Sequence order of the step",
+            "exclusiveMinimum": 0,
+            "title": "Step Number",
+            "type": "integer"
+        },
+        "name": {
+            "description": "Name of the step",
+            "title": "Name",
+            "type": "string"
+        },
+        "description": {
+            "description": "Actionable detail of the step",
+            "title": "Description",
+            "type": "string"
+        },
+        "actor": {
+            "$ref": "#/$defs/WorkflowActor",
+            "description": "Who performs the step"
+        },
+        "channel": {
+            "$ref": "#/$defs/WorkflowChannel",
+            "description": "How the step is executed"
+        },
+        "url": {
+            "default": "",
+            "description": "Optional URL related to this step",
+            "title": "Url",
+            "type": "string"
+        },
+        "estimated_duration_days": {
+            "default": 0,
+            "description": "Estimated duration in days, 0 if immediate/unknown",
+            "minimum": 0,
+            "title": "Estimated Duration Days",
+            "type": "integer"
+        }
+    },
+    "required": [
+        "id",
+        "step_number",
+        "name",
+        "description",
+        "actor",
+        "channel"
+    ],
+    "title": "WorkflowStep",
+    "type": "object"
+}

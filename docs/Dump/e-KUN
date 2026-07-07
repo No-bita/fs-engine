@@ -1,0 +1,361 @@
+Below is a structured extraction of the **e-Kisan Upaj Nidhi (e-KUN)** scheme available through the JanSamarth portal, supplemented with information from the Warehousing Development and Regulatory Authority (WDRA), PIB, and official implementation documents.
+
+---
+
+# e-Kisan Upaj Nidhi (e-KUN)
+
+## Overview
+
+| Field                | Value                                                                                 |                   |
+| -------------------- | ------------------------------------------------------------------------------------- | ----------------- |
+| Scheme Name          | e-Kisan Upaj Nidhi (e-KUN)                                                            |                   |
+| Ministry             | Ministry of Consumer Affairs, Food & Public Distribution                              |                   |
+| Nodal Agency         | Warehousing Development and Regulatory Authority (WDRA)                               |                   |
+| Government Level     | Central Government                                                                    |                   |
+| Application Portal   | JanSamarth                                                                            |                   |
+| Scheme Type          | Post-Harvest Finance Scheme                                                           |                   |
+| Financial Instrument | Warehouse Receipt Financing / Pledge Loan                                             |                   |
+| Target Beneficiaries | Farmers, FPOs, Agri Traders, Agri MSMEs                                               |                   |
+| Objective            | Enable post-harvest loans against warehouse receipts without distress sale of produce | ([JanSamarth][1]) |
+
+---
+
+# Objective
+
+The scheme enables farmers and other eligible agricultural participants to obtain **post-harvest working capital loans** by pledging their **electronic Negotiable Warehouse Receipts (e-NWRs)** issued against agricultural commodities stored in **WDRA-registered warehouses**.
+
+The primary objective is to:
+
+* Prevent distress sale immediately after harvest
+* Improve farmers' bargaining power
+* Provide quick institutional credit
+* Encourage scientific warehousing
+* Improve price realization
+* Promote formal agricultural financing
+
+([WDRA][2])
+
+---
+
+# Primary Benefits
+
+## 1. Post-Harvest Loan Against Stored Produce
+
+Borrowers can pledge warehouse receipts instead of selling their produce immediately after harvest.
+
+The stored commodity itself acts as the primary security.
+
+---
+
+## 2. No Additional Collateral
+
+No separate collateral is required.
+
+The **electronic Negotiable Warehouse Receipt (e-NWR)** serves as the collateral for the loan.
+
+([Press Information Bureau][3])
+
+---
+
+## 3. Affordable Interest Rate
+
+For eligible Small and Marginal Farmers:
+
+* Interest rate: **7% per annum**
+* Interest subvention available for loans up to ₹3 lakh for storage periods up to six months, subject to Government of India guidelines.
+
+For other borrowers, interest is charged as per the lending bank's applicable rates.
+
+([JanSamarth][1])
+
+---
+
+## 4. Better Price Realisation
+
+Instead of selling immediately after harvest when prices are low, farmers can:
+
+* store produce
+* obtain working capital
+* wait for favourable market prices
+* sell later
+
+This improves income realization.
+
+---
+
+## 5. Lower Warehousing Cost
+
+At launch, the required warehouse security deposit was reduced, making storage more affordable and improving access for small farmers.
+
+([Press Information Bureau][3])
+
+---
+
+## 6. Integration with Digital Agriculture Platforms
+
+The scheme integrates with:
+
+* WDRA
+* Electronic Negotiable Warehouse Receipts (e-NWR)
+* JanSamarth
+* e-NAM (Electronic National Agriculture Market)
+
+allowing farmers to access broader markets beyond local mandis and MSP procurement.
+
+([UPSC IAS Materials][4])
+
+---
+
+# Eligible Beneficiaries
+
+The scheme is available to:
+
+* Individual farmers
+* Farmer Producer Organisations (FPOs)
+* Farmer Producer Companies (FPCs)
+* Agri traders
+* Commodity traders
+* Agricultural aggregators
+* Food processing MSMEs
+* Businesses dealing in eligible agricultural commodities
+
+provided eligible produce is stored in a WDRA-registered warehouse.
+
+([CreditCares][5])
+
+---
+
+# Eligibility Criteria
+
+Applicants should satisfy the following conditions.
+
+## Produce Storage
+
+Agricultural produce must be stored in a **WDRA-registered warehouse**.
+
+---
+
+## Electronic Warehouse Receipt
+
+The warehouse must issue an **Electronic Negotiable Warehouse Receipt (e-NWR)** through an authorized repository.
+
+---
+
+## Eligible Commodity
+
+Only notified agricultural commodities accepted by participating warehouses and lenders are eligible.
+
+---
+
+## Ownership
+
+The applicant must be the legal owner of the stored commodity represented by the e-NWR.
+
+---
+
+## Participating Lender
+
+Loan must be sanctioned by a participating bank or financial institution under the scheme.
+
+([WDRA][2])
+
+---
+
+# Loan Amount
+
+Unlike fixed subsidy schemes, the loan amount depends on:
+
+* Commodity type
+* Quantity stored
+* Market value
+* Loan-to-Value (LTV) norms
+* Lending institution policy
+
+The financing amount is generally calculated as a percentage of the value of the stored produce represented by the e-NWR.
+
+([WDRA][2])
+
+---
+
+# Loan Tenure
+
+Typical tenure:
+
+* Up to **6 months**
+
+The produce remains stored in the warehouse while the borrower utilizes the credit facility.
+
+([Drishti IAS][6])
+
+---
+
+# Security
+
+Primary security:
+
+* Electronic Negotiable Warehouse Receipt (e-NWR)
+
+Additional collateral:
+
+* Generally **not required**, as the pledged warehouse receipt secures the loan.
+
+([Press Information Bureau][3])
+
+---
+
+# Activities Covered
+
+The scheme finances post-harvest working capital needs including:
+
+* Storage financing
+* Crop marketing
+* Working capital during storage
+* Avoidance of distress sale
+* Commodity trading against stored produce
+* Agricultural value chain financing
+
+([WDRA][2])
+
+---
+
+# Application Process
+
+1. Register on the JanSamarth portal.
+2. Store eligible produce in a WDRA-registered warehouse.
+3. Obtain an Electronic Negotiable Warehouse Receipt (e-NWR).
+4. Complete the online eligibility assessment.
+5. Select a participating lender.
+6. Submit the application with e-NWR details.
+7. The lender evaluates the pledged commodity and sanctions the loan.
+8. Loan is disbursed directly to the applicant's bank account.
+
+([JanSamarth][1])
+
+---
+
+# Documents Required
+
+Applicants should generally keep the following ready:
+
+### Identity Documents
+
+* Aadhaar
+* PAN (where applicable)
+
+### Banking Documents
+
+* Bank account details
+* IFSC
+
+### Agricultural Documents
+
+* Warehouse receipt (e-NWR)
+* Commodity details
+* Warehouse registration details
+
+### Repository Information
+
+* Repository account number
+* Repository participant details
+
+### Other
+
+* Passport-size photograph
+* Any lender-specific declarations
+
+([Kisan Call Center][7])
+
+---
+
+# Important Conditions
+
+* Produce must be stored only in WDRA-registered warehouses.
+* A valid e-NWR is mandatory.
+* Loan amount depends on the commodity value.
+* Interest subvention is available only for eligible Small and Marginal Farmers under applicable Government guidelines.
+* Warehouse receipt remains pledged until repayment.
+* The scheme supports digital processing through JanSamarth.
+
+([JanSamarth][1])
+
+---
+
+# Frequently Asked Questions
+
+### What is e-Kisan Upaj Nidhi?
+
+It is a digital platform that enables borrowers to obtain post-harvest loans by pledging electronic warehouse receipts issued against agricultural produce stored in WDRA-registered warehouses. ([WDRA][2])
+
+---
+
+### Who can apply?
+
+Eligible applicants include:
+
+* Farmers
+* FPOs
+* Agri traders
+* Commodity traders
+* Food processing MSMEs
+* Agricultural aggregators
+
+provided they hold a valid e-NWR for produce stored in a WDRA-registered warehouse. ([CreditCares][5])
+
+---
+
+### Is collateral required?
+
+No. The pledged electronic warehouse receipt acts as the security for the loan. ([CreditCares][5])
+
+---
+
+### How long can produce remain under the scheme?
+
+Typically up to **6 months**, allowing borrowers time to wait for favourable market prices before selling. ([Drishti IAS][6])
+
+---
+
+### What is an e-NWR?
+
+An Electronic Negotiable Warehouse Receipt is a legally recognized digital document issued by an authorized repository against agricultural commodities stored in a WDRA-registered warehouse. It can be pledged electronically to obtain financing. ([WDRA][2])
+
+---
+
+### What are the interest rates?
+
+Eligible Small and Marginal Farmers can access loans at **7% per annum** (subject to applicable Government interest subvention for eligible loans up to ₹3 lakh for up to six months). Other borrowers are charged as per the participating lender's applicable rates. ([JanSamarth][1])
+
+---
+
+# Structured Schema (Ready for Your Knowledge Base)
+
+| Field                          | Value                                                                                                              |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| Scheme Name                    | e-Kisan Upaj Nidhi (e-KUN)                                                                                         |
+| Scheme Type                    | Post-Harvest Warehouse Receipt Finance                                                                             |
+| Provider Category              | Government                                                                                                         |
+| Provider Name                  | Warehousing Development and Regulatory Authority (WDRA)                                                            |
+| Government Level               | Central                                                                                                            |
+| Financial Instrument Type      | Warehouse Receipt-backed Loan                                                                                      |
+| Benefit Category               | Post-Harvest Working Capital                                                                                       |
+| Target Beneficiaries           | Farmers, FPOs, FPCs, Agri Traders, Commodity Traders, Food Processing MSMEs                                        |
+| Business Stage                 | Post-Harvest / Working Capital                                                                                     |
+| Maximum Assistance             | Loan based on commodity value and lender LTV norms                                                                 |
+| Interest Rate                  | 7% p.a. for eligible Small & Marginal Farmers (subject to Government subvention); lender-specific rates for others |
+| Loan Tenure                    | Up to 6 months                                                                                                     |
+| Collateral                     | Electronic Negotiable Warehouse Receipt (e-NWR)                                                                    |
+| Additional Collateral Required | No                                                                                                                 |
+| Eligible Commodities           | Agricultural commodities accepted by WDRA-registered warehouses and participating lenders                          |
+| Warehouse Requirement          | WDRA-registered warehouse                                                                                          |
+| Mandatory Document             | Valid Electronic Negotiable Warehouse Receipt (e-NWR)                                                              |
+| Platform Integrations          | WDRA, JanSamarth, e-NWR repositories, e-NAM                                                                        |
+| Primary Objective              | Prevent distress sale and provide affordable post-harvest finance                                                  |
+| Application Mode               | Online through JanSamarth and participating lenders                                                                |
+
+[1]: https://www.jansamarth.in/e-kisan-upaj-nidhi?utm_source=chatgpt.com "Apply Online e-Kisan Upaj Nidhi Scheme"
+[2]: https://wdra.gov.in/ekun-eng?utm_source=chatgpt.com "e-Kisan Upaj Nidhi"
+[3]: https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2011283&utm_source=chatgpt.com "Shri Goyal launches 'e-Kisan Upaj Nidhi' to ease farmers' ..."
+[4]: https://forumias.com/blog/e-kisan-upaj-nidhi/?utm_source=chatgpt.com "e-Kisan Upaj Nidhi - ForumIAS Blog"
+[5]: https://creditcares.co.in/blog/e-kisan-upaj-nidhi-the-government-scheme/?utm_source=chatgpt.com "e-Kisan Upaj Nidhi: The Government Scheme Smart Agri ..."
+[6]: https://www.drishtiias.com/daily-updates/daily-news-analysis/e-kisan-upaj-nidhi?utm_source=chatgpt.com "e-Kisan Upaj Nidhi"
+[7]: https://dackkms.gov.in/docs/Inputs_of_schemes.pdf?utm_source=chatgpt.com "eKisan Upaj Nidhi (eKUN)"

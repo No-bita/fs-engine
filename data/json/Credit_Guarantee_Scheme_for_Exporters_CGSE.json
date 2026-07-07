@@ -1,0 +1,135 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "CREDIT_GUARANTEE_SCHEME_FOR_EXPORTERS_CGSE",
+        "name": "Credit Guarantee Scheme for Exporters (CGSE)",
+        "short_name": "CGSE",
+        "slug": "credit-guarantee-scheme-for-exporters-cgse",
+        "description": "",
+        "scheme_type": "credit_guarantee",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of Commerce and Industry (under Export Promotion Mission)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "expansion"
+            ],
+            "sectors": [
+                "export_oriented",
+                "manufacturing"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "working_capital",
+                "export_support",
+                "collateral_substitution"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium",
+                "exporter"
+            ],
+            "business_intents": [
+                "need loan",
+                "need collateral free loan",
+                "working capital support",
+                "start factory"
+            ],
+            "search_keywords": [
+                "industrial machines",
+                "guarantee",
+                "low interest",
+                "no security",
+                "loan",
+                "term loan",
+                "working capital",
+                "credit cover",
+                "factory setup",
+                "collateral free"
+            ],
+            "search_aliases": [
+                "CGSE"
+            ]
+        },
+        "status": "unknown",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "CREDIT_GUARANTEE_SCHEME_FOR_EXPORTERS_CGSE_BENEFIT_01",
+            "name": "Additional collateral-free working capital for MSME exporters",
+            "category": "loan",
+            "summary": "Guarantee-backed additional working-capital credit for eligible exporters, particularly MSMEs, enabling collateral-free access over and above existing limits under the Export Promotion Mission.",
+            "calculation_logic": "Provides additional credit support of up to 20pct of existing working-capital limits to eligible borrowers, particularly MSMEs, by enabling collateral-free access under a guarantee.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "unknown",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "collateral_free",
+            "guarantee_coverage": "unknown",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "CREDIT_GUARANTEE_SCHEME_FOR_EXPORTERS_CGSE_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "CREDIT_GUARANTEE_SCHEME_FOR_EXPORTERS_CGSE_REF_01",
+            "title": "Official Source Url",
+            "url": "https://commerce.gov.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "CREDIT_GUARANTEE_SCHEME_FOR_EXPORTERS_CGSE_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://www.technicaltextiles.in/assessment-of-imports-in-textile-industry/",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Recently approved under the Export Promotion Mission; operational guidelines and lender onboarding should be confirmed before publication. This is the export credit-guarantee component flagged during C3."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Credit Guarantee Scheme for Exporters (CGSE)?",
+            "answer": "The main objective is to provide assistance and support under Credit Guarantee Scheme for Exporters (CGSE) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Credit Guarantee Scheme for Exporters (CGSE)?",
+            "answer": "Businesses belonging to micro, small, medium, exporter in export_oriented, manufacturing may apply."
+        }
+    ]
+}

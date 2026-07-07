@@ -1,0 +1,130 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "TRADE_RECEIVABLES_DISCOUNTING_SYSTEM_TREDS",
+        "name": "Trade Receivables Discounting System (TReDS)",
+        "short_name": "TRDS",
+        "slug": "trade-receivables-discounting-system-treds",
+        "description": "",
+        "scheme_type": "government_scheme",
+        "provider": {
+            "category": "public_institution",
+            "name": "RBI-regulated TReDS platforms (RXIL, M1xchange, Invoicemart, KredX DTX)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "expansion"
+            ],
+            "sectors": [
+                "manufacturing",
+                "services",
+                "trading"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "working_capital"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium"
+            ],
+            "business_intents": [
+                "retail store capital",
+                "start factory",
+                "start service business"
+            ],
+            "search_keywords": [
+                "consultancy",
+                "industrial machines",
+                "wholesaler",
+                "repair shop",
+                "inventory purchase",
+                "it services",
+                "factory setup",
+                "retail shop"
+            ],
+            "search_aliases": [
+                "TRDS"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "TRADE_RECEIVABLES_DISCOUNTING_SYSTEM_TREDS_BENEFIT_01",
+            "name": "Collateral-free invoice discounting of MSME receivables",
+            "category": "loan",
+            "summary": "RBI-regulated digital platforms let MSME suppliers sell their invoices raised on large corporates, PSUs and government departments to banks/NBFCs through competitive bidding, obtaining early, collateral-free, non-recourse payment.",
+            "calculation_logic": "MSME receives the discounted invoice value upfront; financiers bid competitively (reported effective rates around 5-8pct per annum). No collateral and no recourse to the MSME if the buyer defaults.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "discount_approx_5_to_8pct",
+            "collateral_required": false,
+            "collateral_details": "collateral_free",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "TRADE_RECEIVABLES_DISCOUNTING_SYSTEM_TREDS_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "TRADE_RECEIVABLES_DISCOUNTING_SYSTEM_TREDS_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.sidbi.in/treds",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "TRADE_RECEIVABLES_DISCOUNTING_SYSTEM_TREDS_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://blucrest.in/treds-platform-a-practical-guide/",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Benefit is early liquidity on receivables, not a subsidy. Requires the buyer to also be on a TReDS platform. GeM Sahay is a related invoice-based financing facility for GeM sellers (noted in methodology)."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Trade Receivables Discounting System (TReDS)?",
+            "answer": "The main objective is to provide assistance and support under Trade Receivables Discounting System (TReDS) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Trade Receivables Discounting System (TReDS)?",
+            "answer": "Businesses belonging to micro, small, medium in manufacturing, services, trading may apply."
+        }
+    ]
+}

@@ -1,0 +1,173 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "MSME_INNOVATIVE_SCHEME_INCUBATION_DESIGN_AND_IPR",
+        "name": "MSME Innovative Scheme (Incubation, Design and IPR)",
+        "short_name": "MSME",
+        "slug": "msme-innovative-scheme-incubation-design-and-ipr",
+        "description": "",
+        "scheme_type": "grant",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of MSME (via recognized Host Institutes)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "idea_or_pre_startup",
+                "startup_early_stage"
+            ],
+            "sectors": [
+                "sector_agnostic"
+            ],
+            "benefit_categories": [
+                "technology_upgradation",
+                "equity_seed_capital",
+                "ip_patent_support"
+            ],
+            "msme_segments": [
+                "all_msme",
+                "startup_dpiit"
+            ],
+            "business_intents": [
+                "need startup grant"
+            ],
+            "search_keywords": [
+                "free money",
+                "grant",
+                "seed funding",
+                "non-repayable"
+            ],
+            "search_aliases": [
+                "MSME"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "MSME_INNOVATIVE_SCHEME_INCUBATION_DESIGN_AND_IPR_BENEFIT_01",
+            "name": "Incubation support for innovative ideas",
+            "category": "other",
+            "summary": "Financial assistance routed through recognized Host Institutes to develop and nurture innovative ideas of MSMEs and innovators, covering prototype development and commercialization support.",
+            "calculation_logic": "Up to 15 lakh per approved innovative idea to the Host Institute for developing/nurturing the idea. Separately, up to 1 crore to a Host Institute for plant and machinery to strengthen incubation facilities.",
+            "max_amount": 1500000.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        },
+        {
+            "id": "MSME_INNOVATIVE_SCHEME_INCUBATION_DESIGN_AND_IPR_BENEFIT_02",
+            "name": "Design project financial assistance",
+            "category": "other",
+            "summary": "Financial assistance for engaging professional design expertise for new product development and improvement of existing products, plus support for student design projects.",
+            "calculation_logic": "Up to 40 lakh per design project for individual MSMEs (75pct for micro, 60pct for small/medium). Student design projects up to 2.5 lakh. Disbursed in phases (40pct concept, 30pct detailed design, 30pct post-prototype).",
+            "max_amount": 4000000.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "25pct_to_40pct"
+        },
+        {
+            "id": "MSME_INNOVATIVE_SCHEME_INCUBATION_DESIGN_AND_IPR_BENEFIT_03",
+            "name": "Reimbursement for IPR registration (patent, trademark, GI, design)",
+            "category": "other",
+            "summary": "One-time reimbursement of expenditure incurred by MSMEs on registering patents, trademarks, geographical indications and designs, to strengthen IP protection and commercialization.",
+            "calculation_logic": "Reimbursement caps: foreign patent up to 5 lakh, domestic patent up to 1 lakh, GI registration up to 2 lakh, design registration up to 15000, trademark up to 10000. One-time, not claimable if already claimed under another government scheme.",
+            "max_amount": 500000.0,
+            "min_amount": 10000.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        },
+        {
+            "id": "MSME_INNOVATIVE_SCHEME_INCUBATION_DESIGN_AND_IPR_BENEFIT_04",
+            "name": "Equity support for commercialization of ideas/designs/patents",
+            "category": "other",
+            "summary": "Equity support to help MSMEs commercialize proven ideas, designs and patents and scale up to raise subsequent funding, through a corpus managed by SIDBI.",
+            "calculation_logic": "Up to 1 crore equity support per case, with GoI contribution up to 80pct (80:20 ratio), managed by SIDBI as fund manager.",
+            "max_amount": 10000000.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "20pct"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "MSME_INNOVATIVE_SCHEME_INCUBATION_DESIGN_AND_IPR_RULE_GEN_SEGMENT",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "all_msme",
+                "startup_dpiit"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "MSME_INNOVATIVE_SCHEME_INCUBATION_DESIGN_AND_IPR_REF_01",
+            "title": "Official Source Url",
+            "url": "https://innovative.msme.gov.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "MSME_INNOVATIVE_SCHEME_INCUBATION_DESIGN_AND_IPR_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://dcmsme.gov.in/CLCS_TUS_Scheme/MSME%20Innovative%20Scheme%20Guidelines.pdf",
+            "type": "official_guidelines",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Individuals/students must apply through a recognized Host Institute. The 15 lakh per idea is a grant, not a loan. Up to 1 crore infra support is to the Host Institute, not the MSME."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of MSME Innovative Scheme (Incubation, Design and IPR)?",
+            "answer": "The main objective is to provide assistance and support under MSME Innovative Scheme (Incubation, Design and IPR) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for MSME Innovative Scheme (Incubation, Design and IPR)?",
+            "answer": "Businesses belonging to all_msme, startup_dpiit in sector_agnostic may apply."
+        }
+    ]
+}

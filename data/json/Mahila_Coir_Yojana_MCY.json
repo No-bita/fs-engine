@@ -1,0 +1,124 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "MAHILA_COIR_YOJANA_MCY",
+        "name": "Mahila Coir Yojana (MCY)",
+        "short_name": "MCY",
+        "slug": "mahila-coir-yojana-mcy",
+        "description": "",
+        "scheme_type": "subsidy",
+        "provider": {
+            "category": "public_institution",
+            "name": "Coir Board (Ministry of MSME)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "startup_early_stage",
+                "existing_enterprise"
+            ],
+            "sectors": [
+                "coir"
+            ],
+            "benefit_categories": [
+                "skilling_capacity_financial",
+                "capital_investment_subsidy"
+            ],
+            "msme_segments": [
+                "women_led",
+                "artisan",
+                "rural_enterprise"
+            ],
+            "business_intents": [
+                "need subsidy",
+                "discount on cost"
+            ],
+            "search_keywords": [
+                "reimbursement",
+                "subsidy",
+                "financial support",
+                "govt grant"
+            ],
+            "search_aliases": [
+                "MCY"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_3"
+    },
+    "benefits": [
+        {
+            "id": "MAHILA_COIR_YOJANA_MCY_BENEFIT_01",
+            "name": "75pct subsidy on coir processing equipment for rural women",
+            "category": "subsidy",
+            "summary": "After training, rural women artisans receive motorised ratts and other coir-processing equipment at a 75pct subsidy, plus a training-period stipend, to enable home-based coir livelihoods.",
+            "calculation_logic": "75pct subsidy on the cost of a motorised ratt/traditional ratt and other equipment, subject to a maximum of 7,500 per beneficiary, after completing a 2-month training programme (stipend of 1,000 per month during training).",
+            "max_amount": 7500.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "25pct"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "MAHILA_COIR_YOJANA_MCY_RULE_GEN_SEGMENT",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "women_led",
+                "artisan",
+                "rural_enterprise"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "MAHILA_COIR_YOJANA_MCY_REF_01",
+            "title": "Official Source Url",
+            "url": "http://coirboard.gov.in/?page_id=8452",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "MAHILA_COIR_YOJANA_MCY_REF_02",
+            "title": "Policy Document Url",
+            "url": "http://coirboard.gov.in/?page_id=8452",
+            "type": "official_guidelines",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Equipment subsidy is small (max 7,500) but paired with a monthly training stipend of 1,000 for 2 months. Exclusive to rural women artisans in coir-producing regions."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Mahila Coir Yojana (MCY)?",
+            "answer": "The main objective is to provide assistance and support under Mahila Coir Yojana (MCY) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Mahila Coir Yojana (MCY)?",
+            "answer": "Businesses belonging to women_led, artisan, rural_enterprise in coir may apply."
+        }
+    ]
+}

@@ -1,0 +1,152 @@
+[
+    {
+        "id": "REG_PROF_01",
+        "description": "Micro manufacturing unit, general owner, turnover 15 Lakhs, Maharashtra",
+        "profile": {
+            "msme_segment": "micro",
+            "turnover": 1500000.0,
+            "state": "maharashtra",
+            "sector": "manufacturing",
+            "ownership_category": "general",
+            "has_udyam_registration": true
+        },
+        "expected_schemes": [
+            "PRIME_MINISTERS_EMPLOYMENT_GENERATION_PROGRAMME_PMEGP",
+            "CREDIT_GUARANTEE_FUND_TRUST_FOR_MICRO_AND_SMALL_ENTERPRISES_CGTMSE"
+        ]
+    },
+    {
+        "id": "REG_PROF_02",
+        "description": "Small services provider, general owner, turnover 2 Crore, Karnataka",
+        "profile": {
+            "msme_segment": "small",
+            "turnover": 20000000.0,
+            "state": "karnataka",
+            "sector": "services",
+            "ownership_category": "general",
+            "has_udyam_registration": true
+        },
+        "expected_schemes": [
+            "CREDIT_GUARANTEE_FUND_TRUST_FOR_MICRO_AND_SMALL_ENTERPRISES_CGTMSE"
+        ]
+    },
+    {
+        "id": "REG_PROF_03",
+        "description": "Micro trading unit, women owner, turnover 5 Lakhs, Tamil Nadu",
+        "profile": {
+            "msme_segment": "micro",
+            "turnover": 500000.0,
+            "state": "tamil_nadu",
+            "sector": "trading",
+            "ownership_category": "women",
+            "has_udyam_registration": true
+        },
+        "expected_schemes": [
+            "STANDUP_INDIA_SCHEME"
+        ]
+    },
+    {
+        "id": "REG_PROF_04",
+        "description": "Agricultural dairy farm cultivator, turnover 3 Lakhs, Gujarat",
+        "profile": {
+            "msme_segment": "micro",
+            "turnover": 300000.0,
+            "state": "gujarat",
+            "sector": "agriculture_allied",
+            "ownership_category": "general",
+            "has_udyam_registration": false
+        },
+        "expected_schemes": [
+            "KISAN_CREDIT_CARD_KCC_SCHEME"
+        ]
+    },
+    {
+        "id": "REG_PROF_05",
+        "description": "Urban family seeking first home, income 5 Lakhs (turnover)",
+        "profile": {
+            "msme_segment": "micro",
+            "turnover": 500000.0,
+            "state": "maharashtra",
+            "sector": "services",
+            "ownership_category": "general",
+            "has_udyam_registration": false
+        },
+        "expected_schemes": [
+            "PRADHAN_MANTRI_AWAS_YOJANA_URBAN_2_0_ISS"
+        ]
+    },
+    {
+        "id": "REG_PROF_06",
+        "description": "Micro services unit, SC owner, turnover 8 Lakhs, Maharashtra",
+        "profile": {
+            "msme_segment": "micro",
+            "turnover": 800000.0,
+            "state": "maharashtra",
+            "sector": "services",
+            "ownership_category": "SC",
+            "has_udyam_registration": true
+        },
+        "expected_schemes": [
+            "STANDUP_INDIA_SCHEME"
+        ]
+    },
+    {
+        "id": "REG_PROF_07",
+        "description": "Small manufacturing unit, ST owner, turnover 4 Crore, Karnataka",
+        "profile": {
+            "msme_segment": "small",
+            "turnover": 40000000.0,
+            "state": "karnataka",
+            "sector": "manufacturing",
+            "ownership_category": "ST",
+            "has_udyam_registration": true
+        },
+        "expected_schemes": [
+            "STANDUP_INDIA_SCHEME",
+            "CREDIT_GUARANTEE_FUND_TRUST_FOR_MICRO_AND_SMALL_ENTERPRISES_CGTMSE"
+        ]
+    },
+    {
+        "id": "REG_PROF_08",
+        "description": "Micro exporter, turnover 40 Lakhs, Gujarat",
+        "profile": {
+            "msme_segment": "micro",
+            "turnover": 4000000.0,
+            "state": "gujarat",
+            "sector": "manufacturing",
+            "ownership_category": "general",
+            "has_udyam_registration": true,
+            "export_status": "exporter"
+        },
+        "expected_schemes": [
+            "EMERGENCY_CREDIT_LINE_GUARANTEE_SCHEME_ECLGS_5_0",
+            "CREDIT_GUARANTEE_FUND_TRUST_FOR_MICRO_AND_SMALL_ENTERPRISES_CGTMSE"
+        ]
+    },
+    {
+        "id": "REG_PROF_09",
+        "description": "Medium manufacturing unit, turnover 80 Crore, Maharashtra",
+        "profile": {
+            "msme_segment": "medium",
+            "turnover": 800000000.0,
+            "state": "maharashtra",
+            "sector": "manufacturing",
+            "ownership_category": "general",
+            "has_udyam_registration": true
+        },
+        "expected_schemes": []
+    },
+    {
+        "id": "REG_PROF_10",
+        "description": "Micro enterprise in non-specified state, turnover 2 Lakhs",
+        "profile": {
+            "msme_segment": "micro",
+            "turnover": 200000.0,
+            "state": "delhi",
+            "sector": "services",
+            "ownership_category": "general",
+            "has_udyam_registration": true
+        },
+        "expected_schemes": []
+    }
+]

@@ -1,0 +1,241 @@
+.appContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.topNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.caret {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* --- EMPTY STATE LAYOUT --- */
+.emptyStateContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.emptyStateTitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.emptyStateInputWrapper {
+  width: 100%;
+  max-width: 48rem;
+  position: relative;
+}
+
+.centeredInputBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--input-bg);
+  border-radius: 2rem;
+  padding: 0.75rem 1.25rem;
+  gap: 1rem;
+}
+
+.plusIcon, .micIcon {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.centeredInputField {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+}
+
+.voiceButton {
+  background-color: #3b82f6;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suggestionsRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.suggestionChip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  transition: background-color 0.2s;
+}
+
+.suggestionChip:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- ACTIVE CHAT LAYOUT --- */
+.mainArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--bg-primary);
+}
+
+.chatContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 4rem; /* space for top nav */
+  padding-bottom: 120px; /* space for input bar */
+}
+
+.messageRow {
+  padding: 1.5rem 0;
+}
+
+.messageContent {
+  max-width: 48rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.avatarUser {
+  background-color: #a855f7;
+  color: white;
+  border-radius: 50%;
+}
+
+.avatarBot {
+  background-color: #10a37f;
+  color: white;
+  border-radius: 50%;
+}
+
+.messageText {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--text-primary);
+  flex: 1;
+  padding-top: 0.2rem;
+}
+
+.inputContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--bg-primary) 50%);
+  display: flex;
+  justify-content: center;
+}
+
+/* --- SIDEBAR FOR GAP ANALYSIS --- */
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.sidebarHeader {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.sidebarContent {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.scoreCard {
+  background-color: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.scoreCard h3 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.scoreValue {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.actionItem {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.actionItem h4 {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.actionItem p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}

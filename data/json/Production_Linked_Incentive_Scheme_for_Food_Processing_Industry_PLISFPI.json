@@ -1,0 +1,107 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "PRODUCTION_LINKED_INCENTIVE_SCHEME_FOR_FOOD_PROCESSING_INDUSTRY_PLISFPI",
+        "name": "Production Linked Incentive Scheme for Food Processing Industry (PLISFPI)",
+        "short_name": "PLISFPI",
+        "slug": "production-linked-incentive-scheme-for-food-processing-industry-plisfpi",
+        "description": "",
+        "scheme_type": "government_scheme",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of Food Processing Industries (MoFPI)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "expansion"
+            ],
+            "sectors": [
+                "food_processing"
+            ],
+            "benefit_categories": [
+                "capital_investment_subsidy",
+                "marketing_procurement"
+            ],
+            "msme_segments": [
+                "small",
+                "medium"
+            ],
+            "business_intents": [],
+            "search_keywords": [],
+            "search_aliases": [
+                "PLISFPI"
+            ]
+        },
+        "status": "unknown",
+        "priority": "tier_3"
+    },
+    "benefits": [
+        {
+            "id": "PRODUCTION_LINKED_INCENTIVE_SCHEME_FOR_FOOD_PROCESSING_INDUSTRY_PLISFPI_BENEFIT_01",
+            "name": "Incentive on incremental sales of processed food",
+            "category": "subsidy",
+            "summary": "Performance-linked incentive paid on incremental sales of eligible processed-food products (and for branding/marketing abroad), aimed primarily at larger food processing companies but with some components relevant to growing MSMEs.",
+            "calculation_logic": "Incentive computed as a percentage of incremental sales over a base year, subject to eligibility thresholds on minimum sales and committed investment; separate support for branding/marketing abroad. Thresholds generally favour mid-to-large firms.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "incentive_on_incremental_sales",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "PRODUCTION_LINKED_INCENTIVE_SCHEME_FOR_FOOD_PROCESSING_INDUSTRY_PLISFPI_RULE_GEN_SEGMENT",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "small",
+                "medium"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "PRODUCTION_LINKED_INCENTIVE_SCHEME_FOR_FOOD_PROCESSING_INDUSTRY_PLISFPI_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.mofpi.gov.in",
+            "type": "official_guidelines",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Primarily targets larger food processing firms (minimum sales/investment thresholds); MSME applicability is limited to specific components (for example millet-based products, SME/innovative categories). Confirm current window and thresholds."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Production Linked Incentive Scheme for Food Processing Industry (PLISFPI)?",
+            "answer": "The main objective is to provide assistance and support under Production Linked Incentive Scheme for Food Processing Industry (PLISFPI) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Production Linked Incentive Scheme for Food Processing Industry (PLISFPI)?",
+            "answer": "Businesses belonging to small, medium in food_processing may apply."
+        }
+    ]
+}

@@ -1,0 +1,149 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "STANDUP_INDIA_SCHEME",
+        "name": "Stand-Up India Scheme",
+        "short_name": "SIS",
+        "slug": "stand-up-india-scheme",
+        "description": "",
+        "scheme_type": "government_product",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of Finance (Department of Financial Services); SIDBI refinance",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "idea_or_pre_startup",
+                "startup_early_stage"
+            ],
+            "sectors": [
+                "manufacturing",
+                "services",
+                "trading",
+                "agriculture_allied"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "working_capital",
+                "collateral_substitution"
+            ],
+            "msme_segments": [
+                "sc_st_entrepreneur",
+                "women_led"
+            ],
+            "business_intents": [
+                "retail store capital",
+                "farming capital",
+                "start factory",
+                "start service business"
+            ],
+            "search_keywords": [
+                "consultancy",
+                "industrial machines",
+                "cold storage",
+                "wholesaler",
+                "repair shop",
+                "inventory purchase",
+                "dairy farm",
+                "it services",
+                "crop cultivation",
+                "factory setup",
+                "retail shop"
+            ],
+            "search_aliases": [
+                "SIS"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "STANDUP_INDIA_SCHEME_BENEFIT_01",
+            "name": "Composite bank loan for SC/ST and women greenfield enterprises",
+            "category": "loan",
+            "summary": "Facilitates a composite bank loan (term loan plus working capital) to at least one SC/ST borrower and one woman borrower per bank branch to set up a first-time (greenfield) enterprise.",
+            "calculation_logic": "Composite loan between 10 lakh and 1 crore, covering up to 85pct of project cost (borrower brings minimum 10pct own contribution; 15pct margin can converge with other central/state schemes). Interest capped at the bank's lowest applicable rate not exceeding MCLR + 3pct + tenor premium.",
+            "max_amount": 10000000.0,
+            "min_amount": 1000000.0,
+            "loan_range": "1000000-10000000",
+            "interest_rate": "roi_up_to_mclr_plus_3pct",
+            "collateral_required": true,
+            "collateral_details": "partial_collateral",
+            "guarantee_coverage": "via_cgfsi",
+            "tenure_months": 84,
+            "moratorium_months": 18,
+            "margin_contribution": "up_to_15pct"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "SUI_RULE_OWNERSHIP",
+            "parameter": "business.ownership_category",
+            "operator": "IN",
+            "value": [
+                "SC",
+                "ST",
+                "women"
+            ]
+        },
+        {
+            "id": "SUI_RULE_TURNOVER",
+            "parameter": "business.turnover",
+            "operator": "<=",
+            "value": 100000000.0
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "STANDUP_INDIA_SCHEME_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.standupmitra.in/Home/SUISchemes",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "STANDUP_INDIA_SCHEME_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://www.standupmitra.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "STANDUP_INDIA_SCHEME_REF_03",
+            "title": "Secondary Source Url",
+            "url": "https://www.ibef.org/government-schemes/stand-up-india",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Greenfield (first-time venture) only. Non-individual entities need 51pct SC/ST or woman shareholding. Backed by Credit Guarantee Fund for Stand-Up India (CGFSI) or bank collateral at bank discretion. Rupay debit card issued."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Stand-Up India Scheme?",
+            "answer": "The main objective is to provide assistance and support under Stand-Up India Scheme to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Stand-Up India Scheme?",
+            "answer": "Businesses belonging to sc_st_entrepreneur, women_led in manufacturing, services, trading, agriculture_allied may apply."
+        }
+    ]
+}

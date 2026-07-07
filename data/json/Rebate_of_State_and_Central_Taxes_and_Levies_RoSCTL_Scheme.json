@@ -1,0 +1,117 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "REBATE_OF_STATE_AND_CENTRAL_TAXES_AND_LEVIES_ROSCTL_SCHEME",
+        "name": "Rebate of State and Central Taxes and Levies (RoSCTL) Scheme",
+        "short_name": "RSCTLS",
+        "slug": "rebate-of-state-and-central-taxes-and-levies-rosctl-scheme",
+        "description": "",
+        "scheme_type": "tax_incentive",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of Textiles (DGFT for scrip issuance)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "expansion"
+            ],
+            "sectors": [
+                "textiles",
+                "export_oriented"
+            ],
+            "benefit_categories": [
+                "export_support",
+                "tax_duty_relief"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium",
+                "exporter"
+            ],
+            "business_intents": [],
+            "search_keywords": [],
+            "search_aliases": [
+                "RSCTLS"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "REBATE_OF_STATE_AND_CENTRAL_TAXES_AND_LEVIES_ROSCTL_SCHEME_BENEFIT_01",
+            "name": "Rebate of embedded state/central taxes on apparel and made-ups exports",
+            "category": "tax_incentive",
+            "summary": "Rebate of embedded state and central taxes and levies on exports of readymade garments/apparel and made-ups, issued as transferable, saleable duty-credit scrips based on FOB value.",
+            "calculation_logic": "Rebate as a percentage of FOB value per notified schedule; reported maximum around 6.05pct for apparel and 8.2pct for made-ups. Claimed via online ANF 4R on the DGFT portal with a digital signature. Textile products not covered under RoSCTL fall under RoDTEP.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "rebate_up_to_6.05pct_apparel_8.2pct_madeups",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "REBATE_OF_STATE_AND_CENTRAL_TAXES_AND_LEVIES_ROSCTL_SCHEME_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "REBATE_OF_STATE_AND_CENTRAL_TAXES_AND_LEVIES_ROSCTL_SCHEME_REF_01",
+            "title": "Official Source Url",
+            "url": "https://texmin.nic.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "REBATE_OF_STATE_AND_CENTRAL_TAXES_AND_LEVIES_ROSCTL_SCHEME_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://exportexpertsglobal.com/export-incentives/",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Textile-specific counterpart to RoDTEP, generally at higher rates. Confirm current per-item rates from the notified RoSCTL schedule."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Rebate of State and Central Taxes and Levies (RoSCTL) Scheme?",
+            "answer": "The main objective is to provide assistance and support under Rebate of State and Central Taxes and Levies (RoSCTL) Scheme to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Rebate of State and Central Taxes and Levies (RoSCTL) Scheme?",
+            "answer": "Businesses belonging to micro, small, medium, exporter in textiles, export_oriented may apply."
+        }
+    ]
+}

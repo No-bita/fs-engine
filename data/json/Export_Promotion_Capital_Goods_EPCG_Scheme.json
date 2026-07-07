@@ -1,0 +1,124 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "EXPORT_PROMOTION_CAPITAL_GOODS_EPCG_SCHEME",
+        "name": "Export Promotion Capital Goods (EPCG) Scheme",
+        "short_name": "EPCG",
+        "slug": "export-promotion-capital-goods-epcg-scheme",
+        "description": "",
+        "scheme_type": "tax_incentive",
+        "provider": {
+            "category": "central_government",
+            "name": "DGFT (Ministry of Commerce and Industry)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "expansion",
+                "modernization_upgradation"
+            ],
+            "sectors": [
+                "manufacturing",
+                "export_oriented"
+            ],
+            "benefit_categories": [
+                "technology_upgradation",
+                "export_support",
+                "tax_duty_relief"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium",
+                "exporter"
+            ],
+            "business_intents": [
+                "start factory"
+            ],
+            "search_keywords": [
+                "industrial machines",
+                "factory setup"
+            ],
+            "search_aliases": [
+                "EPCG"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "EXPORT_PROMOTION_CAPITAL_GOODS_EPCG_SCHEME_BENEFIT_01",
+            "name": "Concessional/zero customs duty on capital goods against export obligation",
+            "category": "tax_incentive",
+            "summary": "Allows exporters to import capital goods (machinery, spares, moulds, software) at zero or concessional customs duty, in exchange for a commitment to export goods worth a multiple of the duty saved.",
+            "calculation_logic": "Duty saved on imported capital goods, conditional on fulfilling an export obligation equal to 6 times the duty saved within 6 years (export obligation reduced by 25pct for indigenously sourced capital goods). IGST exemption also available on EPCG imports.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "EXPORT_PROMOTION_CAPITAL_GOODS_EPCG_SCHEME_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "EXPORT_PROMOTION_CAPITAL_GOODS_EPCG_SCHEME_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.dgft.gov.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "EXPORT_PROMOTION_CAPITAL_GOODS_EPCG_SCHEME_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://www.registrationwala.com/knowledge-base/post/business/export-promotion-schemes-for-indian-exporters",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Benefit is a duty saving, not a cash transfer; failure to meet the export obligation triggers duty recovery with interest. Confirm current duty rates and EO conditions from FTP/HBP before publication."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Export Promotion Capital Goods (EPCG) Scheme?",
+            "answer": "The main objective is to provide assistance and support under Export Promotion Capital Goods (EPCG) Scheme to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Export Promotion Capital Goods (EPCG) Scheme?",
+            "answer": "Businesses belonging to micro, small, medium, exporter in manufacturing, export_oriented may apply."
+        }
+    ]
+}

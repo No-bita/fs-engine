@@ -1,0 +1,178 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "MSME_SUSTAINABLE_ZED_CERTIFICATION_SCHEME",
+        "name": "MSME Sustainable (ZED) Certification Scheme",
+        "short_name": "MSME",
+        "slug": "msme-sustainable-zed-certification-scheme",
+        "description": "",
+        "scheme_type": "government_scheme",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of MSME (QCI as implementing partner)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise"
+            ],
+            "sectors": [
+                "manufacturing",
+                "services"
+            ],
+            "benefit_categories": [
+                "technology_upgradation",
+                "energy_efficiency_green",
+                "quality_certification"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium",
+                "women_led",
+                "sc_st_entrepreneur"
+            ],
+            "business_intents": [
+                "start factory",
+                "start service business"
+            ],
+            "search_keywords": [
+                "consultancy",
+                "industrial machines",
+                "repair shop",
+                "it services",
+                "factory setup"
+            ],
+            "search_aliases": [
+                "MSME"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "MSME_SUSTAINABLE_ZED_CERTIFICATION_SCHEME_BENEFIT_01",
+            "name": "Subsidy on cost of ZED certification",
+            "category": "other",
+            "summary": "Government bears a large share of the ZED certification fee (Bronze/Silver/Gold) for registered MSMEs, reducing the cost of quality-and-sustainability certification.",
+            "calculation_logic": "Subsidy on certification cost: micro 80pct, small 60pct, medium 50pct. Additional 10pct for women/SC/ST-owned or NER/Himalayan/LWE/island/aspirational-district units, plus additional 5pct for SFURTI or MSE-CDP cluster members. Certification cost: Bronze 10000, Silver 40000, Gold 90000.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        },
+        {
+            "id": "MSME_SUSTAINABLE_ZED_CERTIFICATION_SCHEME_BENEFIT_02",
+            "name": "ZED pledge joining reward",
+            "category": "other",
+            "summary": "One-time limited-purpose reward of 10000 to each MSME on taking the ZED pledge, to be used within a defined period for a defined purpose.",
+            "calculation_logic": "Flat 10000 per MSME on taking the ZED pledge; valid for a limited period after the pledge.",
+            "max_amount": 10000.0,
+            "min_amount": 10000.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        },
+        {
+            "id": "MSME_SUSTAINABLE_ZED_CERTIFICATION_SCHEME_BENEFIT_03",
+            "name": "Handholding and zero-effect technology upgradation support",
+            "category": "other",
+            "summary": "Financial support of up to 5 lakh per ZED-certified MSME for consultancy handholding and for moving towards zero-effect solutions, pollution control or cleaner technology.",
+            "calculation_logic": "Up to 5 lakh per MSME (up to 2 lakh for handholding/consultancy and up to 3 lakh for zero-effect technology), subsidized at micro 80pct, small 60pct, medium 50pct, with the same additional 10pct/5pct enhancements as certification.",
+            "max_amount": 500000.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        },
+        {
+            "id": "MSME_SUSTAINABLE_ZED_CERTIFICATION_SCHEME_BENEFIT_04",
+            "name": "Reimbursement for testing / system / product certification",
+            "category": "other",
+            "summary": "After achieving a ZED certification level, MSMEs can claim reimbursement on the cost of one testing, one management-system certification or one product certification.",
+            "calculation_logic": "Subsidy on cost of one Testing OR one Management System OR one Product Certification after achieving a ZED level. Rupee cap to be confirmed from scheme guidelines (secondary sources cite up to 50000).",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "MSME_SUSTAINABLE_ZED_CERTIFICATION_SCHEME_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "MSME_SUSTAINABLE_ZED_CERTIFICATION_SCHEME_REF_01",
+            "title": "Official Source Url",
+            "url": "https://zed.msme.gov.in/subsidy-on-cost-of-certification",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "MSME_SUSTAINABLE_ZED_CERTIFICATION_SCHEME_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://zed.msme.gov.in/uploads/Guideline_Book.pdf",
+            "type": "official_guidelines",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Registration is free. Women-owned MSMEs are reported to get certification effectively free across levels. Max rupee value varies by level and category; compute from the percentage grid."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of MSME Sustainable (ZED) Certification Scheme?",
+            "answer": "The main objective is to provide assistance and support under MSME Sustainable (ZED) Certification Scheme to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for MSME Sustainable (ZED) Certification Scheme?",
+            "answer": "Businesses belonging to micro, small, medium, women_led, sc_st_entrepreneur in manufacturing, services may apply."
+        }
+    ]
+}

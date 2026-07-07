@@ -1,0 +1,123 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "INTEREST_SUBVENTION_SUPPORT_UNDER_EXPORT_PROMOTION_MISSION_NIRYAT_PROTSAHAN",
+        "name": "Interest Subvention Support under Export Promotion Mission (Niryat Protsahan)",
+        "short_name": "ISSEPMP",
+        "slug": "interest-subvention-support-under-export-promotion-mission-niryat-protsahan",
+        "description": "",
+        "scheme_type": "government_scheme",
+        "provider": {
+            "category": "central_government",
+            "name": "DGFT (Ministry of Commerce and Industry); RBI reimbursement to banks",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "expansion"
+            ],
+            "sectors": [
+                "manufacturing",
+                "export_oriented"
+            ],
+            "benefit_categories": [
+                "interest_relief",
+                "working_capital",
+                "export_support"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium",
+                "exporter"
+            ],
+            "business_intents": [
+                "start factory"
+            ],
+            "search_keywords": [
+                "industrial machines",
+                "factory setup"
+            ],
+            "search_aliases": [
+                "ISSEPMP"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "INTEREST_SUBVENTION_SUPPORT_UNDER_EXPORT_PROMOTION_MISSION_NIRYAT_PROTSAHAN_BENEFIT_01",
+            "name": "Interest subvention on pre and post shipment rupee export credit (MSME manufacturers)",
+            "category": "other",
+            "summary": "Reduction in the interest rate on pre- and post-shipment rupee export credit for eligible MSME manufacturer exporters, continuing the erstwhile Interest Equalisation Scheme under the new Export Promotion Mission framework.",
+            "calculation_logic": "Interest subvention of about 2.75pct (historically 3pct) per annum for MSME manufacturer exporters on rupee export credit, subject to an annual per-MSME ceiling (a 50 lakh cap applied in FY 2024-25). Current rate and cap governed by DGFT trade notices under the Export Promotion Mission (Jan 2026).",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "subvention_approx_2.75pct_msme",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "INTEREST_SUBVENTION_SUPPORT_UNDER_EXPORT_PROMOTION_MISSION_NIRYAT_PROTSAHAN_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "INTEREST_SUBVENTION_SUPPORT_UNDER_EXPORT_PROMOTION_MISSION_NIRYAT_PROTSAHAN_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.dgft.gov.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "INTEREST_SUBVENTION_SUPPORT_UNDER_EXPORT_PROMOTION_MISSION_NIRYAT_PROTSAHAN_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://a2ztaxcorp.net/dgft-issues-amendments-to-interest-subvention-guidelines-for-pre-and-post-shipment-export-credit-under-export-promotion-mission-niryat-protsahan/",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Successor to the Interest Equalisation Scheme (IES), now under the Export Promotion Mission (Niryat Protsahan, outlay 25,060 crore FY26-31). Requires a DGFT-generated UIN submitted to the bank; goods must originate in India. Confirm current rate and annual cap from the latest DGFT trade notice."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Interest Subvention Support under Export Promotion Mission (Niryat Protsahan)?",
+            "answer": "The main objective is to provide assistance and support under Interest Subvention Support under Export Promotion Mission (Niryat Protsahan) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Interest Subvention Support under Export Promotion Mission (Niryat Protsahan)?",
+            "answer": "Businesses belonging to micro, small, medium, exporter in manufacturing, export_oriented may apply."
+        }
+    ]
+}

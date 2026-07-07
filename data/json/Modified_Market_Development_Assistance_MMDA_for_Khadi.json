@@ -1,0 +1,122 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "MODIFIED_MARKET_DEVELOPMENT_ASSISTANCE_MMDA_FOR_KHADI",
+        "name": "Modified Market Development Assistance (MMDA) for Khadi",
+        "short_name": "MMDA",
+        "slug": "modified-market-development-assistance-mmda-for-khadi",
+        "description": "",
+        "scheme_type": "grant",
+        "provider": {
+            "category": "public_institution",
+            "name": "KVIC (Ministry of MSME)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise"
+            ],
+            "sectors": [
+                "khadi_village_industry",
+                "textiles"
+            ],
+            "benefit_categories": [
+                "skilling_capacity_financial",
+                "capital_investment_subsidy",
+                "marketing_procurement"
+            ],
+            "msme_segments": [
+                "artisan",
+                "rural_enterprise"
+            ],
+            "business_intents": [
+                "need startup grant"
+            ],
+            "search_keywords": [
+                "free money",
+                "grant",
+                "seed funding",
+                "non-repayable"
+            ],
+            "search_aliases": [
+                "MMDA"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "MODIFIED_MARKET_DEVELOPMENT_ASSISTANCE_MMDA_FOR_KHADI_BENEFIT_01",
+            "name": "Production/marketing assistance on prime cost of khadi",
+            "category": "procurement",
+            "summary": "Financial assistance calculated on the prime cost of khadi production, distributed among selling institutions, producing institutions and artisans, with a share passed directly to artisans/spinners/weavers as an income incentive.",
+            "calculation_logic": "Assistance at a percentage of prime cost: reported at 35pct for cotton/muslin/wool/polyvastra khadi and 20pct for silk khadi (structures have varied across MDA/MPDA/MMDA versions). A defined share is credited directly to artisans as incentive.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "MODIFIED_MARKET_DEVELOPMENT_ASSISTANCE_MMDA_FOR_KHADI_RULE_GEN_SEGMENT",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "artisan",
+                "rural_enterprise"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "MODIFIED_MARKET_DEVELOPMENT_ASSISTANCE_MMDA_FOR_KHADI_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2224092",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "MODIFIED_MARKET_DEVELOPMENT_ASSISTANCE_MMDA_FOR_KHADI_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://schemesmsme.com/khadi-gramodyog-vikas-yojana/",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Percentage rates and distribution split have changed across MDA/MPDA/MMDA versions; confirm the current MMDA rate and split from KVIC guidelines."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Modified Market Development Assistance (MMDA) for Khadi?",
+            "answer": "The main objective is to provide assistance and support under Modified Market Development Assistance (MMDA) for Khadi to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Modified Market Development Assistance (MMDA) for Khadi?",
+            "answer": "Businesses belonging to artisan, rural_enterprise in khadi_village_industry, textiles may apply."
+        }
+    ]
+}

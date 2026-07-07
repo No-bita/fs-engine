@@ -1,0 +1,887 @@
+[
+    {
+        "file_name": "SIDBI_PRAYAAS.json",
+        "scheme_id": "SIDBI_PRAYAAS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "MSME_Competitive_LEAN_Scheme.json",
+        "scheme_id": "MSME_COMPETITIVE_LEAN_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "PM_Formalisation_of_Micro_Food_Processing_Enterprises_PMFME.json",
+        "scheme_id": "PM_FORMALISATION_OF_MICRO_FOOD_PROCESSING_ENTERPRISES_PMFME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "NSIC_Bank_Credit_Facilitation_Scheme_BCFS.json",
+        "scheme_id": "NSIC_BANK_CREDIT_FACILITATION_SCHEME_BCFS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Interest_Subsidy_Eligibility_Certificate_ISEC_Scheme.json",
+        "scheme_id": "INTEREST_SUBSIDY_ELIGIBILITY_CERTIFICATE_ISEC_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Mahila_Coir_Yojana_MCY.json",
+        "scheme_id": "MAHILA_COIR_YOJANA_MCY",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "National_SC-ST_Hub_NSSH.json",
+        "scheme_id": "NATIONAL_SCST_HUB_NSSH",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Pradhan_Mantri_Mudra_Yojana_PMMY.json",
+        "scheme_id": "PRADHAN_MANTRI_MUDRA_YOJANA_PMMY",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "ECLGS_5.0.json",
+        "scheme_id": "EMERGENCY_CREDIT_LINE_GUARANTEE_SCHEME_ECLGS_5_0",
+        "is_valid": true,
+        "score": 100,
+        "quality_score": 100,
+        "errors": [],
+        "warnings": [],
+        "lint_issues": []
+    },
+    {
+        "file_name": "MSME_Innovative_Scheme_Incubation_Design_and_IPR.json",
+        "scheme_id": "MSME_INNOVATIVE_SCHEME_INCUBATION_DESIGN_AND_IPR",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Credit_Guarantee_Scheme_for_Startups_CGSS.json",
+        "scheme_id": "CREDIT_GUARANTEE_SCHEME_FOR_STARTUPS_CGSS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "NABARD_Credit-Linked_Capital_Subsidy_for_WarehousingGodowns.json",
+        "scheme_id": "NABARD_CREDITLINKED_CAPITAL_SUBSIDY_FOR_WAREHOUSINGGODOWNS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Special_Credit_Linked_Capital_Subsidy_Scheme_SCLCSS.json",
+        "scheme_id": "SPECIAL_CREDIT_LINKED_CAPITAL_SUBSIDY_SCHEME_SCLCSS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "SIDBI_Trader_Finance_Scheme_STFS.json",
+        "scheme_id": "SIDBI_TRADER_FINANCE_SCHEME_STFS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Interest_Subvention_Support_under_Export_Promotion_Mission_Niryat_Protsahan.json",
+        "scheme_id": "INTEREST_SUBVENTION_SUPPORT_UNDER_EXPORT_PROMOTION_MISSION_NIRYAT_PROTSAHAN",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Modified_Market_Development_Assistance_MMDA_for_Khadi.json",
+        "scheme_id": "MODIFIED_MARKET_DEVELOPMENT_ASSISTANCE_MMDA_FOR_KHADI",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Stand-Up_India_Scheme.json",
+        "scheme_id": "STANDUP_INDIA_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Agriculture_Infrastructure_Fund_AIF.json",
+        "scheme_id": "AGRICULTURE_INFRASTRUCTURE_FUND_AIF",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Market_Access_Initiative_MAI_Scheme.json",
+        "scheme_id": "MARKET_ACCESS_INITIATIVE_MAI_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Trade_Receivables_Discounting_System_TReDS.json",
+        "scheme_id": "TRADE_RECEIVABLES_DISCOUNTING_SYSTEM_TREDS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Micro_and_Small_Enterprises_Cluster_Development_Programme_MSE-CDP.json",
+        "scheme_id": "MICRO_AND_SMALL_ENTERPRISES_CLUSTER_DEVELOPMENT_PROGRAMME_MSECDP",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "MSME_Sustainable_ZED_Certification_Scheme.json",
+        "scheme_id": "MSME_SUSTAINABLE_ZED_CERTIFICATION_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "NSIC_Raw_Material_Assistance_RMA_Scheme.json",
+        "scheme_id": "NSIC_RAW_MATERIAL_ASSISTANCE_RMA_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Agri_Clinics_and_Agri_Business_Centres_ACABC_Scheme.json",
+        "scheme_id": "AGRI_CLINICS_AND_AGRI_BUSINESS_CENTRES_ACABC_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Credit_Guarantee_Scheme_for_Exporters_CGSE.json",
+        "scheme_id": "CREDIT_GUARANTEE_SCHEME_FOR_EXPORTERS_CGSE",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Export_Promotion_Capital_Goods_EPCG_Scheme.json",
+        "scheme_id": "EXPORT_PROMOTION_CAPITAL_GOODS_EPCG_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Production_Linked_Incentive_Scheme_for_Food_Processing_Industry_PLISFPI.json",
+        "scheme_id": "PRODUCTION_LINKED_INCENTIVE_SCHEME_FOR_FOOD_PROCESSING_INDUSTRY_PLISFPI",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "SIDBI_Loan_for_Purchase_of_Equipment_for_Enterprises_Development_SPEED.json",
+        "scheme_id": "SIDBI_LOAN_FOR_PURCHASE_OF_EQUIPMENT_FOR_ENTERPRISES_DEVELOPMENT_SPEED",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Workshed_Scheme_for_Khadi_Artisans.json",
+        "scheme_id": "WORKSHED_SCHEME_FOR_KHADI_ARTISANS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Coir_Vikas_Yojana_-_Development_of_Production_Infrastructure.json",
+        "scheme_id": "COIR_VIKAS_YOJANA_DEVELOPMENT_OF_PRODUCTION_INFRASTRUCTURE",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Prime_Ministers_Employment_Generation_Programme_PMEGP.json",
+        "scheme_id": "PRIME_MINISTERS_EMPLOYMENT_GENERATION_PROGRAMME_PMEGP",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "PMAY_Urban_2.0_Home_Loan.json",
+        "scheme_id": "PRADHAN_MANTRI_AWAS_YOJANA_URBAN_2_0_ISS",
+        "is_valid": true,
+        "score": 100,
+        "quality_score": 100,
+        "errors": [],
+        "warnings": [],
+        "lint_issues": []
+    },
+    {
+        "file_name": "Remission_of_Duties_and_Taxes_on_Exported_Products_RoDTEP.json",
+        "scheme_id": "REMISSION_OF_DUTIES_AND_TAXES_ON_EXPORTED_PRODUCTS_RODTEP",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Rebate_of_State_and_Central_Taxes_and_Levies_RoSCTL_Scheme.json",
+        "scheme_id": "REBATE_OF_STATE_AND_CENTRAL_TAXES_AND_LEVIES_ROSCTL_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Credit_Guarantee_Fund_Trust_for_Micro_and_Small_Enterprises_CGTMSE.json",
+        "scheme_id": "CREDIT_GUARANTEE_FUND_TRUST_FOR_MICRO_AND_SMALL_ENTERPRISES_CGTMSE",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Scheme_of_Fund_for_Regeneration_of_Traditional_Industries_SFURTI.json",
+        "scheme_id": "SCHEME_OF_FUND_FOR_REGENERATION_OF_TRADITIONAL_INDUSTRIES_SFURTI",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Coir_Udyami_Yojana_CUY.json",
+        "scheme_id": "COIR_UDYAMI_YOJANA_CUY",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Procurement_and_Marketing_Support_PMS_Scheme.json",
+        "scheme_id": "PROCUREMENT_AND_MARKETING_SUPPORT_PMS_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Fund_of_Funds_for_Startups_FFS.json",
+        "scheme_id": "FUND_OF_FUNDS_FOR_STARTUPS_FFS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "NSIC_Single_Point_Registration_Scheme_SPRS.json",
+        "scheme_id": "NSIC_SINGLE_POINT_REGISTRATION_SCHEME_SPRS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "ECGC_Export_Credit_Insurance.json",
+        "scheme_id": "ECGC_EXPORT_CREDIT_INSURANCE",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "SIDBI_Make_in_India_Soft_Loan_Fund_for_MSMEs_SMILE.json",
+        "scheme_id": "SIDBI_MAKE_IN_INDIA_SOFT_LOAN_FUND_FOR_MSMES_SMILE",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Startup_India_Seed_Fund_Scheme_SISFS.json",
+        "scheme_id": "STARTUP_INDIA_SEED_FUND_SCHEME_SISFS",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "National_Livestock_Mission_-_Entrepreneurship_Development_NLM-EDP.json",
+        "scheme_id": "NATIONAL_LIVESTOCK_MISSION_ENTREPRENEURSHIP_DEVELOPMENT_NLMEDP",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "KCC.json",
+        "scheme_id": "KISAN_CREDIT_CARD_KCC_SCHEME",
+        "is_valid": true,
+        "score": 100,
+        "quality_score": 100,
+        "errors": [],
+        "warnings": [],
+        "lint_issues": []
+    },
+    {
+        "file_name": "PM_Vishwakarma_Scheme.json",
+        "scheme_id": "PM_VISHWAKARMA_SCHEME",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "RBI_Collateral-Free_Lending_Norm_for_Micro_and_Small_Enterprises.json",
+        "scheme_id": "RBI_COLLATERALFREE_LENDING_NORM_FOR_MICRO_AND_SMALL_ENTERPRISES",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    },
+    {
+        "file_name": "Credit_Linked_Capital_Subsidy_Scheme_CLCSS_-_general_component.json",
+        "scheme_id": "CREDIT_LINKED_CAPITAL_SUBSIDY_SCHEME_CLCSS_GENERAL_COMPONENT",
+        "is_valid": true,
+        "score": 94,
+        "quality_score": 60,
+        "errors": [],
+        "warnings": [
+            "No required documents listed.",
+            "No workflow steps listed."
+        ],
+        "lint_issues": [
+            {
+                "category": "documents",
+                "message": "No document requirements specified",
+                "severity": "warning"
+            }
+        ]
+    }
+]

@@ -1,0 +1,135 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "NABARD_CREDITLINKED_CAPITAL_SUBSIDY_FOR_WAREHOUSINGGODOWNS",
+        "name": "NABARD Credit-Linked Capital Subsidy for Warehousing/Godowns",
+        "short_name": "NABARD",
+        "slug": "nabard-credit-linked-capital-subsidy-for-warehousinggodowns",
+        "description": "",
+        "scheme_type": "subsidy",
+        "provider": {
+            "category": "financial_institution",
+            "name": "NABARD (with financing banks)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "expansion"
+            ],
+            "sectors": [
+                "agriculture_allied",
+                "food_processing"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "capital_investment_subsidy"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium",
+                "rural_enterprise"
+            ],
+            "business_intents": [
+                "working capital support",
+                "need subsidy",
+                "farming capital",
+                "need loan",
+                "discount on cost"
+            ],
+            "search_keywords": [
+                "financial support",
+                "low interest",
+                "reimbursement",
+                "cold storage",
+                "loan",
+                "term loan",
+                "subsidy",
+                "working capital",
+                "govt grant",
+                "dairy farm",
+                "crop cultivation"
+            ],
+            "search_aliases": [
+                "NABARD"
+            ]
+        },
+        "status": "unknown",
+        "priority": "tier_3"
+    },
+    "benefits": [
+        {
+            "id": "NABARD_CREDITLINKED_CAPITAL_SUBSIDY_FOR_WAREHOUSINGGODOWNS_BENEFIT_01",
+            "name": "Capital subsidy for construction of agri storage/godown",
+            "category": "subsidy",
+            "summary": "Credit-linked capital subsidy channelled via NABARD for construction/renovation of rural godowns and agri-storage infrastructure, benefiting agri-allied MSMEs, FPOs and rural entrepreneurs.",
+            "calculation_logic": "Subsidy on eligible project cost with a permissible construction cost cap (reported around 3,000 per MT). Reported rates: 33.33pct (max about 50 lakh) for FPOs, panchayats, women, SC/ST and SHGs; 25pct (max about 37.5 lakh) for other categories.",
+            "max_amount": 5000000.0,
+            "min_amount": 0.0,
+            "loan_range": "unknown",
+            "interest_rate": "roi_per_bank",
+            "collateral_required": true,
+            "collateral_details": "unknown",
+            "guarantee_coverage": "unknown",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "unknown"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "NABARD_CREDITLINKED_CAPITAL_SUBSIDY_FOR_WAREHOUSINGGODOWNS_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "NABARD_CREDITLINKED_CAPITAL_SUBSIDY_FOR_WAREHOUSINGGODOWNS_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.nabard.org",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "NABARD_CREDITLINKED_CAPITAL_SUBSIDY_FOR_WAREHOUSINGGODOWNS_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://kipfinancial.com/nabard-subsidy-on-warehouse/",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Overlaps with the Agriculture Marketing Infrastructure (AMI) sub-scheme and the Agriculture Infrastructure Fund. Confirm the current operative window, rates and ceilings from NABARD."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of NABARD Credit-Linked Capital Subsidy for Warehousing/Godowns?",
+            "answer": "The main objective is to provide assistance and support under NABARD Credit-Linked Capital Subsidy for Warehousing/Godowns to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for NABARD Credit-Linked Capital Subsidy for Warehousing/Godowns?",
+            "answer": "Businesses belonging to micro, small, medium, rural_enterprise in agriculture_allied, food_processing may apply."
+        }
+    ]
+}

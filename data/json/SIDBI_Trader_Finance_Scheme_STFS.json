@@ -1,0 +1,119 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "SIDBI_TRADER_FINANCE_SCHEME_STFS",
+        "name": "SIDBI Trader Finance Scheme (STFS)",
+        "short_name": "SIDBI",
+        "slug": "sidbi-trader-finance-scheme-stfs",
+        "description": "",
+        "scheme_type": "government_product",
+        "provider": {
+            "category": "financial_institution",
+            "name": "SIDBI",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise"
+            ],
+            "sectors": [
+                "trading"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "working_capital"
+            ],
+            "msme_segments": [
+                "micro",
+                "small"
+            ],
+            "business_intents": [
+                "retail store capital"
+            ],
+            "search_keywords": [
+                "wholesaler",
+                "inventory purchase",
+                "retail shop"
+            ],
+            "search_aliases": [
+                "SIDBI"
+            ]
+        },
+        "status": "unknown",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "SIDBI_TRADER_FINANCE_SCHEME_STFS_BENEFIT_01",
+            "name": "Collateral-free finance for MSME traders/retailers/wholesalers",
+            "category": "loan",
+            "summary": "Direct SIDBI working-capital and need-based finance for MSME traders such as stockists, distributors, dealers and organised retailers, offered without collateral.",
+            "calculation_logic": "Loan reported from about 10 lakh up to 1 crore per borrower for working capital and need-based capital expenditure; repayment up to about 60 months. Applicant should be a trader in existence for at least 3 years with satisfactory financials. Confirm current terms from SIDBI.",
+            "max_amount": 10000000.0,
+            "min_amount": 1000000.0,
+            "loan_range": "1000000-10000000",
+            "interest_rate": "roi_per_sidbi",
+            "collateral_required": false,
+            "collateral_details": "collateral_free",
+            "guarantee_coverage": "unknown",
+            "tenure_months": 60,
+            "moratorium_months": 0,
+            "margin_contribution": "unknown"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "SIDBI_TRADER_FINANCE_SCHEME_STFS_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "SIDBI_TRADER_FINANCE_SCHEME_STFS_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.sidbi.in/other-loan-products",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "SIDBI_TRADER_FINANCE_SCHEME_STFS_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://www.indiafilings.com/learn/sidbi-trader-finance-scheme-stfs",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Traders already availing working-capital loans from other banks are generally not eligible. Confirm current ceiling, rate and eligibility from SIDBI before publication."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of SIDBI Trader Finance Scheme (STFS)?",
+            "answer": "The main objective is to provide assistance and support under SIDBI Trader Finance Scheme (STFS) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for SIDBI Trader Finance Scheme (STFS)?",
+            "answer": "Businesses belonging to micro, small in trading may apply."
+        }
+    ]
+}

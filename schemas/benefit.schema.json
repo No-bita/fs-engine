@@ -1,0 +1,121 @@
+{
+    "$defs": {
+        "BenefitCategory": {
+            "enum": [
+                "subsidy",
+                "loan",
+                "guarantee",
+                "grant",
+                "interest_subvention",
+                "tax_incentive",
+                "procurement",
+                "insurance_risk_cover",
+                "reimbursement",
+                "other"
+            ],
+            "title": "BenefitCategory",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+            "description": "Canonical ID for benefit, e.g., PMEGP_BENEFIT_SUBSIDY",
+            "pattern": "^[A-Z0-9_]+$",
+            "title": "Id",
+            "type": "string"
+        },
+        "name": {
+            "description": "Name of the benefit",
+            "title": "Name",
+            "type": "string"
+        },
+        "category": {
+            "$ref": "#/$defs/BenefitCategory",
+            "description": "Category of benefit"
+        },
+        "summary": {
+            "description": "Summary of the benefit details",
+            "title": "Summary",
+            "type": "string"
+        },
+        "calculation_logic": {
+            "default": "",
+            "description": "Calculation logic details",
+            "title": "Calculation Logic",
+            "type": "string"
+        },
+        "max_amount": {
+            "default": 0.0,
+            "description": "Max benefit amount in INR, 0.0 if not capped/unknown",
+            "minimum": 0.0,
+            "title": "Max Amount",
+            "type": "number"
+        },
+        "min_amount": {
+            "default": 0.0,
+            "description": "Min benefit amount in INR",
+            "minimum": 0.0,
+            "title": "Min Amount",
+            "type": "number"
+        },
+        "loan_range": {
+            "default": "",
+            "description": "Applicable loan range string if any",
+            "title": "Loan Range",
+            "type": "string"
+        },
+        "interest_rate": {
+            "default": "",
+            "description": "Interest rate or subvention info",
+            "title": "Interest Rate",
+            "type": "string"
+        },
+        "collateral_required": {
+            "default": false,
+            "description": "Whether collateral is required",
+            "title": "Collateral Required",
+            "type": "boolean"
+        },
+        "collateral_details": {
+            "default": "",
+            "description": "Collateral details if any",
+            "title": "Collateral Details",
+            "type": "string"
+        },
+        "guarantee_coverage": {
+            "default": "",
+            "description": "Guarantee coverage percentage or details",
+            "title": "Guarantee Coverage",
+            "type": "string"
+        },
+        "tenure_months": {
+            "default": 0,
+            "description": "Repayment tenure in months, 0 if unknown/NA",
+            "minimum": 0,
+            "title": "Tenure Months",
+            "type": "integer"
+        },
+        "moratorium_months": {
+            "default": 0,
+            "description": "Moratorium period in months",
+            "minimum": 0,
+            "title": "Moratorium Months",
+            "type": "integer"
+        },
+        "margin_contribution": {
+            "default": "",
+            "description": "Margin contribution required",
+            "title": "Margin Contribution",
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "category",
+        "summary"
+    ],
+    "title": "Benefit",
+    "type": "object"
+}

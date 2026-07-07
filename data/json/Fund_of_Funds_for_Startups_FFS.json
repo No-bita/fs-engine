@@ -1,0 +1,111 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "FUND_OF_FUNDS_FOR_STARTUPS_FFS",
+        "name": "Fund of Funds for Startups (FFS)",
+        "short_name": "FFS",
+        "slug": "fund-of-funds-for-startups-ffs",
+        "description": "",
+        "scheme_type": "government_scheme",
+        "provider": {
+            "category": "financial_institution",
+            "name": "SIDBI (operating agency); DPIIT (monitoring agency)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "startup_early_stage",
+                "expansion"
+            ],
+            "sectors": [
+                "sector_agnostic"
+            ],
+            "benefit_categories": [
+                "equity_seed_capital"
+            ],
+            "msme_segments": [
+                "startup_dpiit"
+            ],
+            "business_intents": [],
+            "search_keywords": [],
+            "search_aliases": [
+                "FFS"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_3"
+    },
+    "benefits": [
+        {
+            "id": "FUND_OF_FUNDS_FOR_STARTUPS_FFS_BENEFIT_01",
+            "name": "Indirect equity capital via SEBI-registered AIFs",
+            "category": "other",
+            "summary": "Government-backed fund-of-funds that contributes capital to SEBI-registered Category I and II Alternative Investment Funds, which in turn invest equity in DPIIT-recognised startups. Startups do not apply directly.",
+            "calculation_logic": "Corpus of 10,000 crore contributed to AIFs; each AIF must invest at least twice the FFS contribution into eligible startups. FFS typically contributes up to about 20pct of an AIF's corpus. Benefit to a startup is the equity investment received from a participating AIF (amount varies).",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "FUND_OF_FUNDS_FOR_STARTUPS_FFS_RULE_GEN_SEGMENT",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "startup_dpiit"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "FUND_OF_FUNDS_FOR_STARTUPS_FFS_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.sidbivcf.in/en/funds/ffs",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "FUND_OF_FUNDS_FOR_STARTUPS_FFS_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1895964",
+            "type": "official_guidelines",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Indirect scheme: only SEBI-registered AIFs apply to SIDBI; startups access capital by approaching participating AIFs. A successor FFS 2.0 (additional 10,000 crore, focus deep-tech/climate/defence) has been notified with SIDBI as implementation agency."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Fund of Funds for Startups (FFS)?",
+            "answer": "The main objective is to provide assistance and support under Fund of Funds for Startups (FFS) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Fund of Funds for Startups (FFS)?",
+            "answer": "Businesses belonging to startup_dpiit in sector_agnostic may apply."
+        }
+    ]
+}

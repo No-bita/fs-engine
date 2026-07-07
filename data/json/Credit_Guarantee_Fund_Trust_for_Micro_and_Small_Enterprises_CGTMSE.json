@@ -1,0 +1,136 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "CREDIT_GUARANTEE_FUND_TRUST_FOR_MICRO_AND_SMALL_ENTERPRISES_CGTMSE",
+        "name": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE)",
+        "short_name": "CGTMSE",
+        "slug": "credit-guarantee-fund-trust-for-micro-and-small-enterprises-cgtmse",
+        "description": "",
+        "scheme_type": "credit_guarantee",
+        "provider": {
+            "category": "public_institution",
+            "name": "CGTMSE (Ministry of MSME and SIDBI)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "startup_early_stage",
+                "existing_enterprise",
+                "all_stages"
+            ],
+            "sectors": [
+                "sector_agnostic"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "collateral_substitution"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "women_led",
+                "sc_st_entrepreneur"
+            ],
+            "business_intents": [
+                "need loan",
+                "need collateral free loan",
+                "working capital support"
+            ],
+            "search_keywords": [
+                "low interest",
+                "guarantee",
+                "no security",
+                "loan",
+                "term loan",
+                "working capital",
+                "credit cover",
+                "collateral free"
+            ],
+            "search_aliases": [
+                "CGTMSE"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "CREDIT_GUARANTEE_FUND_TRUST_FOR_MICRO_AND_SMALL_ENTERPRISES_CGTMSE_BENEFIT_01",
+            "name": "Guarantee cover on collateral-free credit to micro and small enterprises",
+            "category": "loan",
+            "summary": "Provides guarantee cover to member lending institutions for collateral-free and third-party-guarantee-free credit extended to eligible micro and small enterprises, including manufacturing, services and retail/wholesale trade.",
+            "calculation_logic": "Guarantee cover 75pct to 85pct of the amount in default depending on borrower category and loan size, with an additional 5pct enhancement for women entrepreneurs (per Dec 2024 circular). Annual Guarantee Fee from 0.37pct p.a. (revised Apr 2025).",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "0-100000000",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "collateral_free",
+            "guarantee_coverage": "up_to_85pct_general_up_to_90pct_women",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "CGTMSE_RULE_MSME",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        },
+        {
+            "id": "CGTMSE_RULE_TURNOVER",
+            "parameter": "business.turnover",
+            "operator": "<=",
+            "value": 50000000.0
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "CREDIT_GUARANTEE_FUND_TRUST_FOR_MICRO_AND_SMALL_ENTERPRISES_CGTMSE_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.cgtmse.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "CREDIT_GUARANTEE_FUND_TRUST_FOR_MICRO_AND_SMALL_ENTERPRISES_CGTMSE_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://www.cgtmse.in/Home/VS/96",
+            "type": "official_guidelines",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Ceiling of guaranteed credit is 10 crore per eligible borrower. Medium enterprises are not covered. Borrower applies via a Member Lending Institution, not directly to CGTMSE. 10pct fee concession for women/SC/ST/ZED/NER/aspirational-district units."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE)?",
+            "answer": "The main objective is to provide assistance and support under Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE)?",
+            "answer": "Businesses belonging to micro, small, women_led, sc_st_entrepreneur in sector_agnostic may apply."
+        }
+    ]
+}

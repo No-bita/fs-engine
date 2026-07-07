@@ -1,0 +1,130 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "NATIONAL_LIVESTOCK_MISSION_ENTREPRENEURSHIP_DEVELOPMENT_NLMEDP",
+        "name": "National Livestock Mission - Entrepreneurship Development (NLM-EDP)",
+        "short_name": "NLM",
+        "slug": "national-livestock-mission---entrepreneurship-development-nlm-edp",
+        "description": "",
+        "scheme_type": "subsidy",
+        "provider": {
+            "category": "central_government",
+            "name": "Department of Animal Husbandry and Dairying",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "idea_or_pre_startup",
+                "startup_early_stage",
+                "expansion"
+            ],
+            "sectors": [
+                "agriculture_allied"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "capital_investment_subsidy"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "women_led",
+                "sc_st_entrepreneur",
+                "rural_enterprise"
+            ],
+            "business_intents": [
+                "need subsidy",
+                "farming capital",
+                "discount on cost"
+            ],
+            "search_keywords": [
+                "financial support",
+                "reimbursement",
+                "cold storage",
+                "subsidy",
+                "govt grant",
+                "dairy farm",
+                "crop cultivation"
+            ],
+            "search_aliases": [
+                "NLM"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "NATIONAL_LIVESTOCK_MISSION_ENTREPRENEURSHIP_DEVELOPMENT_NLMEDP_BENEFIT_01",
+            "name": "50pct capital subsidy for livestock entrepreneurship",
+            "category": "subsidy",
+            "summary": "Credit-linked capital subsidy to entrepreneurs, FPOs, SHGs and companies for setting up livestock ventures (poultry, sheep, goat, piggery, feed and fodder units), to promote private investment and employment in animal husbandry.",
+            "calculation_logic": "50pct capital subsidy of eligible project cost, with component ceilings: up to 25 lakh (rural poultry), up to 50 lakh (sheep/goat and feed/fodder units), up to 30 lakh (piggery). Beneficiary brings a minimum share; balance via bank loan. Land, personal vehicles and working capital are excluded from subsidy.",
+            "max_amount": 5000000.0,
+            "min_amount": 0.0,
+            "loan_range": "unknown",
+            "interest_rate": "roi_per_bank",
+            "collateral_required": true,
+            "collateral_details": "unknown",
+            "guarantee_coverage": "unknown",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "25pct"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "NATIONAL_LIVESTOCK_MISSION_ENTREPRENEURSHIP_DEVELOPMENT_NLMEDP_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "NATIONAL_LIVESTOCK_MISSION_ENTREPRENEURSHIP_DEVELOPMENT_NLMEDP_REF_01",
+            "title": "Official Source Url",
+            "url": "https://dahd.gov.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "NATIONAL_LIVESTOCK_MISSION_ENTREPRENEURSHIP_DEVELOPMENT_NLMEDP_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://kipfinancial.com/government-subsidy-with-national-livestock-mission-nlm-2025-a-game-changer-for-livestock-entrepreneurs/",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Ministry of Fisheries, Animal Husbandry and Dairying scheme; relevant to agri-allied/rural MSMEs. DPR and bank sanction required. Confirm current component ceilings from DAHD guidelines."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of National Livestock Mission - Entrepreneurship Development (NLM-EDP)?",
+            "answer": "The main objective is to provide assistance and support under National Livestock Mission - Entrepreneurship Development (NLM-EDP) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for National Livestock Mission - Entrepreneurship Development (NLM-EDP)?",
+            "answer": "Businesses belonging to micro, small, women_led, sc_st_entrepreneur, rural_enterprise in agriculture_allied may apply."
+        }
+    ]
+}

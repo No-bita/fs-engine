@@ -1,0 +1,115 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "SIDBI_PRAYAAS",
+        "name": "SIDBI PRAYAAS",
+        "short_name": "SIDBI",
+        "slug": "sidbi-prayaas",
+        "description": "",
+        "scheme_type": "government_product",
+        "provider": {
+            "category": "financial_institution",
+            "name": "SIDBI (through partner institutions)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "startup_early_stage",
+                "existing_enterprise"
+            ],
+            "sectors": [
+                "sector_agnostic"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "working_capital"
+            ],
+            "msme_segments": [
+                "micro",
+                "women_led",
+                "rural_enterprise"
+            ],
+            "business_intents": [],
+            "search_keywords": [],
+            "search_aliases": [
+                "SIDBI"
+            ]
+        },
+        "status": "unknown",
+        "priority": "tier_3"
+    },
+    "benefits": [
+        {
+            "id": "SIDBI_PRAYAAS_BENEFIT_01",
+            "name": "Micro-enterprise finance via partner institutions",
+            "category": "loan",
+            "summary": "SIDBI-linked lending program that channels affordable credit to micro-entrepreneurs, including women-led enterprises, through partner institutions rather than direct SIDBI branches.",
+            "calculation_logic": "Need-based micro loans delivered via SIDBI partner institutions; exact ticket size, rate and tenure vary by partner and are not published centrally. Confirm current terms from SIDBI.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "unknown",
+            "interest_rate": "roi_per_partner",
+            "collateral_required": true,
+            "collateral_details": "unknown",
+            "guarantee_coverage": "unknown",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "unknown"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "SIDBI_PRAYAAS_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "SIDBI_PRAYAAS_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.sidbi.in/home-product",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "SIDBI_PRAYAAS_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://www.iifl.com/blogs/business-loan/sidbi-loan-for-msme",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Delivered through partner institutions; discoverability and terms are partner-dependent. A Digital PRAYAAS variant has also been reported. Needs confirmation from SIDBI."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of SIDBI PRAYAAS?",
+            "answer": "The main objective is to provide assistance and support under SIDBI PRAYAAS to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for SIDBI PRAYAAS?",
+            "answer": "Businesses belonging to micro, women_led, rural_enterprise in sector_agnostic may apply."
+        }
+    ]
+}

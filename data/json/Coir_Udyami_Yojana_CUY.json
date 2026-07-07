@@ -1,0 +1,132 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "COIR_UDYAMI_YOJANA_CUY",
+        "name": "Coir Udyami Yojana (CUY)",
+        "short_name": "CUY",
+        "slug": "coir-udyami-yojana-cuy",
+        "description": "",
+        "scheme_type": "subsidy",
+        "provider": {
+            "category": "public_institution",
+            "name": "Coir Board (Ministry of MSME)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "idea_or_pre_startup",
+                "startup_early_stage"
+            ],
+            "sectors": [
+                "coir"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "capital_investment_subsidy"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "women_led",
+                "sc_st_entrepreneur",
+                "rural_enterprise"
+            ],
+            "business_intents": [
+                "need subsidy",
+                "discount on cost"
+            ],
+            "search_keywords": [
+                "reimbursement",
+                "subsidy",
+                "financial support",
+                "govt grant"
+            ],
+            "search_aliases": [
+                "CUY"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "COIR_UDYAMI_YOJANA_CUY_BENEFIT_01",
+            "name": "Credit-linked capital subsidy for coir units",
+            "category": "subsidy",
+            "summary": "Credit-linked subsidy to set up coir production/processing units, combining a government subsidy, a bank loan and a small beneficiary contribution.",
+            "calculation_logic": "Pattern: 40pct of project cost as GoI subsidy, 55pct bank loan, 5pct beneficiary contribution. Maximum admissible project cost 10 lakh plus one cycle of working capital (WC not exceeding 25pct of project cost; WC not subsidised). Max subsidy therefore about 4 lakh.",
+            "max_amount": 400000.0,
+            "min_amount": 0.0,
+            "loan_range": "0-1000000",
+            "interest_rate": "roi_at_base_rate",
+            "collateral_required": false,
+            "collateral_details": "collateral_free",
+            "guarantee_coverage": "unknown",
+            "tenure_months": 84,
+            "moratorium_months": 0,
+            "margin_contribution": "5pct"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "COIR_UDYAMI_YOJANA_CUY_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "COIR_UDYAMI_YOJANA_CUY_REF_01",
+            "title": "Official Source Url",
+            "url": "http://coirboard.gov.in/?page_id=8452",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "COIR_UDYAMI_YOJANA_CUY_REF_02",
+            "title": "Policy Document Url",
+            "url": "http://coirboard.gov.in/?page_id=8452",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "COIR_UDYAMI_YOJANA_CUY_REF_03",
+            "title": "Secondary Source Url",
+            "url": "https://www.creditmantri.com/coir-udyami-yojana/",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Formerly REMOT scheme. EDP training mandatory. No collateral per RBI norms for eligible loans. One person per family. No income ceiling."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Coir Udyami Yojana (CUY)?",
+            "answer": "The main objective is to provide assistance and support under Coir Udyami Yojana (CUY) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Coir Udyami Yojana (CUY)?",
+            "answer": "Businesses belonging to micro, small, women_led, sc_st_entrepreneur, rural_enterprise in coir may apply."
+        }
+    ]
+}

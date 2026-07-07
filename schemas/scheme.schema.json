@@ -1,0 +1,746 @@
+{
+    "$defs": {
+        "ActiveStatus": {
+            "enum": [
+                "confirmed_active",
+                "temporarily_closed",
+                "expired",
+                "merged",
+                "draft",
+                "unknown"
+            ],
+            "title": "ActiveStatus",
+            "type": "string"
+        },
+        "Benefit": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "description": "Canonical ID for benefit, e.g., PMEGP_BENEFIT_SUBSIDY",
+                    "pattern": "^[A-Z0-9_]+$",
+                    "title": "Id",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Name of the benefit",
+                    "title": "Name",
+                    "type": "string"
+                },
+                "category": {
+                    "$ref": "#/$defs/BenefitCategory",
+                    "description": "Category of benefit"
+                },
+                "summary": {
+                    "description": "Summary of the benefit details",
+                    "title": "Summary",
+                    "type": "string"
+                },
+                "calculation_logic": {
+                    "default": "",
+                    "description": "Calculation logic details",
+                    "title": "Calculation Logic",
+                    "type": "string"
+                },
+                "max_amount": {
+                    "default": 0.0,
+                    "description": "Max benefit amount in INR, 0.0 if not capped/unknown",
+                    "minimum": 0.0,
+                    "title": "Max Amount",
+                    "type": "number"
+                },
+                "min_amount": {
+                    "default": 0.0,
+                    "description": "Min benefit amount in INR",
+                    "minimum": 0.0,
+                    "title": "Min Amount",
+                    "type": "number"
+                },
+                "loan_range": {
+                    "default": "",
+                    "description": "Applicable loan range string if any",
+                    "title": "Loan Range",
+                    "type": "string"
+                },
+                "interest_rate": {
+                    "default": "",
+                    "description": "Interest rate or subvention info",
+                    "title": "Interest Rate",
+                    "type": "string"
+                },
+                "collateral_required": {
+                    "default": false,
+                    "description": "Whether collateral is required",
+                    "title": "Collateral Required",
+                    "type": "boolean"
+                },
+                "collateral_details": {
+                    "default": "",
+                    "description": "Collateral details if any",
+                    "title": "Collateral Details",
+                    "type": "string"
+                },
+                "guarantee_coverage": {
+                    "default": "",
+                    "description": "Guarantee coverage percentage or details",
+                    "title": "Guarantee Coverage",
+                    "type": "string"
+                },
+                "tenure_months": {
+                    "default": 0,
+                    "description": "Repayment tenure in months, 0 if unknown/NA",
+                    "minimum": 0,
+                    "title": "Tenure Months",
+                    "type": "integer"
+                },
+                "moratorium_months": {
+                    "default": 0,
+                    "description": "Moratorium period in months",
+                    "minimum": 0,
+                    "title": "Moratorium Months",
+                    "type": "integer"
+                },
+                "margin_contribution": {
+                    "default": "",
+                    "description": "Margin contribution required",
+                    "title": "Margin Contribution",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "category",
+                "summary"
+            ],
+            "title": "Benefit",
+            "type": "object"
+        },
+        "BenefitCategory": {
+            "enum": [
+                "subsidy",
+                "loan",
+                "guarantee",
+                "grant",
+                "interest_subvention",
+                "tax_incentive",
+                "procurement",
+                "insurance_risk_cover",
+                "reimbursement",
+                "other"
+            ],
+            "title": "BenefitCategory",
+            "type": "string"
+        },
+        "DocumentRequirement": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "description": "Canonical ID for document, e.g., DOC_UDYAM_REGISTRATION",
+                    "pattern": "^[A-Z0-9_]+$",
+                    "title": "Id",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Name of the document",
+                    "title": "Name",
+                    "type": "string"
+                },
+                "description": {
+                    "default": "",
+                    "description": "Purpose or description of the document",
+                    "title": "Description",
+                    "type": "string"
+                },
+                "is_mandatory": {
+                    "default": true,
+                    "description": "Whether the document is mandatory",
+                    "title": "Is Mandatory",
+                    "type": "boolean"
+                },
+                "issuing_authority": {
+                    "default": "",
+                    "description": "Authority issuing the document",
+                    "title": "Issuing Authority",
+                    "type": "string"
+                },
+                "digitized_verification_available": {
+                    "default": false,
+                    "description": "Whether digitized API verification is available",
+                    "title": "Digitized Verification Available",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ],
+            "title": "DocumentRequirement",
+            "type": "object"
+        },
+        "EligibilityRule": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "description": "Canonical ID for rule, e.g., PMEGP_RULE_TURNOVER",
+                    "pattern": "^[A-Z0-9_]+$",
+                    "title": "Id",
+                    "type": "string"
+                },
+                "parameter": {
+                    "$ref": "#/$defs/RuleParameter",
+                    "description": "The business profile parameter to evaluate"
+                },
+                "operator": {
+                    "$ref": "#/$defs/RuleOperator",
+                    "description": "Comparison operator"
+                },
+                "value": {
+                    "description": "The matching value or threshold",
+                    "title": "Value"
+                }
+            },
+            "required": [
+                "id",
+                "parameter",
+                "operator",
+                "value"
+            ],
+            "title": "EligibilityRule",
+            "type": "object"
+        },
+        "Geography": {
+            "additionalProperties": false,
+            "properties": {
+                "coverage": {
+                    "$ref": "#/$defs/GeographyCoverage",
+                    "description": "Geography coverage level"
+                },
+                "states": {
+                    "description": "States where the scheme is applicable",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "States",
+                    "type": "array"
+                },
+                "districts": {
+                    "description": "Districts where the scheme is applicable",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "Districts",
+                    "type": "array"
+                }
+            },
+            "required": [
+                "coverage"
+            ],
+            "title": "Geography",
+            "type": "object"
+        },
+        "GeographyCoverage": {
+            "enum": [
+                "all_india",
+                "state_specific",
+                "district_specific"
+            ],
+            "title": "GeographyCoverage",
+            "type": "string"
+        },
+        "GovernmentLevel": {
+            "enum": [
+                "central",
+                "state",
+                "district",
+                "psu",
+                "bank",
+                "multilateral"
+            ],
+            "title": "GovernmentLevel",
+            "type": "string"
+        },
+        "Metadata": {
+            "additionalProperties": false,
+            "properties": {
+                "created_at": {
+                    "default": "",
+                    "description": "ISO-8601 creation timestamp",
+                    "pattern": "^$|^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})?)?$",
+                    "title": "Created At",
+                    "type": "string"
+                },
+                "updated_at": {
+                    "default": "",
+                    "description": "ISO-8601 update timestamp",
+                    "pattern": "^$|^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})?)?$",
+                    "title": "Updated At",
+                    "type": "string"
+                },
+                "verified_at": {
+                    "default": "",
+                    "description": "ISO-8601 verification timestamp",
+                    "pattern": "^$|^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})?)?$",
+                    "title": "Verified At",
+                    "type": "string"
+                },
+                "source_confidence": {
+                    "$ref": "#/$defs/SourceConfidence",
+                    "description": "Confidence score or level of source verification"
+                },
+                "compiled_by": {
+                    "default": "",
+                    "description": "Name of the person/bot who compiled the scheme data",
+                    "title": "Compiled By",
+                    "type": "string"
+                },
+                "reviewed_by": {
+                    "default": "",
+                    "description": "Name of the person who reviewed the scheme data",
+                    "title": "Reviewed By",
+                    "type": "string"
+                },
+                "quality_score": {
+                    "default": 100,
+                    "description": "Calculated completeness and quality score (0-100)",
+                    "maximum": 100,
+                    "minimum": 0,
+                    "title": "Quality Score",
+                    "type": "integer"
+                },
+                "notes": {
+                    "default": "",
+                    "description": "Internal developer or compiler notes",
+                    "title": "Notes",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "source_confidence"
+            ],
+            "title": "Metadata",
+            "type": "object"
+        },
+        "PriorityTier": {
+            "enum": [
+                "tier_1",
+                "tier_2",
+                "tier_3"
+            ],
+            "title": "PriorityTier",
+            "type": "string"
+        },
+        "Provider": {
+            "additionalProperties": false,
+            "properties": {
+                "category": {
+                    "$ref": "#/$defs/ProviderCategory",
+                    "description": "Provider category"
+                },
+                "name": {
+                    "description": "Full name of the providing ministry or organization",
+                    "title": "Name",
+                    "type": "string"
+                },
+                "implementing_agencies": {
+                    "description": "Agencies implementing the scheme",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "Implementing Agencies",
+                    "type": "array"
+                },
+                "government_level": {
+                    "$ref": "#/$defs/GovernmentLevel",
+                    "description": "Level of government providing the scheme"
+                }
+            },
+            "required": [
+                "category",
+                "name",
+                "government_level"
+            ],
+            "title": "Provider",
+            "type": "object"
+        },
+        "ProviderCategory": {
+            "enum": [
+                "central_government",
+                "state_government",
+                "financial_institution",
+                "public_institution",
+                "private_sector",
+                "unknown"
+            ],
+            "title": "ProviderCategory",
+            "type": "string"
+        },
+        "Reference": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "description": "Canonical ID for reference, e.g., PMEGP_REF_01",
+                    "pattern": "^[A-Z0-9_]+$",
+                    "title": "Id",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Title of the reference",
+                    "title": "Title",
+                    "type": "string"
+                },
+                "url": {
+                    "description": "URL of the reference source",
+                    "pattern": "^https?://.+$",
+                    "title": "Url",
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/$defs/ReferenceType",
+                    "description": "Strong category type of reference source"
+                },
+                "language": {
+                    "default": "en",
+                    "description": "Language of the reference source",
+                    "title": "Language",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "title",
+                "url",
+                "type"
+            ],
+            "title": "Reference",
+            "type": "object"
+        },
+        "ReferenceType": {
+            "enum": [
+                "official_guidelines",
+                "application_portal",
+                "faq",
+                "circular",
+                "press_release",
+                "third_party"
+            ],
+            "title": "ReferenceType",
+            "type": "string"
+        },
+        "RuleOperator": {
+            "enum": [
+                "=",
+                "!=",
+                ">",
+                "<",
+                ">=",
+                "<=",
+                "IN",
+                "NOT IN",
+                "BETWEEN",
+                "CONTAINS"
+            ],
+            "title": "RuleOperator",
+            "type": "string"
+        },
+        "RuleParameter": {
+            "enum": [
+                "business.msme_segment",
+                "business.turnover",
+                "business.state",
+                "business.district",
+                "business.sector",
+                "business.ownership_category",
+                "business.constitution",
+                "business.investment_plant_machinery",
+                "business.establishment_year",
+                "business.has_udyam_registration",
+                "business.employment_count",
+                "business.export_status"
+            ],
+            "title": "RuleParameter",
+            "type": "string"
+        },
+        "SchemeIdentity": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "description": "Canonical unique ID, e.g., PMEGP",
+                    "pattern": "^[A-Z0-9_]+$",
+                    "title": "Id",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Full name of the scheme",
+                    "title": "Name",
+                    "type": "string"
+                },
+                "short_name": {
+                    "description": "Short/abbreviated name of the scheme",
+                    "title": "Short Name",
+                    "type": "string"
+                },
+                "slug": {
+                    "description": "Lowercase kebab-case slug",
+                    "pattern": "^[a-z0-9-]+$",
+                    "title": "Slug",
+                    "type": "string"
+                },
+                "description": {
+                    "default": "",
+                    "description": "Detailed description of the scheme identity",
+                    "title": "Description",
+                    "type": "string"
+                },
+                "scheme_type": {
+                    "$ref": "#/$defs/SchemeType",
+                    "description": "Type of the scheme"
+                },
+                "provider": {
+                    "$ref": "#/$defs/Provider",
+                    "description": "Provider organization information"
+                },
+                "geography": {
+                    "$ref": "#/$defs/Geography",
+                    "description": "Geographic applicability"
+                },
+                "tags": {
+                    "$ref": "#/$defs/Tags",
+                    "description": "Search and categorization tags"
+                },
+                "status": {
+                    "$ref": "#/$defs/ActiveStatus",
+                    "description": "Active status of the scheme"
+                },
+                "priority": {
+                    "$ref": "#/$defs/PriorityTier",
+                    "description": "Registry display/processing priority tier"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "short_name",
+                "slug",
+                "scheme_type",
+                "provider",
+                "geography",
+                "tags",
+                "status",
+                "priority"
+            ],
+            "title": "SchemeIdentity",
+            "type": "object"
+        },
+        "SchemeType": {
+            "enum": [
+                "government_scheme",
+                "government_product",
+                "credit_guarantee",
+                "procurement_program",
+                "tax_incentive",
+                "subsidy",
+                "grant"
+            ],
+            "title": "SchemeType",
+            "type": "string"
+        },
+        "SourceConfidence": {
+            "enum": [
+                "official",
+                "semi_official",
+                "third_party",
+                "crowdsourced"
+            ],
+            "title": "SourceConfidence",
+            "type": "string"
+        },
+        "Tags": {
+            "additionalProperties": false,
+            "properties": {
+                "business_stages": {
+                    "description": "Target stages of business",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "Business Stages",
+                    "type": "array"
+                },
+                "sectors": {
+                    "description": "Target industry sectors",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "Sectors",
+                    "type": "array"
+                },
+                "benefit_categories": {
+                    "description": "Tags describing categories of benefits",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "Benefit Categories",
+                    "type": "array"
+                },
+                "msme_segments": {
+                    "description": "Target MSME segments",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "Msme Segments",
+                    "type": "array"
+                },
+                "business_intents": {
+                    "description": "Target business intents",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "Business Intents",
+                    "type": "array"
+                }
+            },
+            "title": "Tags",
+            "type": "object"
+        },
+        "WorkflowActor": {
+            "enum": [
+                "applicant",
+                "provider",
+                "implementing_agency",
+                "bank",
+                "third_party"
+            ],
+            "title": "WorkflowActor",
+            "type": "string"
+        },
+        "WorkflowChannel": {
+            "enum": [
+                "online",
+                "offline",
+                "hybrid"
+            ],
+            "title": "WorkflowChannel",
+            "type": "string"
+        },
+        "WorkflowStep": {
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "description": "Canonical ID for workflow step, e.g., PMEGP_WF_STEP_01",
+                    "pattern": "^[A-Z0-9_]+$",
+                    "title": "Id",
+                    "type": "string"
+                },
+                "step_number": {
+                    "description": "Sequence order of the step",
+                    "exclusiveMinimum": 0,
+                    "title": "Step Number",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "Name of the step",
+                    "title": "Name",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "Actionable detail of the step",
+                    "title": "Description",
+                    "type": "string"
+                },
+                "actor": {
+                    "$ref": "#/$defs/WorkflowActor",
+                    "description": "Who performs the step"
+                },
+                "channel": {
+                    "$ref": "#/$defs/WorkflowChannel",
+                    "description": "How the step is executed"
+                },
+                "url": {
+                    "default": "",
+                    "description": "Optional URL related to this step",
+                    "title": "Url",
+                    "type": "string"
+                },
+                "estimated_duration_days": {
+                    "default": 0,
+                    "description": "Estimated duration in days, 0 if immediate/unknown",
+                    "minimum": 0,
+                    "title": "Estimated Duration Days",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id",
+                "step_number",
+                "name",
+                "description",
+                "actor",
+                "channel"
+            ],
+            "title": "WorkflowStep",
+            "type": "object"
+        }
+    },
+    "additionalProperties": false,
+    "properties": {
+        "schema_version": {
+            "default": "1.0.0",
+            "description": "Version of this document schema",
+            "title": "Schema Version",
+            "type": "string"
+        },
+        "scheme": {
+            "$ref": "#/$defs/SchemeIdentity",
+            "description": "Scheme core identity details"
+        },
+        "benefits": {
+            "description": "List of benefits provided by the scheme",
+            "items": {
+                "$ref": "#/$defs/Benefit"
+            },
+            "title": "Benefits",
+            "type": "array"
+        },
+        "eligibility_rules": {
+            "description": "Rules to determine business eligibility",
+            "items": {
+                "$ref": "#/$defs/EligibilityRule"
+            },
+            "title": "Eligibility Rules",
+            "type": "array"
+        },
+        "documents": {
+            "description": "Documents required to apply",
+            "items": {
+                "$ref": "#/$defs/DocumentRequirement"
+            },
+            "title": "Documents",
+            "type": "array"
+        },
+        "workflow": {
+            "description": "Step-by-step application workflow",
+            "items": {
+                "$ref": "#/$defs/WorkflowStep"
+            },
+            "title": "Workflow",
+            "type": "array"
+        },
+        "references": {
+            "description": "Reference links and documents",
+            "items": {
+                "$ref": "#/$defs/Reference"
+            },
+            "title": "References",
+            "type": "array"
+        },
+        "metadata": {
+            "$ref": "#/$defs/Metadata",
+            "description": "Curation metadata"
+        }
+    },
+    "required": [
+        "scheme",
+        "metadata"
+    ],
+    "title": "SchemeDocument",
+    "type": "object"
+}

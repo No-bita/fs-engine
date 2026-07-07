@@ -1,0 +1,124 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "NSIC_RAW_MATERIAL_ASSISTANCE_RMA_SCHEME",
+        "name": "NSIC Raw Material Assistance (RMA) Scheme",
+        "short_name": "NSIC",
+        "slug": "nsic-raw-material-assistance-rma-scheme",
+        "description": "",
+        "scheme_type": "government_product",
+        "provider": {
+            "category": "public_institution",
+            "name": "NSIC (Ministry of MSME)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise"
+            ],
+            "sectors": [
+                "manufacturing",
+                "services"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "working_capital"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium"
+            ],
+            "business_intents": [
+                "start factory",
+                "start service business"
+            ],
+            "search_keywords": [
+                "consultancy",
+                "industrial machines",
+                "repair shop",
+                "it services",
+                "factory setup"
+            ],
+            "search_aliases": [
+                "NSIC"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "NSIC_RAW_MATERIAL_ASSISTANCE_RMA_SCHEME_BENEFIT_01",
+            "name": "Credit for raw material procurement against bank guarantee",
+            "category": "loan",
+            "summary": "NSIC finances the purchase of raw materials (indigenous and imported) for manufacturing/processing MSMEs on credit, letting them buy in bulk and focus on production. Trading activity is excluded.",
+            "calculation_logic": "Credit for raw material for up to about 90 days (extendable up to 180 days) against a bank guarantee. Concessional interest linked to the unit's rating (for example about 9.00pct p.a. for a micro unit with a valid SME-1 rating), typically ranging up to about 9.5-12pct.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "unknown",
+            "interest_rate": "roi_approx_9_to_12pct_rating_linked",
+            "collateral_required": true,
+            "collateral_details": "collateral_required",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 180,
+            "moratorium_months": 0,
+            "margin_contribution": "unknown"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "NSIC_RAW_MATERIAL_ASSISTANCE_RMA_SCHEME_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "NSIC_RAW_MATERIAL_ASSISTANCE_RMA_SCHEME_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.nsic.co.in/Corporate/AboutUs",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "NSIC_RAW_MATERIAL_ASSISTANCE_RMA_SCHEME_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://www.egovtschemes.com/raw-material-assistance-scheme/",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Requires a bank guarantee as security. Only for manufacturing/service MSMEs with valid Udyam registration, not trading. Confirm current interest grid and sanction limits from NSIC."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of NSIC Raw Material Assistance (RMA) Scheme?",
+            "answer": "The main objective is to provide assistance and support under NSIC Raw Material Assistance (RMA) Scheme to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for NSIC Raw Material Assistance (RMA) Scheme?",
+            "answer": "Businesses belonging to micro, small, medium in manufacturing, services may apply."
+        }
+    ]
+}

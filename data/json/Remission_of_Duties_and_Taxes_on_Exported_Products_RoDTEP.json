@@ -1,0 +1,122 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "REMISSION_OF_DUTIES_AND_TAXES_ON_EXPORTED_PRODUCTS_RODTEP",
+        "name": "Remission of Duties and Taxes on Exported Products (RoDTEP)",
+        "short_name": "RDTEP",
+        "slug": "remission-of-duties-and-taxes-on-exported-products-rodtep",
+        "description": "",
+        "scheme_type": "tax_incentive",
+        "provider": {
+            "category": "central_government",
+            "name": "DGFT / CBIC (Ministry of Commerce and Industry; Ministry of Finance)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "expansion"
+            ],
+            "sectors": [
+                "manufacturing",
+                "export_oriented"
+            ],
+            "benefit_categories": [
+                "export_support",
+                "tax_duty_relief"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium",
+                "exporter"
+            ],
+            "business_intents": [
+                "start factory"
+            ],
+            "search_keywords": [
+                "industrial machines",
+                "factory setup"
+            ],
+            "search_aliases": [
+                "RDTEP"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "REMISSION_OF_DUTIES_AND_TAXES_ON_EXPORTED_PRODUCTS_RODTEP_BENEFIT_01",
+            "name": "Remission of embedded duties/taxes on exported goods",
+            "category": "tax_incentive",
+            "summary": "Refund of embedded central, state and local duties and taxes on exported products that are not otherwise refunded (for example VAT on fuel, mandi tax, electricity duty), issued as transferable e-scrips/ledger credits.",
+            "calculation_logic": "Remission as a percentage of FOB value of exports, varying roughly from 0.5pct to 4.3pct by product HS code as notified. Credited as transferable duty credit in the exporter's electronic ledger on ICEGATE.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "remission_0.5_to_4.3pct_fob",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "REMISSION_OF_DUTIES_AND_TAXES_ON_EXPORTED_PRODUCTS_RODTEP_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "REMISSION_OF_DUTIES_AND_TAXES_ON_EXPORTED_PRODUCTS_RODTEP_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.dgft.gov.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "REMISSION_OF_DUTIES_AND_TAXES_ON_EXPORTED_PRODUCTS_RODTEP_REF_02",
+            "title": "Secondary Source Url",
+            "url": "https://www.dgftguru.com/export-incentives-guide-for-indian-traders/",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Available to almost all export sectors; reported that a large majority of beneficiaries are MSMEs. Exact per-product rates are notified on the DGFT/ICEGATE portal and should be checked by HS code before publication."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Remission of Duties and Taxes on Exported Products (RoDTEP)?",
+            "answer": "The main objective is to provide assistance and support under Remission of Duties and Taxes on Exported Products (RoDTEP) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Remission of Duties and Taxes on Exported Products (RoDTEP)?",
+            "answer": "Businesses belonging to micro, small, medium, exporter in manufacturing, export_oriented may apply."
+        }
+    ]
+}

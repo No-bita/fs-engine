@@ -1,0 +1,125 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "MICRO_AND_SMALL_ENTERPRISES_CLUSTER_DEVELOPMENT_PROGRAMME_MSECDP",
+        "name": "Micro and Small Enterprises Cluster Development Programme (MSE-CDP)",
+        "short_name": "MSE",
+        "slug": "micro-and-small-enterprises-cluster-development-programme-mse-cdp",
+        "description": "",
+        "scheme_type": "grant",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of MSME (Office of DC-MSME)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise"
+            ],
+            "sectors": [
+                "manufacturing",
+                "sector_agnostic"
+            ],
+            "benefit_categories": [
+                "technology_upgradation",
+                "capital_investment_subsidy",
+                "marketing_procurement"
+            ],
+            "msme_segments": [
+                "micro",
+                "small"
+            ],
+            "business_intents": [
+                "start factory",
+                "need startup grant"
+            ],
+            "search_keywords": [
+                "grant",
+                "industrial machines",
+                "free money",
+                "seed funding",
+                "factory setup",
+                "non-repayable"
+            ],
+            "search_aliases": [
+                "MSE"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "MICRO_AND_SMALL_ENTERPRISES_CLUSTER_DEVELOPMENT_PROGRAMME_MSECDP_BENEFIT_01",
+            "name": "Grant for Common Facility Centre (CFC)",
+            "category": "subsidy",
+            "summary": "One-time capital grant to a Special Purpose Vehicle of clustered micro and small enterprises for setting up a Common Facility Centre (shared plant, machinery, testing, plug-and-play facilities).",
+            "calculation_logic": "GoI grant is a percentage of project cost with a ceiling; assistance is 90pct of project cost for CFC projects in NER/hilly states, island territories, aspirational/LWE districts and for special-category groups, subject to a GoI-share ceiling (commonly cited at 5 crore for CFC). Land cost counts up to 25pct of project cost.",
+            "max_amount": 50000000.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "unknown"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "MICRO_AND_SMALL_ENTERPRISES_CLUSTER_DEVELOPMENT_PROGRAMME_MSECDP_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "MICRO_AND_SMALL_ENTERPRISES_CLUSTER_DEVELOPMENT_PROGRAMME_MSECDP_REF_01",
+            "title": "Official Source Url",
+            "url": "https://cluster.dcmsme.gov.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "MICRO_AND_SMALL_ENTERPRISES_CLUSTER_DEVELOPMENT_PROGRAMME_MSECDP_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://dcmsme.gov.in/schemes/New%20MSE-CDP.pdf",
+            "type": "official_guidelines",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Delivered at cluster/SPV level; individual MSEs benefit collectively via the shared facility. Infrastructure Development component supports industrial estates/flatted factory complexes (larger ceilings). Thematic interventions: 50pct grant up to 2 lakh per activity."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Micro and Small Enterprises Cluster Development Programme (MSE-CDP)?",
+            "answer": "The main objective is to provide assistance and support under Micro and Small Enterprises Cluster Development Programme (MSE-CDP) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Micro and Small Enterprises Cluster Development Programme (MSE-CDP)?",
+            "answer": "Businesses belonging to micro, small in manufacturing, sector_agnostic may apply."
+        }
+    ]
+}

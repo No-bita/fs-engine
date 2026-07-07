@@ -1,0 +1,54 @@
+{
+    "$defs": {
+        "ReferenceType": {
+            "enum": [
+                "official_guidelines",
+                "application_portal",
+                "faq",
+                "circular",
+                "press_release",
+                "third_party"
+            ],
+            "title": "ReferenceType",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+            "description": "Canonical ID for reference, e.g., PMEGP_REF_01",
+            "pattern": "^[A-Z0-9_]+$",
+            "title": "Id",
+            "type": "string"
+        },
+        "title": {
+            "description": "Title of the reference",
+            "title": "Title",
+            "type": "string"
+        },
+        "url": {
+            "description": "URL of the reference source",
+            "pattern": "^https?://.+$",
+            "title": "Url",
+            "type": "string"
+        },
+        "type": {
+            "$ref": "#/$defs/ReferenceType",
+            "description": "Strong category type of reference source"
+        },
+        "language": {
+            "default": "en",
+            "description": "Language of the reference source",
+            "title": "Language",
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "url",
+        "type"
+    ],
+    "title": "Reference",
+    "type": "object"
+}

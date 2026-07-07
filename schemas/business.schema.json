@@ -1,0 +1,163 @@
+{
+    "additionalProperties": false,
+    "properties": {
+        "msme_segment": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "micro, small, medium",
+            "title": "Msme Segment"
+        },
+        "turnover": {
+            "anyOf": [
+                {
+                    "type": "number"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Turnover in INR",
+            "title": "Turnover"
+        },
+        "state": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "State of operation",
+            "title": "State"
+        },
+        "district": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "District of operation",
+            "title": "District"
+        },
+        "sector": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "manufacturing, services, trading, agriculture_allied",
+            "title": "Sector"
+        },
+        "ownership_category": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "SC, ST, women, general",
+            "title": "Ownership Category"
+        },
+        "constitution": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "proprietorship, partnership, private_limited, public_limited, co_operative, self_help_group",
+            "title": "Constitution"
+        },
+        "investment_plant_machinery": {
+            "anyOf": [
+                {
+                    "type": "number"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Investment in plant & machinery or equipment in INR",
+            "title": "Investment Plant Machinery"
+        },
+        "establishment_year": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Year of establishment",
+            "title": "Establishment Year"
+        },
+        "has_udyam_registration": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Whether business has Udyam registration",
+            "title": "Has Udyam Registration"
+        },
+        "employment_count": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Number of employees",
+            "title": "Employment Count"
+        },
+        "export_status": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "exporter, non_exporter",
+            "title": "Export Status"
+        }
+    },
+    "title": "BusinessProfile",
+    "type": "object"
+}

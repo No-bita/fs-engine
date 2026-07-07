@@ -1,0 +1,170 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "PM_FORMALISATION_OF_MICRO_FOOD_PROCESSING_ENTERPRISES_PMFME",
+        "name": "PM Formalisation of Micro Food Processing Enterprises (PMFME)",
+        "short_name": "PM",
+        "slug": "pm-formalisation-of-micro-food-processing-enterprises-pmfme",
+        "description": "",
+        "scheme_type": "subsidy",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of Food Processing Industries (MoFPI)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "expansion",
+                "modernization_upgradation"
+            ],
+            "sectors": [
+                "food_processing"
+            ],
+            "benefit_categories": [
+                "equity_seed_capital",
+                "technology_upgradation",
+                "working_capital",
+                "credit_access",
+                "capital_investment_subsidy",
+                "marketing_procurement"
+            ],
+            "msme_segments": [
+                "micro",
+                "women_led",
+                "sc_st_entrepreneur",
+                "rural_enterprise"
+            ],
+            "business_intents": [
+                "need subsidy",
+                "discount on cost"
+            ],
+            "search_keywords": [
+                "reimbursement",
+                "subsidy",
+                "financial support",
+                "govt grant"
+            ],
+            "search_aliases": [
+                "PM"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "PM_FORMALISATION_OF_MICRO_FOOD_PROCESSING_ENTERPRISES_PMFME_BENEFIT_01",
+            "name": "Credit-linked capital subsidy for individual micro food units",
+            "category": "subsidy",
+            "summary": "Credit-linked capital subsidy to individual micro food processing units for setting up or upgrading, with a preference for One District One Product (ODOP) products.",
+            "calculation_logic": "35pct of eligible project cost as credit-linked capital subsidy, capped at 10 lakh per unit. Beneficiary brings minimum 10pct; balance is a bank loan. Repayment up to about 10 years with 6-24 month moratorium.",
+            "max_amount": 1000000.0,
+            "min_amount": 0.0,
+            "loan_range": "unknown",
+            "interest_rate": "roi_per_bank",
+            "collateral_required": true,
+            "collateral_details": "unknown",
+            "guarantee_coverage": "via_cgtmse_or_cgfmu",
+            "tenure_months": 120,
+            "moratorium_months": 6,
+            "margin_contribution": "10pct"
+        },
+        {
+            "id": "PM_FORMALISATION_OF_MICRO_FOOD_PROCESSING_ENTERPRISES_PMFME_BENEFIT_02",
+            "name": "Seed capital to SHG members in food processing",
+            "category": "other",
+            "summary": "Seed capital provided to members of Self-Help Groups engaged in food processing, for working capital and purchase of small tools, routed through the SHG federation.",
+            "calculation_logic": "Seed capital of 40,000 per SHG member engaged in food processing, subject to a maximum of 4 lakh per SHG federation. Provided as a grant to the federation, extended to members as a loan through the SHG.",
+            "max_amount": 400000.0,
+            "min_amount": 40000.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "not_applicable"
+        },
+        {
+            "id": "PM_FORMALISATION_OF_MICRO_FOOD_PROCESSING_ENTERPRISES_PMFME_BENEFIT_03",
+            "name": "Credit-linked grant for common infrastructure and branding/marketing",
+            "category": "subsidy",
+            "summary": "Credit-linked grant to FPOs, SHGs, cooperatives and government agencies for common infrastructure (processing, storage, packaging, incubation), plus marketing and branding support for group beneficiaries.",
+            "calculation_logic": "35pct credit-linked grant for common infrastructure, subject to a maximum of 3 crore. Branding and marketing support to FPOs/SHGs/cooperatives/SPVs at 50pct of total expenditure (with DPR support up to 5 lakh from the State Nodal Agency).",
+            "max_amount": 30000000.0,
+            "min_amount": 0.0,
+            "loan_range": "unknown",
+            "interest_rate": "roi_per_bank",
+            "collateral_required": true,
+            "collateral_details": "unknown",
+            "guarantee_coverage": "unknown",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "unknown"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "PM_FORMALISATION_OF_MICRO_FOOD_PROCESSING_ENTERPRISES_PMFME_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "PM_FORMALISATION_OF_MICRO_FOOD_PROCESSING_ENTERPRISES_PMFME_REF_01",
+            "title": "Official Source Url",
+            "url": "https://pmfme.mofpi.gov.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "PM_FORMALISATION_OF_MICRO_FOOD_PROCESSING_ENTERPRISES_PMFME_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2199453",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "PM_FORMALISATION_OF_MICRO_FOOD_PROCESSING_ENTERPRISES_PMFME_REF_03",
+            "title": "Secondary Source Url",
+            "url": "https://cleartax.in/s/pmfme-scheme",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Original scheme period was 2020-21 to 2024-25 with a continuation into 2025-26; confirm current window. ODOP proposals preferred but non-ODOP also eligible. Union Bank of India is the nodal bank."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of PM Formalisation of Micro Food Processing Enterprises (PMFME)?",
+            "answer": "The main objective is to provide assistance and support under PM Formalisation of Micro Food Processing Enterprises (PMFME) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for PM Formalisation of Micro Food Processing Enterprises (PMFME)?",
+            "answer": "Businesses belonging to micro, women_led, sc_st_entrepreneur, rural_enterprise in food_processing may apply."
+        }
+    ]
+}

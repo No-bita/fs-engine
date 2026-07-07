@@ -1,0 +1,130 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "MSME_COMPETITIVE_LEAN_SCHEME",
+        "name": "MSME Competitive (LEAN) Scheme",
+        "short_name": "MSME",
+        "slug": "msme-competitive-lean-scheme",
+        "description": "",
+        "scheme_type": "government_scheme",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of MSME (QCI/NPC empanelled consultants)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "modernization_upgradation"
+            ],
+            "sectors": [
+                "manufacturing"
+            ],
+            "benefit_categories": [
+                "technology_upgradation",
+                "skilling_capacity_financial",
+                "quality_certification"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium",
+                "women_led",
+                "sc_st_entrepreneur"
+            ],
+            "business_intents": [
+                "start factory"
+            ],
+            "search_keywords": [
+                "industrial machines",
+                "factory setup"
+            ],
+            "search_aliases": [
+                "MSME"
+            ]
+        },
+        "status": "unknown",
+        "priority": "tier_2"
+    },
+    "benefits": [
+        {
+            "id": "MSME_COMPETITIVE_LEAN_SCHEME_BENEFIT_01",
+            "name": "Subsidy on Lean implementation and consultancy cost",
+            "category": "other",
+            "summary": "Government contributes the bulk of the cost of Lean manufacturing implementation (5S, Kaizen, Kanban and similar tools) through empanelled consultants across Basic, Intermediate and Advanced levels.",
+            "calculation_logic": "90pct of implementation/consultancy cost borne by GoI, plus an additional 5pct for women/SC/ST-owned, SFURTI-cluster or NER units, plus an additional 5pct for units registering via Industry Associations/OEMs after completing all levels. 5000 per MSME to the OEM/Association on completion.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "not_applicable",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "unknown"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "MSME_COMPETITIVE_LEAN_SCHEME_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "MSME_COMPETITIVE_LEAN_SCHEME_REF_01",
+            "title": "Official Source Url",
+            "url": "https://lean.msme.gov.in/Home/FinancialAssistance",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "MSME_COMPETITIVE_LEAN_SCHEME_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://lean.msme.gov.in",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "MSME_COMPETITIVE_LEAN_SCHEME_REF_03",
+            "title": "Secondary Source Url",
+            "url": "https://www.drishtiias.com/daily-updates/daily-news-analysis/msme-competitive-lean-scheme",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Scheme validity was stated up to 31 March 2026; confirm extension/continuation and per-level rupee caps (secondary sources cite up to 1.2 lakh Intermediate and 2.4 lakh Advanced)."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of MSME Competitive (LEAN) Scheme?",
+            "answer": "The main objective is to provide assistance and support under MSME Competitive (LEAN) Scheme to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for MSME Competitive (LEAN) Scheme?",
+            "answer": "Businesses belonging to micro, small, medium, women_led, sc_st_entrepreneur in manufacturing may apply."
+        }
+    ]
+}

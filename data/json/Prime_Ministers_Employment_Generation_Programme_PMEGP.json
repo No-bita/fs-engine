@@ -1,0 +1,151 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "PRIME_MINISTERS_EMPLOYMENT_GENERATION_PROGRAMME_PMEGP",
+        "name": "Prime Minister's Employment Generation Programme (PMEGP)",
+        "short_name": "PMEGP",
+        "slug": "prime-ministers-employment-generation-programme-pmegp",
+        "description": "",
+        "scheme_type": "government_scheme",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of MSME (implemented by KVIC / KVIB / DIC)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "idea_or_pre_startup",
+                "startup_early_stage"
+            ],
+            "sectors": [
+                "manufacturing",
+                "services"
+            ],
+            "benefit_categories": [
+                "credit_access",
+                "technology_upgradation",
+                "capital_investment_subsidy"
+            ],
+            "msme_segments": [
+                "micro",
+                "women_led",
+                "sc_st_entrepreneur",
+                "artisan",
+                "rural_enterprise"
+            ],
+            "business_intents": [
+                "start factory",
+                "start service business"
+            ],
+            "search_keywords": [
+                "consultancy",
+                "industrial machines",
+                "repair shop",
+                "it services",
+                "factory setup"
+            ],
+            "search_aliases": [
+                "PMEGP"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "PRIME_MINISTERS_EMPLOYMENT_GENERATION_PROGRAMME_PMEGP_BENEFIT_01",
+            "name": "Margin money subsidy for new micro units",
+            "category": "subsidy",
+            "summary": "Credit-linked back-ended margin money subsidy to help set up new micro enterprises in manufacturing and service/business activities. Bank finances the balance as term loan and working capital.",
+            "calculation_logic": "Subsidy as a percentage of project cost. General category: 15pct urban / 25pct rural. Special category (SC/ST/OBC/minorities/women/ex-servicemen/PwD/NER/hill/border/aspirational): 25pct urban / 35pct rural. Max project cost: 50 lakh manufacturing, 20 lakh service/business.",
+            "max_amount": 1750000.0,
+            "min_amount": 0.0,
+            "loan_range": "unknown",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "collateral_free",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 36,
+            "moratorium_months": 0,
+            "margin_contribution": "5pct_to_10pct"
+        },
+        {
+            "id": "PRIME_MINISTERS_EMPLOYMENT_GENERATION_PROGRAMME_PMEGP_BENEFIT_02",
+            "name": "Second-loan margin money subsidy for upgradation of existing PMEGP/REGP/MUDRA units",
+            "category": "subsidy",
+            "summary": "Second dose of credit-linked subsidy for upgrading well-performing existing PMEGP/REGP/MUDRA units after successful adjustment of the first subsidy and three-year lock-in.",
+            "calculation_logic": "15pct subsidy (20pct for NER/hill) on project cost. Max project cost for upgradation: 1 crore manufacturing (max subsidy 15 lakh, 20 lakh NER/hill); 25 lakh service/business (max subsidy 3.75 lakh, 5 lakh NER/hill).",
+            "max_amount": 2000000.0,
+            "min_amount": 0.0,
+            "loan_range": "unknown",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "collateral_free",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 36,
+            "moratorium_months": 0,
+            "margin_contribution": "10pct"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "PMEGP_RULE_TURNOVER",
+            "parameter": "business.turnover",
+            "operator": "<=",
+            "value": 50000000.0
+        },
+        {
+            "id": "PMEGP_RULE_SEGMENT",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "PRIME_MINISTERS_EMPLOYMENT_GENERATION_PROGRAMME_PMEGP_REF_01",
+            "title": "Official Source Url",
+            "url": "https://msme.gov.in/1-prime-ministers-employment-generation-programme-pmegp",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "PRIME_MINISTERS_EMPLOYMENT_GENERATION_PROGRAMME_PMEGP_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://msme.gov.in/sites/default/files/Revisedguidelines07.12.2023.pdf",
+            "type": "official_guidelines",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "Loans up to 10 lakh are collateral-free per RBI norms; loans above are covered under CGTMSE. Max subsidy shown is 35pct of 50 lakh manufacturing project (special category, rural)."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Prime Minister's Employment Generation Programme (PMEGP)?",
+            "answer": "The main objective is to provide assistance and support under Prime Minister's Employment Generation Programme (PMEGP) to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Prime Minister's Employment Generation Programme (PMEGP)?",
+            "answer": "Businesses belonging to micro, women_led, sc_st_entrepreneur, artisan, rural_enterprise in manufacturing, services may apply."
+        }
+    ]
+}

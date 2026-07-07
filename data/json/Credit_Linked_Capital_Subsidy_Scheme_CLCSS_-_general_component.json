@@ -1,0 +1,138 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "CREDIT_LINKED_CAPITAL_SUBSIDY_SCHEME_CLCSS_GENERAL_COMPONENT",
+        "name": "Credit Linked Capital Subsidy Scheme (CLCSS) - general component",
+        "short_name": "CLCSS",
+        "slug": "credit-linked-capital-subsidy-scheme-clcss---general-component",
+        "description": "",
+        "scheme_type": "subsidy",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of MSME (Office of DC-MSME)",
+            "implementing_agencies": [],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "existing_enterprise",
+                "modernization_upgradation"
+            ],
+            "sectors": [
+                "manufacturing"
+            ],
+            "benefit_categories": [
+                "technology_upgradation",
+                "capital_investment_subsidy"
+            ],
+            "msme_segments": [
+                "micro",
+                "small"
+            ],
+            "business_intents": [
+                "working capital support",
+                "need subsidy",
+                "start factory",
+                "need loan",
+                "discount on cost"
+            ],
+            "search_keywords": [
+                "industrial machines",
+                "financial support",
+                "reimbursement",
+                "low interest",
+                "loan",
+                "term loan",
+                "subsidy",
+                "working capital",
+                "govt grant",
+                "factory setup"
+            ],
+            "search_aliases": [
+                "CLCSS"
+            ]
+        },
+        "status": "unknown",
+        "priority": "tier_3"
+    },
+    "benefits": [
+        {
+            "id": "CREDIT_LINKED_CAPITAL_SUBSIDY_SCHEME_CLCSS_GENERAL_COMPONENT_BENEFIT_01",
+            "name": "15pct capital subsidy for technology upgradation (general)",
+            "category": "subsidy",
+            "summary": "Upfront capital subsidy to micro and small enterprises for inducting well-established and improved technology in specified sub-sectors/products, linked to a term loan from a Primary Lending Institution.",
+            "calculation_logic": "15pct subsidy on institutional finance up to 1 crore, i.e. subsidy capped at 15 lakh, on eligible plant and machinery in approved sub-sectors.",
+            "max_amount": 1500000.0,
+            "min_amount": 0.0,
+            "loan_range": "0-10000000",
+            "interest_rate": "not_applicable",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "not_applicable",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": "unknown"
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "CREDIT_LINKED_CAPITAL_SUBSIDY_SCHEME_CLCSS_GENERAL_COMPONENT_RULE_01",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small"
+            ]
+        }
+    ],
+    "documents": [],
+    "workflow": [],
+    "references": [
+        {
+            "id": "CREDIT_LINKED_CAPITAL_SUBSIDY_SCHEME_CLCSS_GENERAL_COMPONENT_REF_01",
+            "title": "Official Source Url",
+            "url": "https://www.dcmsme.gov.in/old/schemes/Credit_link_Scheme.htm",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "CREDIT_LINKED_CAPITAL_SUBSIDY_SCHEME_CLCSS_GENERAL_COMPONENT_REF_02",
+            "title": "Policy Document Url",
+            "url": "https://clcss.dcmsme.gov.in/",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "CREDIT_LINKED_CAPITAL_SUBSIDY_SCHEME_CLCSS_GENERAL_COMPONENT_REF_03",
+            "title": "Secondary Source Url",
+            "url": "https://www.indiainfoline.com/knowledge-center/business-loan/know-about-clcss-for-msme",
+            "type": "third_party",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-03T00:00:00Z",
+        "updated_at": "2026-07-03T00:00:00Z",
+        "verified_at": "2026-07-03T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 60,
+        "notes": "General CLCSS is reported to be under revision and may not be accepting fresh applications. Include only after confirming an open window. SCLCSS (SC/ST) is separately active."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Credit Linked Capital Subsidy Scheme (CLCSS) - general component?",
+            "answer": "The main objective is to provide assistance and support under Credit Linked Capital Subsidy Scheme (CLCSS) - general component to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Credit Linked Capital Subsidy Scheme (CLCSS) - general component?",
+            "answer": "Businesses belonging to micro, small in manufacturing may apply."
+        }
+    ]
+}

@@ -1,0 +1,209 @@
+{
+    "schema_version": "1.0.0",
+    "scheme": {
+        "id": "EMERGENCY_CREDIT_LINE_GUARANTEE_SCHEME_ECLGS_5_0",
+        "name": "Emergency Credit Line Guarantee Scheme (ECLGS) 5.0",
+        "short_name": "ECLGS 5.0",
+        "slug": "emergency-credit-line-guarantee-scheme-eclgs-5-0",
+        "description": "Provide emergency liquidity support to businesses affected by the West Asia crisis.",
+        "scheme_type": "credit_guarantee",
+        "provider": {
+            "category": "central_government",
+            "name": "Ministry of Finance",
+            "implementing_agencies": [
+                "NCGTC"
+            ],
+            "government_level": "central"
+        },
+        "geography": {
+            "coverage": "all_india",
+            "states": [],
+            "districts": []
+        },
+        "tags": {
+            "business_stages": [
+                "growth",
+                "scaling"
+            ],
+            "sectors": [
+                "manufacturing",
+                "services",
+                "trading"
+            ],
+            "benefit_categories": [
+                "guarantee",
+                "loan"
+            ],
+            "msme_segments": [
+                "micro",
+                "small",
+                "medium"
+            ],
+            "business_intents": [
+                "working capital support",
+                "need collateral free loan",
+                "start factory",
+                "need loan",
+                "start service business",
+                "working_capital",
+                "retail store capital"
+            ],
+            "search_keywords": [
+                "collateral free",
+                "consultancy",
+                "industrial machines",
+                "guarantee",
+                "low interest",
+                "no security",
+                "loan",
+                "term loan",
+                "working capital",
+                "wholesaler",
+                "repair shop",
+                "inventory purchase",
+                "it services",
+                "credit cover",
+                "factory setup",
+                "retail shop"
+            ],
+            "search_aliases": [
+                "ECLGS 5.0"
+            ]
+        },
+        "status": "confirmed_active",
+        "priority": "tier_1"
+    },
+    "benefits": [
+        {
+            "id": "ECLGS_BENEFIT_01",
+            "name": "Additional Working Capital Term Loan",
+            "category": "loan",
+            "summary": "Additional working capital term loan up to 20% of peak outstanding credit, capped at ₹100 crore.",
+            "calculation_logic": "20% of peak working capital outstanding during 1 January 2026 – 31 March 2026.",
+            "max_amount": 1000000000.0,
+            "min_amount": 0.0,
+            "loan_range": "Up to 20% of peak outstanding credit",
+            "interest_rate": "Capped at ~9% p.a.",
+            "collateral_required": false,
+            "collateral_details": "No additional collateral security is required",
+            "guarantee_coverage": "",
+            "tenure_months": 60,
+            "moratorium_months": 12,
+            "margin_contribution": ""
+        },
+        {
+            "id": "ECLGS_BENEFIT_02",
+            "name": "NCGTC Credit Guarantee Cover",
+            "category": "guarantee",
+            "summary": "100% credit guarantee cover for MSMEs and 90% for non-MSMEs and airline sector.",
+            "calculation_logic": "Government backed guarantee provided directly to lenders.",
+            "max_amount": 0.0,
+            "min_amount": 0.0,
+            "loan_range": "",
+            "interest_rate": "",
+            "collateral_required": false,
+            "collateral_details": "",
+            "guarantee_coverage": "100% for MSMEs, 90% for others",
+            "tenure_months": 0,
+            "moratorium_months": 0,
+            "margin_contribution": ""
+        }
+    ],
+    "eligibility_rules": [
+        {
+            "id": "ECLGS_RULE_MSME",
+            "parameter": "business.msme_segment",
+            "operator": "IN",
+            "value": [
+                "micro",
+                "small",
+                "medium"
+            ]
+        },
+        {
+            "id": "ECLGS_RULE_NPA",
+            "parameter": "business.export_status",
+            "operator": "IN",
+            "value": [
+                "exporter",
+                "non_exporter"
+            ]
+        }
+    ],
+    "documents": [
+        {
+            "id": "ECLGS_DOC_01",
+            "name": "Aadhaar and PAN Cards",
+            "description": "Identity and business credentials",
+            "is_mandatory": true,
+            "issuing_authority": "UIDAI/Income Tax Dept",
+            "digitized_verification_available": true
+        },
+        {
+            "id": "ECLGS_DOC_02",
+            "name": "Existing Outstanding Credit Statements",
+            "description": "To check peak working capital outstanding and standard account status as of 31 March 2026",
+            "is_mandatory": true,
+            "issuing_authority": "Lending Banks",
+            "digitized_verification_available": false
+        }
+    ],
+    "workflow": [
+        {
+            "id": "ECLGS_WF_01",
+            "step_number": 1,
+            "name": "Apply on JanSamarth",
+            "description": "Check eligibility and submit applications digitally through the JanSamarth Portal.",
+            "actor": "applicant",
+            "channel": "online",
+            "url": "https://www.jansamarth.in/emergency-credit-line-guarantee-scheme",
+            "estimated_duration_days": 1
+        },
+        {
+            "id": "ECLGS_WF_02",
+            "step_number": 2,
+            "name": "Lender Sanction and Guarantee Trigger",
+            "description": "Lender performs credit evaluation, issues sanction, and triggers NCGTC guarantee automatically.",
+            "actor": "bank",
+            "channel": "hybrid",
+            "url": "",
+            "estimated_duration_days": 10
+        }
+    ],
+    "references": [
+        {
+            "id": "ECLGS_REF_01",
+            "title": "Cabinet Approves ECLGS 5.0",
+            "url": "https://www.pmindia.gov.in/en/news_updates/cabinet-approves-emergency-credit-line-guarantee-scheme-5-0/",
+            "type": "official_guidelines",
+            "language": "en"
+        },
+        {
+            "id": "ECLGS_REF_02",
+            "title": "JanSamarth ECLGS Application Portal",
+            "url": "https://www.jansamarth.in/emergency-credit-line-guarantee-scheme",
+            "type": "application_portal",
+            "language": "en"
+        }
+    ],
+    "metadata": {
+        "created_at": "2026-07-05T00:00:00Z",
+        "updated_at": "2026-07-05T00:00:00Z",
+        "verified_at": "2026-07-05T00:00:00Z",
+        "source_confidence": "official",
+        "compiled_by": "migration_bot",
+        "reviewed_by": "admin",
+        "quality_score": 100,
+        "notes": "Valid till 31 March 2027 or exhaustion of guarantee corpus. General businesses get 1-year moratorium, airline sector gets 2-year moratorium and 7-year tenure."
+    },
+    "suggested_faqs": [
+        {
+            "question": "What is the main objective of Emergency Credit Line Guarantee Scheme (ECLGS) 5.0?",
+            "answer": "The main objective is to provide assistance and support under Emergency Credit Line Guarantee Scheme (ECLGS) 5.0 to eligible beneficiaries."
+        },
+        {
+            "question": "Who is eligible to apply for Emergency Credit Line Guarantee Scheme (ECLGS) 5.0?",
+            "answer": "Businesses belonging to micro, small, medium in manufacturing, services, trading may apply."
+        }
+    ]
+}
