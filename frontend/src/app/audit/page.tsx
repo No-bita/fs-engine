@@ -20,6 +20,7 @@ type AuditScheme = {
   questions_to_ask: string[];
   steps_to_apply: string[];
   urls: string[];
+  full_document: any;
 };
 
 const RULE_PARAMETERS = [
@@ -39,12 +40,16 @@ const RULE_PARAMETERS = [
 
 const RULE_OPERATORS = ["=", "!=", ">", "<", ">=", "<=", "IN", "NOT IN", "BETWEEN", "CONTAINS"];
 
-function SchemeCard({ scheme, onSave }: { scheme: AuditScheme, onSave: (id: string, rules: RawRule[]) => void }) {
+function SchemeCard({ scheme, onSaveRules, onSaveScheme }: { scheme: AuditScheme, onSaveRules: (id: string, rules: RawRule[]) => void, onSaveScheme: (id: string, document: any) => void }) {
   const [rules, setRules] = useState<RawRule[]>(scheme.raw_eligibility_rules || []);
   const [newParam, setNewParam] = useState(RULE_PARAMETERS[0]);
   const [newOp, setNewOp] = useState(RULE_OPERATORS[0]);
   const [newVal, setNewVal] = useState("");
-  const [isSaving, setIsSaving] = useState(false);
+  const [isSavingRules, setIsSavingRules] = useState(false);
+  const [isSavingDoc, setIsSavingDoc] = useState(false);
+  const [isJsonOpen, setIsJsonOpen] = useState(false);
+  const [jsonStr, setJsonStr] = useState(JSON.stringify(scheme.full_document, null, 2));
+  const [jsonError, setJsonError] = useState("");
 
   const handleAddRule = () => {
     if (!newVal.trim()) return;
@@ -69,10 +74,22 @@ function SchemeCard({ scheme, onSave }: { scheme: AuditScheme, onSave: (id: stri
     setRules(rules.filter((_, i) => i !== index));
   };
 
-  const handleSave = async () => {
-    setIsSaving(true);
-    await onSave(scheme.id, rules);
-    setIsSaving(false);
+  const handleSaveRules = async () => {
+    setIsSavingRules(true);
+    await onSaveRules(scheme.id, rules);
+    setIsSavingRules(false);
+  };
+
+  const handleSaveJson = async () => {
+    try {
+      const parsed = JSON.parse(jsonStr);
+      setJsonError("");
+      setIsSavingDoc(true);
+      await onSaveScheme(scheme.id, parsed);
+      setIsSavingDoc(false);
+    } catch (e: any) {
+      setJsonError(e.message || "Invalid JSON syntax");
+    }
   };
 
   return (
@@ -131,8 +148,8 @@ function SchemeCard({ scheme, onSave }: { scheme: AuditScheme, onSave: (id: stri
           <button className={styles.button} onClick={handleAddRule}>Add</button>
         </div>
 
-        <button className={`${styles.button} ${styles.saveBtn}`} onClick={handleSave} disabled={isSaving}>
-          {isSaving ? "Saving & Recompiling..." : "Save Rules"}
+        <button className={`${styles.button} ${styles.saveBtn}`} onClick={handleSaveRules} disabled={isSavingRules}>
+          {isSavingRules ? "Saving & Recompiling..." : "Save Rules"}
         </button>
       </div>
 
@@ -165,6 +182,31 @@ function SchemeCard({ scheme, onSave }: { scheme: AuditScheme, onSave: (id: stri
           </ul>
         ) : (
           <p className={styles.emptyState}>No workflow steps defined.</p>
+        )}
+      </div>
+
+      <div className={styles.section}>
+        <div className={styles.jsonHeader} onClick={() => setIsJsonOpen(!isJsonOpen)}>
+          <h3>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Advanced Schema Editor (JSON)
+          </h3>
+          <span>{isJsonOpen ? "▼" : "▶"}</span>
+        </div>
+        {isJsonOpen && (
+          <div className={styles.jsonEditorContainer}>
+            <p className={styles.description}>Edit the raw schema directly. This includes all tags, benefits, requirements, and metadata.</p>
+            <textarea 
+              className={styles.jsonTextarea} 
+              value={jsonStr} 
+              onChange={e => setJsonStr(e.target.value)}
+              spellCheck={false}
+            />
+            {jsonError && <p className={styles.errorText}>{jsonError}</p>}
+            <button className={`${styles.button} ${styles.saveBtn}`} onClick={handleSaveJson} disabled={isSavingDoc}>
+              {isSavingDoc ? "Validating & Saving..." : "Save Full Document"}
+            </button>
+          </div>
         )}
       </div>
 
@@ -209,6 +251,24 @@ export default function AuditPage() {
       console.error(err);
       alert("Error saving rules.");
     }
+  const handleSaveScheme = async (schemeId: string, document: any) => {
+    try {
+      const res = await fetch(`/api/scheme/${schemeId}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ document })
+      });
+      if (res.ok) {
+        await fetchAuditData();
+        alert("Document saved successfully!");
+      } else {
+        const errorData = await res.json();
+        alert("Failed to save document: " + (errorData.detail || "Unknown error"));
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error saving document.");
+    }
   };
 
   if (loading) {
@@ -231,7 +291,7 @@ export default function AuditPage() {
 
       <div className={styles.grid}>
         {schemes.map((scheme) => (
-          <SchemeCard key={scheme.id} scheme={scheme} onSave={handleSaveRules} />
+          <SchemeCard key={scheme.id} scheme={scheme} onSaveRules={handleSaveRules} onSaveScheme={handleSaveScheme} />
         ))}
       </div>
     </div>

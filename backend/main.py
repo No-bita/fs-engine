@@ -196,6 +196,41 @@ def get_scheme(identifier: str):
 class SaveRulesRequest(BaseModel):
     rules: List[Dict[str, Any]]
 
+class SaveSchemeRequest(BaseModel):
+    document: Dict[str, Any]
+
+@app.post("/api/scheme/{scheme_id}")
+def save_scheme(scheme_id: str, payload: SaveSchemeRequest):
+    doc_ref = db.collection("schemes").document(scheme_id)
+    doc = doc_ref.get()
+    
+    if not doc.exists:
+        raise HTTPException(status_code=404, detail="Scheme not found in registry")
+        
+    try:
+        data = payload.document
+        
+        # Run compiler pipeline in-memory
+        normalized = normalize_dict(data)
+        # enriched = enrich_metadata_and_tags(normalized)
+        enriched = normalized
+        quality_score = calculate_quality_score(enriched)
+        if "metadata" in enriched:
+            enriched["metadata"]["quality_score"] = quality_score
+            
+        # Validate
+        temp_json_str = json.dumps(enriched, ensure_ascii=False)
+        report = validate_document(temp_json_str, file_name=scheme_id)
+        if not report.is_valid:
+            raise Exception(f"Validation failed: {report.errors}")
+            
+        # Update Firestore
+        doc_ref.set(enriched)
+        
+        return {"status": "success", "message": f"Successfully updated scheme {scheme_id}"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.post("/api/scheme/{scheme_id}/rules")
 def save_scheme_rules(scheme_id: str, payload: SaveRulesRequest):
     doc_ref = db.collection("schemes").document(scheme_id)
@@ -210,7 +245,8 @@ def save_scheme_rules(scheme_id: str, payload: SaveRulesRequest):
         
         # Run compiler pipeline in-memory
         normalized = normalize_dict(data)
-        enriched = enrich_metadata_and_tags(normalized)
+        # enriched = enrich_metadata_and_tags(normalized)
+        enriched = normalized
         quality_score = calculate_quality_score(enriched)
         if "metadata" in enriched:
             enriched["metadata"]["quality_score"] = quality_score
@@ -312,7 +348,8 @@ def audit_schemes():
             "raw_eligibility_rules": raw_rules,
             "questions_to_ask": questions,
             "steps_to_apply": steps,
-            "urls": urls
+            "urls": urls,
+            "full_document": s.model_dump()
         })
         
     return audit_data
