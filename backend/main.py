@@ -17,6 +17,27 @@ from rules.nlp import IntentClassifier
 from rules.questions import QuestionEngine
 from rules.gap_analysis import GapAnalysisEngine
 from models import SchemeDocument, BusinessProfile
+import firebase_admin
+from firebase_admin import credentials, firestore
+from compiler.normalize import normalize_dict
+from compiler.enrich import enrich_metadata_and_tags
+from compiler.quality import calculate_quality_score
+from compiler.validate import validate_document
+import os
+
+# Initialize Firebase Admin SDK
+if not firebase_admin._apps:
+    cred_path = project_root / "FS Engine Firebase Admin SDK.json"
+    if cred_path.exists():
+        cred = credentials.Certificate(str(cred_path))
+        firebase_admin.initialize_app(cred)
+    elif "FIREBASE_SERVICE_ACCOUNT" in os.environ:
+        cred = credentials.Certificate(json.loads(os.environ["FIREBASE_SERVICE_ACCOUNT"]))
+        firebase_admin.initialize_app(cred)
+    else:
+        firebase_admin.initialize_app()
+
+db = firestore.client()
 
 app = FastAPI(title="MSME Benefits Platform API", version="1.0.0")
 
@@ -35,19 +56,15 @@ class RecommendationResponse(BaseModel):
     rule_evaluations: List[RuleEvaluationResult]
 
 def load_local_schemes() -> List[SchemeDocument]:
-    # Load canonical schemes directly from local JSON files to serve requests
-    json_dir = Path("/Users/aaryanshah/Downloads/FS Engine/data/json")
+    # Fetch from Firestore instead of local files
     schemes = []
-    if json_dir.exists():
-        for file in json_dir.glob("*.json"):
-            if file.name.startswith("_"):
-                continue
-            try:
-                with open(file, "r", encoding="utf-8") as f:
-                    scheme_doc = SchemeDocument.model_validate_json(f.read())
-                    schemes.append(scheme_doc)
-            except Exception as e:
-                print(f"Error validating/loading {file.name}: {e}")
+    docs = db.collection("schemes").stream()
+    for doc in docs:
+        try:
+            scheme_doc = SchemeDocument.model_validate(doc.to_dict())
+            schemes.append(scheme_doc)
+        except Exception as e:
+            print(f"Error validating {doc.id}: {e}")
     return schemes
 
 @app.get("/dashboard", response_class=HTMLResponse)
@@ -181,34 +198,31 @@ class SaveRulesRequest(BaseModel):
 
 @app.post("/api/scheme/{scheme_id}/rules")
 def save_scheme_rules(scheme_id: str, payload: SaveRulesRequest):
-    schemes_dir = Path("/Users/aaryanshah/Downloads/FS Engine/data/json")
-    target_file = None
-    for file in schemes_dir.glob("*.json"):
-        if file.name.startswith("_"):
-            continue
-        try:
-            with open(file, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                if data.get("scheme", {}).get("id") == scheme_id:
-                    target_file = file
-                    break
-        except Exception:
-            continue
-            
-    if not target_file:
+    doc_ref = db.collection("schemes").document(scheme_id)
+    doc = doc_ref.get()
+    
+    if not doc.exists:
         raise HTTPException(status_code=404, detail="Scheme not found in registry")
         
     try:
-        with open(target_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            
+        data = doc.to_dict()
         data["eligibility_rules"] = payload.rules
         
-        with open(target_file, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=4, ensure_ascii=False)
+        # Run compiler pipeline in-memory
+        normalized = normalize_dict(data)
+        enriched = enrich_metadata_and_tags(normalized)
+        quality_score = calculate_quality_score(enriched)
+        if "metadata" in enriched:
+            enriched["metadata"]["quality_score"] = quality_score
             
-        from compiler.compile import compile_registry
-        compile_registry(schemes_dir, schemes_dir)
+        # Validate
+        temp_json_str = json.dumps(enriched, ensure_ascii=False)
+        report = validate_document(temp_json_str, file_name=scheme_id)
+        if not report.is_valid:
+            raise Exception(f"Validation failed: {report.errors}")
+            
+        # Update Firestore
+        doc_ref.set(enriched)
         
         return {"status": "success", "message": f"Successfully updated rules for {scheme_id}"}
     except Exception as e:

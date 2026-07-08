@@ -41,23 +41,23 @@
                 "all_msme"
             ],
             "business_intents": [
-                "retail store capital",
-                "farming capital",
                 "start factory",
-                "start service business"
+                "farming capital",
+                "start service business",
+                "retail store capital"
             ],
             "search_keywords": [
-                "consultancy",
-                "industrial machines",
-                "cold storage",
-                "wholesaler",
+                "crop cultivation",
                 "repair shop",
-                "inventory purchase",
+                "wholesaler",
+                "cold storage",
+                "industrial machines",
                 "dairy farm",
                 "it services",
-                "crop cultivation",
+                "retail shop",
                 "factory setup",
-                "retail shop"
+                "inventory purchase",
+                "consultancy"
             ],
             "search_aliases": [
                 "PMMY"

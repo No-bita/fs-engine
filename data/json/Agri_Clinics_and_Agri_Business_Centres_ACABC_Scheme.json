@@ -39,22 +39,22 @@
                 "rural_enterprise"
             ],
             "business_intents": [
-                "discount on cost",
                 "farming capital",
+                "start service business",
                 "need subsidy",
-                "start service business"
+                "discount on cost"
             ],
             "search_keywords": [
-                "consultancy",
                 "financial support",
-                "reimbursement",
-                "cold storage",
-                "subsidy",
+                "crop cultivation",
                 "repair shop",
-                "govt grant",
+                "cold storage",
                 "dairy farm",
                 "it services",
-                "crop cultivation"
+                "reimbursement",
+                "subsidy",
+                "govt grant",
+                "consultancy"
             ],
             "search_aliases": [
                 "ACABC"

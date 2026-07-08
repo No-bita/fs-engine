@@ -39,26 +39,26 @@
             ],
             "business_intents": [
                 "working capital support",
-                "need subsidy",
-                "start factory",
-                "need loan",
+                "discount on cost",
                 "start service business",
-                "discount on cost"
+                "need loan",
+                "start factory",
+                "need subsidy"
             ],
             "search_keywords": [
-                "consultancy",
-                "industrial machines",
                 "financial support",
+                "repair shop",
+                "industrial machines",
+                "working capital",
+                "term loan",
+                "loan",
+                "it services",
+                "factory setup",
                 "reimbursement",
                 "low interest",
-                "loan",
-                "term loan",
                 "subsidy",
-                "working capital",
-                "repair shop",
                 "govt grant",
-                "it services",
-                "factory setup"
+                "consultancy"
             ],
             "search_aliases": [
                 "SCLCSS"

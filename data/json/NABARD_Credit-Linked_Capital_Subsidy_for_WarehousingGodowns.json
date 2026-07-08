@@ -39,23 +39,23 @@
             ],
             "business_intents": [
                 "working capital support",
-                "need subsidy",
+                "discount on cost",
                 "farming capital",
                 "need loan",
-                "discount on cost"
+                "need subsidy"
             ],
             "search_keywords": [
                 "financial support",
-                "low interest",
-                "reimbursement",
+                "crop cultivation",
                 "cold storage",
-                "loan",
-                "term loan",
-                "subsidy",
-                "working capital",
-                "govt grant",
                 "dairy farm",
-                "crop cultivation"
+                "working capital",
+                "term loan",
+                "loan",
+                "reimbursement",
+                "low interest",
+                "subsidy",
+                "govt grant"
             ],
             "search_aliases": [
                 "NABARD"

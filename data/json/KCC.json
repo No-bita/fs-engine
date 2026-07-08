@@ -42,19 +42,19 @@
                 "jlg"
             ],
             "business_intents": [
-                "need loan",
-                "farming capital",
                 "working capital support",
+                "farming capital",
+                "need loan",
                 "working_capital"
             ],
             "search_keywords": [
-                "low interest",
+                "crop cultivation",
                 "cold storage",
-                "loan",
-                "term loan",
-                "working capital",
                 "dairy farm",
-                "crop cultivation"
+                "working capital",
+                "term loan",
+                "loan",
+                "low interest"
             ],
             "search_aliases": [
                 "KCC"

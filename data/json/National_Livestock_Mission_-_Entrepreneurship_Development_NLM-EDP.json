@@ -39,18 +39,18 @@
                 "rural_enterprise"
             ],
             "business_intents": [
-                "need subsidy",
                 "farming capital",
+                "need subsidy",
                 "discount on cost"
             ],
             "search_keywords": [
                 "financial support",
-                "reimbursement",
+                "crop cultivation",
                 "cold storage",
-                "subsidy",
-                "govt grant",
                 "dairy farm",
-                "crop cultivation"
+                "reimbursement",
+                "subsidy",
+                "govt grant"
             ],
             "search_aliases": [
                 "NLM"

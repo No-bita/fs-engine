@@ -35,18 +35,18 @@
                 "startup_dpiit"
             ],
             "business_intents": [
-                "need loan",
+                "working capital support",
                 "need collateral free loan",
-                "working capital support"
+                "need loan"
             ],
             "search_keywords": [
-                "low interest",
-                "guarantee",
                 "no security",
-                "loan",
-                "term loan",
                 "working capital",
                 "credit cover",
+                "term loan",
+                "loan",
+                "guarantee",
+                "low interest",
                 "collateral free"
             ],
             "search_aliases": [

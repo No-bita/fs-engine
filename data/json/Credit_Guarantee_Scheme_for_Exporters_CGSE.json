@@ -40,21 +40,21 @@
                 "exporter"
             ],
             "business_intents": [
-                "need loan",
-                "need collateral free loan",
+                "start factory",
                 "working capital support",
-                "start factory"
+                "need collateral free loan",
+                "need loan"
             ],
             "search_keywords": [
-                "industrial machines",
-                "guarantee",
-                "low interest",
                 "no security",
-                "loan",
-                "term loan",
+                "industrial machines",
                 "working capital",
                 "credit cover",
+                "term loan",
+                "loan",
                 "factory setup",
+                "guarantee",
+                "low interest",
                 "collateral free"
             ],
             "search_aliases": [

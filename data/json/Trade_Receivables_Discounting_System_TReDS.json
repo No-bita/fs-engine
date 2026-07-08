@@ -38,19 +38,19 @@
                 "medium"
             ],
             "business_intents": [
-                "retail store capital",
                 "start factory",
-                "start service business"
+                "start service business",
+                "retail store capital"
             ],
             "search_keywords": [
-                "consultancy",
-                "industrial machines",
-                "wholesaler",
                 "repair shop",
-                "inventory purchase",
+                "wholesaler",
+                "industrial machines",
                 "it services",
+                "retail shop",
                 "factory setup",
-                "retail shop"
+                "inventory purchase",
+                "consultancy"
             ],
             "search_aliases": [
                 "TRDS"

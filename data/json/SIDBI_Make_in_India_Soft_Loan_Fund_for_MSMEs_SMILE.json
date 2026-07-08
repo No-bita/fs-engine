@@ -39,21 +39,21 @@
                 "medium"
             ],
             "business_intents": [
-                "need loan",
-                "working capital support",
                 "start factory",
-                "start service business"
+                "working capital support",
+                "start service business",
+                "need loan"
             ],
             "search_keywords": [
-                "consultancy",
-                "industrial machines",
-                "low interest",
-                "loan",
-                "term loan",
-                "working capital",
                 "repair shop",
+                "industrial machines",
+                "working capital",
+                "term loan",
+                "loan",
                 "it services",
-                "factory setup"
+                "factory setup",
+                "low interest",
+                "consultancy"
             ],
             "search_aliases": [
                 "SIDBI"

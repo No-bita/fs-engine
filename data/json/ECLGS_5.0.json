@@ -41,30 +41,30 @@
             ],
             "business_intents": [
                 "working capital support",
-                "need collateral free loan",
-                "start factory",
-                "need loan",
-                "start service business",
                 "working_capital",
-                "retail store capital"
+                "need collateral free loan",
+                "start service business",
+                "retail store capital",
+                "need loan",
+                "start factory"
             ],
             "search_keywords": [
-                "collateral free",
-                "consultancy",
+                "no security",
+                "wholesaler",
                 "industrial machines",
+                "repair shop",
+                "working capital",
+                "credit cover",
+                "term loan",
+                "loan",
+                "it services",
+                "retail shop",
+                "factory setup",
                 "guarantee",
                 "low interest",
-                "no security",
-                "loan",
-                "term loan",
-                "working capital",
-                "wholesaler",
-                "repair shop",
                 "inventory purchase",
-                "it services",
-                "credit cover",
-                "factory setup",
-                "retail shop"
+                "collateral free",
+                "consultancy"
             ],
             "search_aliases": [
                 "ECLGS 5.0"

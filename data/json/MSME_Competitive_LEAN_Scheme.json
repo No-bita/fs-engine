@@ -42,8 +42,8 @@
                 "start factory"
             ],
             "search_keywords": [
-                "industrial machines",
-                "factory setup"
+                "factory setup",
+                "industrial machines"
             ],
             "search_aliases": [
                 "MSME"
@@ -80,6 +80,12 @@
                 "micro",
                 "small"
             ]
+        },
+        {
+            "id": "RULE_1783434060465",
+            "parameter": "business.has_udyam_registration",
+            "operator": "=",
+            "value": true
         }
     ],
     "documents": [],
