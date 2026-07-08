@@ -195,6 +195,7 @@ def get_scheme(identifier: str):
 
 class SaveRulesRequest(BaseModel):
     rules: List[Dict[str, Any]]
+    manual_rules: List[str] = []
 
 class SaveSchemeRequest(BaseModel):
     document: Dict[str, Any]
@@ -242,6 +243,7 @@ def save_scheme_rules(scheme_id: str, payload: SaveRulesRequest):
     try:
         data = doc.to_dict()
         data["eligibility_rules"] = payload.rules
+        data["manual_eligibility_rules"] = payload.manual_rules
         
         # Run compiler pipeline in-memory
         normalized = normalize_dict(data)

@@ -20,6 +20,7 @@ type AuditScheme = {
   questions_to_ask: string[];
   steps_to_apply: string[];
   urls: string[];
+  manual_eligibility_rules: string[];
   full_document: any;
 };
 
@@ -40,11 +41,13 @@ const RULE_PARAMETERS = [
 
 const RULE_OPERATORS = ["=", "!=", ">", "<", ">=", "<=", "IN", "NOT IN", "BETWEEN", "CONTAINS"];
 
-function SchemeCard({ scheme, onSaveRules, onSaveScheme }: { scheme: AuditScheme, onSaveRules: (id: string, rules: RawRule[]) => void, onSaveScheme: (id: string, document: any) => void }) {
+function SchemeCard({ scheme, onSaveRules, onSaveScheme }: { scheme: AuditScheme, onSaveRules: (id: string, rules: RawRule[], manualRules: string[]) => void, onSaveScheme: (id: string, document: any) => void }) {
   const [rules, setRules] = useState<RawRule[]>(scheme.raw_eligibility_rules || []);
+  const [manualRules, setManualRules] = useState<string[]>(scheme.manual_eligibility_rules || []);
   const [newParam, setNewParam] = useState(RULE_PARAMETERS[0]);
   const [newOp, setNewOp] = useState(RULE_OPERATORS[0]);
   const [newVal, setNewVal] = useState("");
+  const [newManualRule, setNewManualRule] = useState("");
   const [isSavingRules, setIsSavingRules] = useState(false);
   const [isSavingDoc, setIsSavingDoc] = useState(false);
   const [isJsonOpen, setIsJsonOpen] = useState(false);
@@ -74,9 +77,19 @@ function SchemeCard({ scheme, onSaveRules, onSaveScheme }: { scheme: AuditScheme
     setRules(rules.filter((_, i) => i !== index));
   };
 
+  const handleAddManualRule = () => {
+    if (!newManualRule.trim()) return;
+    setManualRules([...manualRules, newManualRule.trim()]);
+    setNewManualRule("");
+  };
+
+  const handleDeleteManualRule = (index: number) => {
+    setManualRules(manualRules.filter((_, i) => i !== index));
+  };
+
   const handleSaveRules = async () => {
     setIsSavingRules(true);
-    await onSaveRules(scheme.id, rules);
+    await onSaveRules(scheme.id, rules, manualRules);
     setIsSavingRules(false);
   };
 
@@ -147,9 +160,35 @@ function SchemeCard({ scheme, onSaveRules, onSaveScheme }: { scheme: AuditScheme
           <input className={styles.input} placeholder="Value (e.g. 50000 or ['micro'])" value={newVal} onChange={e => setNewVal(e.target.value)} />
           <button className={styles.button} onClick={handleAddRule}>Add</button>
         </div>
+      </div>
+
+      <div className={styles.section}>
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          Manual Rules (Plain English)
+        </h3>
+        {manualRules.length > 0 ? (
+          <ul className={styles.list}>
+            {manualRules.map((rule, i) => (
+              <li key={i} className={styles.listItem}>
+                <span>{rule}</span>
+                <button className={styles.deleteBtn} onClick={() => handleDeleteManualRule(i)}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className={styles.emptyState}>No manual rules added.</p>
+        )}
+
+        <div className={styles.editForm}>
+          <input className={styles.input} placeholder="Write a rule in plain English (e.g. Must have an operational plant for 3 years)" value={newManualRule} onChange={e => setNewManualRule(e.target.value)} />
+          <button className={styles.button} onClick={handleAddManualRule}>Add</button>
+        </div>
 
         <button className={`${styles.button} ${styles.saveBtn}`} onClick={handleSaveRules} disabled={isSavingRules}>
-          {isSavingRules ? "Saving & Recompiling..." : "Save Rules"}
+          {isSavingRules ? "Saving & Recompiling..." : "Save All Rules"}
         </button>
       </div>
 
@@ -234,12 +273,12 @@ export default function AuditPage() {
     fetchAuditData();
   }, []);
 
-  const handleSaveRules = async (schemeId: string, rules: RawRule[]) => {
+  const handleSaveRules = async (schemeId: string, rules: RawRule[], manualRules: string[]) => {
     try {
       const res = await fetch(`/api/scheme/${schemeId}/rules`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ rules })
+        body: JSON.stringify({ rules, manual_rules: manualRules })
       });
       if (res.ok) {
         // Refresh the whole dashboard to reflect new questions compiled
