@@ -251,6 +251,7 @@ export default function AuditPage() {
       console.error(err);
       alert("Error saving rules.");
     }
+  };
   const handleSaveScheme = async (schemeId: string, document: any) => {
     try {
       const res = await fetch(`/api/scheme/${schemeId}`, {
