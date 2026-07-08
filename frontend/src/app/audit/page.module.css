@@ -165,3 +165,56 @@
   text-decoration: underline;
   word-break: break-all;
 }
+
+.jsonHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.jsonHeader:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.jsonEditorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+}
+
+.jsonTextarea {
+  width: 100%;
+  min-height: 600px;
+  padding: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  resize: vertical;
+  outline: none;
+}
+
+.jsonTextarea:focus {
+  border-color: #60a5fa;
+}
+
+.errorText {
+  color: #ef4444;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
